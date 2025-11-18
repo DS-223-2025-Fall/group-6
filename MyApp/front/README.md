@@ -70,17 +70,17 @@ Running the frontend in a **Docker container** ensures that the environment is t
 From the root of the project directory, build the Docker image for the frontend service using the following command:
 
 ```bash
-docker build -t frontend-service ./frontend
+docker build -t frontend./frontend
 ```
 
-This will create a Docker image named `frontend-service`.
+This will create a Docker image named `frontend`.
 
 #### Run the Docker Container
 
 After the image is built, you can run the app in a container using this command:
 
 ```bash
-docker run --rm -p 8501:8501 frontend-service
+docker run --rm -p 8501:8501 frontend
 ```
 
 This command tells Docker to map port `8501` inside the container to port `8501` on your local machine. Once the container is running, you can access the app at `http://localhost:8501`.
