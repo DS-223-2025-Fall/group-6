@@ -1,5 +1,0 @@
-channel_key,channel_id_nk,channel_name,channel_type,cost_per_message
-1,CHANNEL_001,Email,Digital,0.01
-2,CHANNEL_002,Push Notification,Digital,0.005
-3,CHANNEL_003,SMS,Digital,0.05
-4,CHANNEL_004,In-App,Digital,0.0
