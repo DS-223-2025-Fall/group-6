@@ -1,0 +1,5 @@
+channel_key,channel_name,description
+1,Email,Digital channel for Email communications
+2,Push Notification,Digital channel for Push Notification communications
+3,SMS,Digital channel for SMS communications
+4,In-App,Digital channel for In-App communications
