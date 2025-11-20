@@ -9,9 +9,9 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /ds
 
 # Copy requirements and install dependencies
-# COPY requirements.txt .
-# RUN pip install --upgrade pip
-# RUN pip install -r requirements.txt
+COPY requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
 # Copy the ds project files
 COPY . .

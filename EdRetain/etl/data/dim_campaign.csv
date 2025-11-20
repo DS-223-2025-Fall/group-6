@@ -1,51 +1,51 @@
 campaign_key,campaign_id_nk,campaign_name,campaign_type,target_risk_segment,offer_type,default_channel,start_date_key,end_date_key
-1,CAMP_0001,Upsell Campaign Above,Upsell,Medium Risk,Mentoring Session,In-App,20250810,20250910
-2,CAMP_0002,Retention Campaign Near,Retention,High Risk,Discount,SMS,20250313,20250428
-3,CAMP_0003,Reactivation Campaign Instead,Reactivation,Churned,Discount,Push Notification,20250105,20251104
-4,CAMP_0004,Reactivation Campaign Color,Reactivation,Churned,Free Trial Extension,Email,20250720,20250916
-5,CAMP_0005,Retention Campaign Reach,Retention,At Risk,Free Trial Extension,Email,20250124,20250507
-6,CAMP_0006,Upsell Campaign Four,Upsell,Medium Risk,Free Content,Email,20251119,20251119
-7,CAMP_0007,Upsell Campaign Attack,Upsell,Medium Risk,Mentoring Session,Email,20250414,20250514
-8,CAMP_0008,Reactivation Campaign When,Reactivation,Inactive,Free Trial Extension,Push Notification,20250128,20250521
-9,CAMP_0009,Upsell Campaign Several,Upsell,Active,Mentoring Session,Email,20241219,20250310
-10,CAMP_0010,Onboarding Campaign Keep,Onboarding,New Users,Mentoring Session,Push Notification,20250808,20250812
-11,CAMP_0011,Upsell Campaign Firm,Upsell,Active,Mentoring Session,Email,20250427,20251012
-12,CAMP_0012,Upsell Campaign Trip,Upsell,Active,Mentoring Session,Email,20250611,20250704
-13,CAMP_0013,Reactivation Campaign Concern,Reactivation,Churned,Discount,Push Notification,20250404,20250727
-14,CAMP_0014,Retention Campaign Play,Retention,At Risk,Free Trial Extension,Email,20250330,20250619
-15,CAMP_0015,Upsell Campaign Test,Upsell,Active,Free Content,Email,20250130,20250318
-16,CAMP_0016,Onboarding Campaign Him,Onboarding,All Users,Mentoring Session,Push Notification,20250210,20250920
-17,CAMP_0017,Onboarding Campaign Nice,Onboarding,New Users,Mentoring Session,Push Notification,20250121,20250305
-18,CAMP_0018,Reactivation Campaign Leave,Reactivation,Inactive,Discount,Email,20241121,20250822
-19,CAMP_0019,Reactivation Campaign Hot,Reactivation,Churned,Discount,Push Notification,20250607,20251115
-20,CAMP_0020,Upsell Campaign Condition,Upsell,Active,Mentoring Session,Email,20250726,20251115
-21,CAMP_0021,Onboarding Campaign Deep,Onboarding,All Users,Mentoring Session,Email,20250626,20251001
-22,CAMP_0022,Retention Campaign Produce,Retention,High Risk,Free Trial Extension,Email,20241224,20250202
-23,CAMP_0023,Retention Campaign Where,Retention,High Risk,Discount,Email,20250909,20251107
-24,CAMP_0024,Reactivation Campaign Property,Reactivation,Churned,Discount,Push Notification,20250428,20250623
-25,CAMP_0025,Upsell Campaign Do,Upsell,Active,Free Content,In-App,20250829,20250906
-26,CAMP_0026,Upsell Campaign Notice,Upsell,Medium Risk,Mentoring Session,Email,20250211,20251025
-27,CAMP_0027,Reactivation Campaign Off,Reactivation,Inactive,Free Trial Extension,Push Notification,20250301,20250619
-28,CAMP_0028,Onboarding Campaign Population,Onboarding,New Users,Free Content,Push Notification,20250624,20250707
-29,CAMP_0029,Upsell Campaign Fine,Upsell,Active,Mentoring Session,Email,20250426,20250509
-30,CAMP_0030,Retention Campaign While,Retention,At Risk,Free Trial Extension,SMS,20251007,20251026
-31,CAMP_0031,Onboarding Campaign Science,Onboarding,New Users,Mentoring Session,Push Notification,20250312,20251011
-32,CAMP_0032,Reactivation Campaign Theory,Reactivation,Inactive,Free Trial Extension,Email,20241205,20251011
-33,CAMP_0033,Reactivation Campaign Future,Reactivation,Inactive,Discount,Email,20241225,20250117
-34,CAMP_0034,Onboarding Campaign Fast,Onboarding,New Users,Mentoring Session,Email,20250926,20251102
-35,CAMP_0035,Upsell Campaign Week,Upsell,Medium Risk,Mentoring Session,Email,20250526,20251116
-36,CAMP_0036,Upsell Campaign Where,Upsell,Active,Free Content,Email,20241224,20250902
-37,CAMP_0037,Reactivation Campaign Amount,Reactivation,Churned,Discount,Push Notification,20250527,20251027
-38,CAMP_0038,Onboarding Campaign Level,Onboarding,New Users,Mentoring Session,Push Notification,20251013,20251106
-39,CAMP_0039,Upsell Campaign However,Upsell,Medium Risk,Mentoring Session,In-App,20250403,20250902
-40,CAMP_0040,Upsell Campaign Soon,Upsell,Medium Risk,Mentoring Session,In-App,20251006,20251030
-41,CAMP_0041,Upsell Campaign Clearly,Upsell,Medium Risk,Free Content,In-App,20250627,20250912
-42,CAMP_0042,Retention Campaign Movie,Retention,High Risk,Discount,Email,20251030,20251117
-43,CAMP_0043,Upsell Campaign Style,Upsell,Active,Free Content,Email,20250209,20250918
-44,CAMP_0044,Reactivation Campaign Low,Reactivation,Inactive,Free Trial Extension,Push Notification,20251115,20251117
-45,CAMP_0045,Upsell Campaign Least,Upsell,Medium Risk,Mentoring Session,In-App,20250426,20250506
-46,CAMP_0046,Upsell Campaign Radio,Upsell,Medium Risk,Free Content,Email,20250511,20251011
-47,CAMP_0047,Onboarding Campaign College,Onboarding,New Users,Free Content,Email,20251009,20251013
-48,CAMP_0048,Upsell Campaign Look,Upsell,Medium Risk,Mentoring Session,Email,20250810,20251102
-49,CAMP_0049,Retention Campaign Town,Retention,At Risk,Free Trial Extension,SMS,20251119,20251119
-50,CAMP_0050,Upsell Campaign Quite,Upsell,Medium Risk,Mentoring Session,Email,20251009,20251117
+1,CAMP_0001,Retention Campaign Wall,Retention,At Risk,Discount,Email,20251006,20251024
+2,CAMP_0002,Upsell Campaign Individual,Upsell,Active,Mentoring Session,In-App,20251101,20251110
+3,CAMP_0003,Reactivation Campaign Floor,Reactivation,Inactive,Discount,Email,20251026,20251030
+4,CAMP_0004,Upsell Campaign Off,Upsell,Medium Risk,Mentoring Session,Email,20250901,20250912
+5,CAMP_0005,Retention Campaign Of,Retention,At Risk,Discount,SMS,20250901,20251113
+6,CAMP_0006,Retention Campaign Radio,Retention,High Risk,Discount,SMS,20250920,20251027
+7,CAMP_0007,Upsell Campaign Sea,Upsell,Active,Free Content,Email,20250901,20250907
+8,CAMP_0008,Retention Campaign Hour,Retention,At Risk,Free Trial Extension,Email,20251028,20251109
+9,CAMP_0009,Retention Campaign Anyone,Retention,At Risk,Free Trial Extension,SMS,20251026,20251106
+10,CAMP_0010,Upsell Campaign Second,Upsell,Active,Free Content,In-App,20251006,20251104
+11,CAMP_0011,Retention Campaign Own,Retention,At Risk,Free Trial Extension,Email,20250929,20251019
+12,CAMP_0012,Reactivation Campaign Environment,Reactivation,Inactive,Free Trial Extension,Push Notification,20251105,20251107
+13,CAMP_0013,Reactivation Campaign Work,Reactivation,Inactive,Free Trial Extension,Email,20250911,20251011
+14,CAMP_0014,Onboarding Campaign Yard,Onboarding,New Users,Free Content,Email,20250910,20250914
+15,CAMP_0015,Retention Campaign Always,Retention,At Risk,Free Trial Extension,Email,20251107,20251112
+16,CAMP_0016,Onboarding Campaign Forward,Onboarding,New Users,Free Content,Push Notification,20251005,20251017
+17,CAMP_0017,Onboarding Campaign Investment,Onboarding,All Users,Free Content,Push Notification,20250929,20251020
+18,CAMP_0018,Upsell Campaign Age,Upsell,Active,Free Content,Email,20251006,20251012
+19,CAMP_0019,Onboarding Campaign Really,Onboarding,All Users,Free Content,Email,20250916,20250927
+20,CAMP_0020,Upsell Campaign Lead,Upsell,Medium Risk,Free Content,Email,20250915,20251110
+21,CAMP_0021,Onboarding Campaign Various,Onboarding,All Users,Free Content,Email,20250924,20251008
+22,CAMP_0022,Reactivation Campaign Staff,Reactivation,Churned,Discount,Push Notification,20251017,20251020
+23,CAMP_0023,Onboarding Campaign Congress,Onboarding,All Users,Mentoring Session,Push Notification,20250911,20251103
+24,CAMP_0024,Retention Campaign Man,Retention,High Risk,Discount,SMS,20251023,20251104
+25,CAMP_0025,Upsell Campaign Play,Upsell,Medium Risk,Mentoring Session,In-App,20251115,20251116
+26,CAMP_0026,Retention Campaign Probably,Retention,At Risk,Free Trial Extension,Email,20250916,20250929
+27,CAMP_0027,Retention Campaign Because,Retention,High Risk,Discount,SMS,20251115,20251117
+28,CAMP_0028,Onboarding Campaign Include,Onboarding,New Users,Free Content,Push Notification,20251023,20251118
+29,CAMP_0029,Upsell Campaign Family,Upsell,Active,Free Content,In-App,20251002,20251105
+30,CAMP_0030,Onboarding Campaign Us,Onboarding,New Users,Mentoring Session,Email,20250929,20251118
+31,CAMP_0031,Onboarding Campaign Pick,Onboarding,New Users,Mentoring Session,Email,20250905,20251014
+32,CAMP_0032,Onboarding Campaign Certain,Onboarding,New Users,Free Content,Push Notification,20251109,20251110
+33,CAMP_0033,Onboarding Campaign Section,Onboarding,New Users,Mentoring Session,Push Notification,20250823,20251026
+34,CAMP_0034,Onboarding Campaign Produce,Onboarding,All Users,Mentoring Session,Push Notification,20251113,20251116
+35,CAMP_0035,Retention Campaign Start,Retention,High Risk,Discount,SMS,20250831,20251110
+36,CAMP_0036,Retention Campaign Agree,Retention,At Risk,Free Trial Extension,Email,20251101,20251107
+37,CAMP_0037,Onboarding Campaign Near,Onboarding,All Users,Free Content,Email,20251030,20251112
+38,CAMP_0038,Upsell Campaign By,Upsell,Active,Mentoring Session,Email,20251108,20251111
+39,CAMP_0039,Onboarding Campaign Support,Onboarding,All Users,Mentoring Session,Push Notification,20251102,20251115
+40,CAMP_0040,Reactivation Campaign Recent,Reactivation,Churned,Discount,Email,20250930,20251018
+41,CAMP_0041,Reactivation Campaign This,Reactivation,Inactive,Free Trial Extension,Email,20251004,20251102
+42,CAMP_0042,Onboarding Campaign Listen,Onboarding,New Users,Mentoring Session,Email,20251021,20251117
+43,CAMP_0043,Reactivation Campaign Next,Reactivation,Inactive,Discount,Push Notification,20251006,20251026
+44,CAMP_0044,Retention Campaign Talk,Retention,At Risk,Free Trial Extension,SMS,20250906,20251021
+45,CAMP_0045,Reactivation Campaign Few,Reactivation,Churned,Discount,Email,20250929,20251119
+46,CAMP_0046,Retention Campaign Opportunity,Retention,High Risk,Free Trial Extension,SMS,20251008,20251014
+47,CAMP_0047,Onboarding Campaign Because,Onboarding,All Users,Mentoring Session,Push Notification,20251005,20251010
+48,CAMP_0048,Onboarding Campaign Investment,Onboarding,All Users,Mentoring Session,Email,20251026,20251028
+49,CAMP_0049,Reactivation Campaign Argue,Reactivation,Inactive,Free Trial Extension,Email,20250901,20251024
+50,CAMP_0050,Reactivation Campaign Factor,Reactivation,Churned,Free Trial Extension,Push Notification,20250910,20251001

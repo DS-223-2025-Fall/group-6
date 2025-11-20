@@ -179,17 +179,23 @@ def generate_date(date_obj):
         "is_weekend": date_obj.weekday() >= 5
     }
 
-def generate_campaign(campaign_key):
+def generate_campaign(campaign_key, min_date=None, max_date=None):
     """
     Build a fake marketing campaign record.
 
     Args:
         campaign_key (int): Campaign ID.
+        min_date (datetime): Minimum date for campaign start (default: 1 year ago).
+        max_date (datetime): Maximum date for campaign end (default: today).
 
     Returns:
         dict: Campaign information for the DimCampaign table.
     """
-
+    if min_date is None:
+        min_date = datetime.now() - timedelta(days=365)
+    if max_date is None:
+        max_date = datetime.now()
+    
     campaign_types = {
     "Retention": {
         "target_risk_segments": ["High Risk", "At Risk"],
@@ -217,7 +223,8 @@ def generate_campaign(campaign_key):
     offer_type = random.choice(campaign_types[campaign_type]["offer_types"])
     channel = random.choice(campaign_types[campaign_type]["default_channels"])
     
-    start_date = fake.date_between(start_date='-1y', end_date='today')
+    # Generate dates within the specified range
+    start_date = fake.date_between(start_date=min_date, end_date=max_date)
     end_date = fake.date_between(start_date=start_date, end_date='+3m')
     
     return {
@@ -254,10 +261,8 @@ def generate_channel(channel_key):
     
     return {
         "channel_key": channel_key,
-        "channel_id_nk": f"CHANNEL_{channel_key:03d}",
         "channel_name": channel["name"],
-        "channel_type": "Digital",
-        "cost_per_message": channel["cost_per_message"]
+        "description": f"Digital channel for {channel['name']} communications"
     }
 
 
@@ -295,10 +300,13 @@ def generate_user_daily_activity(activity_id, user_key, date_key):
         days_since_login = random.randint(8, 60)
     
     return {
-        "activity_id": activity_id,
+        "fact_user_daily_activity_id": activity_id,
         "user_key": user_key,
         "date_key": date_key,
         "subscription_plan_key": random.randint(1, 5),
+        "campaign_key": random.randint(1, 50),
+        "is_premium": random.choice([True, False]),
+        "has_active_subscription": random.choice([True, False]),
         "logins_count": logins,
         "sessions_count": sessions,
         "minutes_watched": minutes,
@@ -308,8 +316,9 @@ def generate_user_daily_activity(activity_id, user_key, date_key):
         "active_days_last_30d": days_active_30d,
         "days_since_last_login": days_since_login,
         "is_inactive_7d_flag": days_since_login > 7,
-        "is_premium": random.choice([True, False]),
-        "has_active_subscription": random.choice([True, False])
+        "active_courses_count": courses,
+        "completed_courses_total": lessons,
+        "created_at": datetime.now()
     }
 
 def generate_campaign_interaction(interaction_id, user_key, campaign_key, date_key, channel_key):
