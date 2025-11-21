@@ -2,7 +2,7 @@
 Database Configuration
 """
 
-import sqlalchemy as create_engine
+from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 import sqlalchemy.orm as orm
 from dotenv import load_dotenv
