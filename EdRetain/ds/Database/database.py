@@ -32,10 +32,10 @@ DATABASE_URL = os.getenv(
 )
 
 # Create the SQLAlchemy engine (will always receive a string now)
-#engine = create_engine(DATABASE_URL)
 DATABASE_URL = os.getenv("DATABASE_URL")
-engine = create_engine(DATABASE_URL)
 
+# Create the SQLAlchemy engine
+engine = create_engine(DATABASE_URL)
 
 # Base class for declarative models (SQLAlchemy 2.0 style)
 Base = declarative_base()
