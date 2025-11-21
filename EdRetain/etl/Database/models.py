@@ -128,4 +128,4 @@ class FactUserAnalyticsSnapshot(Base):
     clv_band = Column(String)
     model_version = Column(String)
 
-Base.metadata.create_all(engine)
+#Base.metadata.create_all(engine)

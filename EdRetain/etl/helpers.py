@@ -2,6 +2,9 @@ import pandas as pd
 from sqlalchemy import text
 from Database.database import engine
 from loguru import logger
+from sqlalchemy.orm import Session
+from Database.models import DimDate
+from datetime import datetime
 
 def load_user_activity_and_subscription_dfs():
     """
@@ -43,3 +46,22 @@ def save_snapshot_to_db(snapshot_df: pd.DataFrame, table_name: str = "fact_user_
     except Exception as e:
         logger.error(f"Error saving snapshot to database table {table_name}: {e}")
 
+def ensure_snapshot_date(session: Session, snapshot_date_key: int):
+    exists = session.query(DimDate).filter_by(date_key=snapshot_date_key).first()
+    if not exists:
+        dt = datetime.strptime(str(snapshot_date_key), "%Y%m%d")
+        dim_date = DimDate(
+            date_key=snapshot_date_key,
+            full_date=dt.date(),
+            year=dt.year,
+            quarter=(dt.month - 1)//3 + 1,
+            month=dt.month,
+            month_name=dt.strftime("%B"),
+            week_of_year=int(dt.strftime("%U")),
+            day_of_month=dt.day,
+            day_of_week=dt.isoweekday(),
+            day_name=dt.strftime("%A"),
+            is_weekend=dt.isoweekday() >= 6
+        )
+        session.add(dim_date)
+        session.commit()
