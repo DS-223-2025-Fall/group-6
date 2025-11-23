@@ -7,3 +7,5 @@ venv/
 pgadmin_data/
 postgres_data/
 .vscode/
+.ipynb_checkpoints/
+.Trash-0/
