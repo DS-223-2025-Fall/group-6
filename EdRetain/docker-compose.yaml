@@ -98,7 +98,7 @@ services:
   ds:
     container_name: ds
     build:
-      context: ./ds  # or ./notebook if that's where your Dockerfile is
+      context: ./ds  
     ports:
       - 8888:8888
     volumes:
