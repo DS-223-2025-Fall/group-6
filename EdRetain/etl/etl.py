@@ -29,6 +29,45 @@ NUM_CHANNELS = 4
 NUM_DAYS_HISTORY = 90
 NUM_INTERACTIONS = 2000
 
+logger.info("\n🔧 Step 1: Resetting database schema...")
+
+try:
+    with engine.begin() as conn:
+        # Drop and recreate schema
+        conn.execute(text("DROP SCHEMA public CASCADE"))
+        conn.execute(text("CREATE SCHEMA public"))
+        conn.execute(text("GRANT ALL ON SCHEMA public TO postgres"))
+        conn.execute(text("GRANT ALL ON SCHEMA public TO public"))
+    
+    logger.info("Schema reset complete")
+except Exception as e:
+    logger.error(f"Failed to reset schema: {e}")
+    raise
+
+# Create all tables
+logger.info("\nCreating all tables...")
+
+try:
+    Base.metadata.create_all(engine)
+    
+    with engine.connect() as conn:
+        result = conn.execute(text("""
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = 'public'
+            ORDER BY table_name
+        """))
+        tables = [row[0] for row in result]
+    
+    logger.info(f"Created {len(tables)} tables:")
+    for table in tables:
+        logger.info(f"  - {table}")
+        
+except Exception as e:
+    logger.error(f"Failed to create tables: {e}")
+    raise
+logger.info("\nGenerating and loading data...")
+
 # Generate and save data
 logger.info("Generating date dimension...")
 start_date = datetime.now() - timedelta(days=NUM_DAYS_HISTORY)
@@ -84,6 +123,7 @@ for interaction_id in range(1, NUM_INTERACTIONS + 1):
     )
 interactions_df = pd.DataFrame(interactions)
 interactions_df.to_csv("data/fact_campaign_interaction.csv", index=False)
+
 
 # Utility function to load CSV into DB
 def load_csv_to_table(table_name: str, csv_path: str) -> None:
