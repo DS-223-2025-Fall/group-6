@@ -3,9 +3,17 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+<<<<<<< HEAD
+.vscode
+postgres_data/
+.ipynb_checkpoints/
+.Trash-0/
+pgadmin_data/
+=======
 venv/
 pgadmin_data/
 postgres_data/
 .vscode/
 .ipynb_checkpoints/
 .Trash-0/
+>>>>>>> main
