@@ -2,11 +2,12 @@
 Database Configuration
 """
 
-import sqlalchemy as sql
+from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base
 import sqlalchemy.orm as orm
 from dotenv import load_dotenv
 import os
+from sqlalchemy.ext.declarative import declarative_base
 
 
 def get_db():
@@ -31,7 +32,10 @@ DATABASE_URL = os.getenv(
 )
 
 # Create the SQLAlchemy engine (will always receive a string now)
-engine = sql.create_engine(DATABASE_URL)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Create the SQLAlchemy engine
+engine = create_engine(DATABASE_URL)
 
 # Base class for declarative models (SQLAlchemy 2.0 style)
 Base = declarative_base()
