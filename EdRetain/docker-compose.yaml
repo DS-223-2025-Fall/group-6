@@ -5,7 +5,7 @@ services:
     image: postgres:17
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5432
     environment: 
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
@@ -43,41 +43,64 @@ services:
     depends_on: 
       db:
         condition: service_healthy
+    env_file:
+      - .env
     healthcheck:
       test: "exit 0"
-  # api:
-  #   build:
-  #     context: ./api
-  #     dockerfile: Dockerfile
-  #   # command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn main:app --host 0.0.0.0'
-  #   volumes:
-  #     - ./api:/api
-  #   ports:
-  #     - 8008:8000
-  #   environment:
-  #     - DATABASE_URL=${DATABASE_URL}
-  #   depends_on:
-  #     - db
 
-  # # app:
-  # #   container_name: streamlit_app
-  # #   build:
-  # #     context: ./app
-  # #     dockerfile: Dockerfile
-  # #   volumes:
-  # #     - ./app:/app
-  # #   ports:
-  # #     - 8501:8501
-  # #   environment:
-  # #     - API_URL=http://api:8000
-  # #   depends_on:
-  # #     - api
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    # command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn main:app --host 0.0.0.0'
+    volumes:
+      - ./api:/api
+    ports:
+      - 8008:8000
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
+
+  app:
+    container_name: streamlit_app
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - 8501:8501
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+
+
+  # ds:
+  #   container_name: ds
+  #   build:
+  #     context: ./ds
+  #   volumes:
+  #     - ./ds:/ds                
+  #     - ./etl:/etl
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #     # etl:
+  #     #   condition: service_healthy
+  #   healthcheck:
+  #     test: "exit 0"
+  #   env_file:
+  #     - .env
 
 
   ds:
     container_name: ds
     build:
-      context: ./ds
+      context: ./ds  
+    ports:
+      - 8888:8888
     volumes:
       - ./ds:/ds                
       - ./etl:/etl
@@ -85,6 +108,9 @@ services:
       db:
         condition: service_healthy
     healthcheck:
-      test: "exit 0"
+      test: ["CMD", "curl", "-f", "http://localhost:8888/tree", "||", "exit", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     env_file:
       - .env

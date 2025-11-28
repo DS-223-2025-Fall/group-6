@@ -1,20 +1,24 @@
+# filepath: myapp/notebook/Dockerfile
 FROM python:3.12-slim-bullseye
 
-# Install system dependencies for psycopg2
 RUN apt-get update && apt-get install -y \
-    libpq-dev \
+    build-essential libpq-dev libfreetype6-dev libpng-dev libjpeg-dev \
+    libblas-dev liblapack-dev gfortran \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /ds
 
-# Copy requirements and install dependencies
-COPY requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+# Copy requirements file and install dependencies
+COPY requirements.txt requirements.txt 
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
 
-# Copy the ds project files
+# Copy the rest of the application code
 COPY . .
 
-# Run the script
-CMD ["python", "ds_models.py"]
+# Expose port 8888 for Jupyter Notebook
+EXPOSE 8888
+
+# Start Jupyter Notebook server
+CMD ["bash", "-c", "python ds_models.py & jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=''"]
