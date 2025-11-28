@@ -6,11 +6,19 @@ from sqlalchemy.orm import Session
 from Database.models import DimDate
 from datetime import datetime
 
+<<<<<<< HEAD
 
 def load_user_activity_and_subscription_dfs():
     """
     Load fact_user_daily_activity and dim_subscription_plan tables into pandas DataFrames.
     Merge to get subscription pricing information.
+=======
+def load_user_activity_and_subscription_dfs():
+    """
+    Load fact_user_daily_activity and dim_subscription_plan tables into pandas DataFrames.
+    Merge on subscription_plan_key to get base_price for monetary calculation.
+    Returns merged DataFrame with necessary columns.
+>>>>>>> main
     """
     with engine.connect() as conn:
         # Load fact_user_daily_activity
@@ -20,16 +28,26 @@ def load_user_activity_and_subscription_dfs():
 
     logger.info(f"[load_user_activity_and_subscription_dfs] Loaded {len(activity_df)} activity rows and {len(subscription_df)} subscription rows")
 
+<<<<<<< HEAD
     # Merge to get base_price and billing_cycle for each activity record
     merged_df = pd.merge(
         activity_df,
         subscription_df[['subscription_plan_key', 'base_price', 'billing_cycle']],
         on='subscription_plan_key',
+=======
+    # Merge to get base_price for each user activity row
+    merged_df = pd.merge(
+        activity_df,
+        subscription_df[['subscription_plan_key', 'base_price']],
+        left_on='subscription_plan_key',
+        right_on='subscription_plan_key',
+>>>>>>> main
         how='left'
     )
 
     return merged_df
 
+<<<<<<< HEAD
 
 def calculate_total_lifetime_revenue(merged_df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -111,6 +129,15 @@ def calculate_total_lifetime_revenue(merged_df: pd.DataFrame) -> pd.DataFrame:
 def save_snapshot_to_db(snapshot_df: pd.DataFrame, table_name: str = "fact_user_analytics_snapshot"):
     """
     Save the final user analytics snapshot DataFrame to the database.
+=======
+def save_snapshot_to_db(snapshot_df: pd.DataFrame, table_name: str = "fact_user_analytics_snapshot"):
+    """
+    Save the final user analytics snapshot DataFrame (with RFM/KMeans/CLV/churn) to the DB.
+
+    Parameters:
+    - snapshot_df: DataFrame with columns matching your snapshot table schema
+    - table_name: Target table name (default = "fact_user_analytics_snapshot")
+>>>>>>> main
     """
     try:
         with engine.begin() as conn:
@@ -119,6 +146,7 @@ def save_snapshot_to_db(snapshot_df: pd.DataFrame, table_name: str = "fact_user_
     except Exception as e:
         logger.error(f"Error saving snapshot to database table {table_name}: {e}")
 
+<<<<<<< HEAD
 def save_dashboard_metrics_to_db(metrics_dict: dict):
     """
     Save dashboard KPIs to database.
@@ -150,6 +178,8 @@ def save_dashboard_metrics_to_db(metrics_dict: dict):
         logger.error(f"Error saving dashboard metrics to database: {e}")
         raise
 
+=======
+>>>>>>> main
 def ensure_snapshot_date(session: Session, snapshot_date_key: int):
     exists = session.query(DimDate).filter_by(date_key=snapshot_date_key).first()
     if not exists:
@@ -168,4 +198,8 @@ def ensure_snapshot_date(session: Session, snapshot_date_key: int):
             is_weekend=dt.isoweekday() >= 6
         )
         session.add(dim_date)
+<<<<<<< HEAD
         session.commit()
+=======
+        session.commit()
+>>>>>>> main

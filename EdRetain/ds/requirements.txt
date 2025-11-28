@@ -8,6 +8,7 @@ numpy>=1.24,<2.1
 psycopg2-binary==2.9.10
 python-dateutil==2.9.0.post0
 pytz==2024.2
+<<<<<<< HEAD
 Faker>=20.0.0
 loguru>=0.7
 
@@ -27,5 +28,10 @@ statsmodels>=0.14.0
 # Type Hints & Standards
 typing_extensions==4.12.2
 six==1.16.0
+=======
+six==1.16.0
+SQLAlchemy==2.0.36
+typing_extensions==4.12.2
+>>>>>>> main
 tzdata==2024.2
 jupyter
