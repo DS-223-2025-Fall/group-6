@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 .env
 .vscode
+postgres_data/
+.ipynb_checkpoints/
+.Trash-0/
+pgadmin_data/
