@@ -1,4 +1,5 @@
 user_key,user_id_nk,signup_date_key,birth_date,gender,country,city,user_type,acquisition_channel,initial_plan_key,is_premium_ever,current_status,created_at,updated_at
+<<<<<<< Updated upstream
 1,USER_000001,20241001,1956-04-17,Female,Iraq,North Erika,Professional,Social Media,1,False,Inactive,2024-10-01,2024-10-24 13:45:15.397395
 2,USER_000002,20221130,1996-09-12,Female,New Caledonia,Mariemouth,Individual,Social Media,1,False,Active,2022-11-30,2025-02-17 09:45:48.738283
 3,USER_000003,20250325,1991-09-02,Male,Kazakhstan,Goodmanstad,Individual,Referral,4,True,Active,2025-03-25,2025-09-12 03:00:31.156639
@@ -999,3 +1000,1005 @@ user_key,user_id_nk,signup_date_key,birth_date,gender,country,city,user_type,acq
 998,USER_000998,20241024,1991-06-13,Male,Kuwait,North Theresa,Individual,Organic Search,2,False,Paused,2024-10-24,2025-05-01 04:20:54.820837
 999,USER_000999,20231224,2000-09-28,Female,Philippines,Meyermouth,Professional,Referral,4,True,Active,2023-12-24,2025-02-04 11:41:35.703455
 1000,USER_001000,20241203,1957-01-02,Male,Sierra Leone,Ramirezchester,Student,Referral,2,True,Downgraded,2024-12-03,2025-09-12 14:42:27.149888
+=======
+1,USER_000001,20230811,1964-12-27,Male,Spain,West Carrie,Professional,Email Campaign,2,True,Active,2023-08-11,2023-08-25 05:35:29.666253
+2,USER_000002,20250309,1960-09-08,Female,Cote d'Ivoire,Tammybury,Student,Email Campaign,3,False,Active,2025-03-09,2025-10-22 07:21:09.135791
+3,USER_000003,20250210,2008-01-25,Female,Cuba,West Amber,Individual,Social Media,3,False,Cancelled,2025-02-10,2025-06-01 19:24:18.232509
+4,USER_000004,20250619,1983-03-08,Male,Micronesia,Cookstad,Individual,Email Campaign,2,False,Paused,2025-06-19,2025-07-11 07:13:08.694951
+5,USER_000005,20240815,1970-07-24,Female,Northern Mariana Islands,Port Amyland,Individual,Organic Search,5,True,Active,2024-08-15,2025-02-11 16:45:36.262900
+6,USER_000006,20250314,1990-10-31,Female,Japan,North Joshuaton,Student,Paid Ads,1,False,Inactive,2025-03-14,2025-10-22 10:00:08.596225
+7,USER_000007,20221207,1955-04-21,Female,Latvia,New Jackiestad,Individual,Paid Ads,5,True,Active,2022-12-07,2025-06-21 06:06:46.311827
+8,USER_000008,20231208,1997-06-17,Female,Mauritius,Lauratown,Student,Email Campaign,5,True,Cancelled,2023-12-08,2024-08-14 05:24:20.788567
+9,USER_000009,20250505,1971-03-31,Male,Nauru,Joyceland,Student,Referral,1,False,Churned,2025-05-05,2025-05-06 05:09:18.026806
+10,USER_000010,20231222,1984-02-28,Male,Bulgaria,South Donald,Professional,Paid Ads,1,False,Inactive,2023-12-22,2025-11-23 16:46:44.559284
+11,USER_000011,20231124,1956-04-25,Female,Burundi,Jennifermouth,Individual,Referral,3,True,Cancelled,2023-11-24,2025-10-17 15:30:10.246145
+12,USER_000012,20221216,1982-09-27,Female,Morocco,Walterstown,Student,Email Campaign,5,True,Cancelled,2022-12-16,2023-06-04 13:01:05.188124
+13,USER_000013,20230815,1995-12-13,Female,Tokelau,South Andrewshire,Student,Organic Search,4,True,Active,2023-08-15,2023-12-31 01:16:17.828977
+14,USER_000014,20230926,1974-03-23,Male,Turkey,Martintown,Student,Paid Ads,4,True,Active,2023-09-26,2025-10-10 21:13:29.178204
+15,USER_000015,20240626,1990-08-16,Male,Grenada,Lake Jessica,Student,Email Campaign,4,True,Active,2024-06-26,2025-05-16 10:24:23.534534
+16,USER_000016,20240310,1975-01-27,Male,Solomon Islands,West Toddburgh,Student,Referral,2,True,Cancelled,2024-03-10,2024-11-14 03:46:29.149607
+17,USER_000017,20240601,1961-10-12,Female,Swaziland,Henryville,Student,Organic Search,4,True,Active,2024-06-01,2024-08-25 05:06:15.425151
+18,USER_000018,20241112,2006-06-28,Male,Ireland,Lunashire,Student,Email Campaign,2,False,Active,2024-11-12,2025-11-27 01:05:40.086940
+19,USER_000019,20230330,1986-02-04,Female,Trinidad and Tobago,Smithton,Individual,Email Campaign,4,True,Downgraded,2023-03-30,2024-11-23 08:47:13.682949
+20,USER_000020,20240313,2009-07-18,Female,Haiti,Jonesville,Student,Email Campaign,2,False,Active,2024-03-13,2024-08-13 12:30:13.994638
+21,USER_000021,20231123,1958-01-28,Female,Croatia,New Lindaland,Professional,Social Media,4,True,Downgraded,2023-11-23,2024-09-07 21:19:56.214214
+22,USER_000022,20250703,2008-12-22,Female,Angola,Hansenmouth,Professional,Paid Ads,4,True,Active,2025-07-03,2025-08-03 11:21:51.674431
+23,USER_000023,20230428,1976-09-09,Female,Mexico,Hooverview,Individual,Social Media,3,True,Active,2023-04-28,2023-09-08 22:57:28.215286
+24,USER_000024,20250419,1964-03-18,Male,Papua New Guinea,New Martha,Student,Email Campaign,5,True,Cancelled,2025-04-19,2025-05-27 21:10:55.093806
+25,USER_000025,20230701,1960-02-28,Male,Mayotte,Watkinsfort,Individual,Organic Search,5,True,Paused,2023-07-01,2023-07-14 12:03:26.619505
+26,USER_000026,20240513,1956-08-18,Male,Guernsey,Port William,Student,Referral,3,True,Cancelled,2024-05-13,2025-05-13 05:49:39.374311
+27,USER_000027,20231008,1970-12-01,Male,Paraguay,Gravesville,Individual,Email Campaign,3,False,Active,2023-10-08,2025-08-22 11:53:31.757261
+28,USER_000028,20240210,1993-12-12,Male,Syrian Arab Republic,Zimmermanport,Student,Referral,4,True,Downgraded,2024-02-10,2024-09-19 00:18:28.306040
+29,USER_000029,20221217,1982-11-08,Male,France,Spearsfort,Individual,Organic Search,1,False,Active,2022-12-17,2024-01-01 19:25:32.792212
+30,USER_000030,20250904,1965-03-16,Female,France,North Jasonfort,Individual,Social Media,5,True,Downgraded,2025-09-04,2025-11-05 08:08:10.586327
+31,USER_000031,20250618,1971-01-31,Male,Hungary,New James,Professional,Paid Ads,1,False,Inactive,2025-06-18,2025-08-19 20:39:26.251720
+32,USER_000032,20230225,2001-06-25,Female,Saint Pierre and Miquelon,East Christopherfurt,Student,Organic Search,2,True,Downgraded,2023-02-25,2023-11-07 17:56:25.102017
+33,USER_000033,20231112,1961-04-22,Female,Thailand,West Eric,Professional,Organic Search,4,True,Active,2023-11-12,2024-09-07 19:43:31.644430
+34,USER_000034,20240701,1995-04-25,Female,Kyrgyz Republic,Barkerfurt,Individual,Social Media,2,True,Paused,2024-07-01,2025-08-29 06:30:31.099700
+35,USER_000035,20221202,1984-07-02,Female,Israel,Denisechester,Student,Referral,2,False,Cancelled,2022-12-02,2023-03-06 11:22:29.881804
+36,USER_000036,20230915,1955-07-20,Female,Honduras,East Daniel,Student,Email Campaign,2,True,Downgraded,2023-09-15,2024-11-15 10:11:32.020282
+37,USER_000037,20230802,1971-08-23,Female,Bulgaria,Debraburgh,Individual,Paid Ads,5,True,Active,2023-08-02,2024-09-06 11:20:12.187912
+38,USER_000038,20250416,1988-06-19,Female,Bosnia and Herzegovina,North Nathan,Individual,Paid Ads,3,False,Cancelled,2025-04-16,2025-09-22 19:34:04.465802
+39,USER_000039,20250626,1963-06-27,Female,Botswana,North Alexanderstad,Professional,Social Media,2,False,Cancelled,2025-06-26,2025-11-06 08:55:21.670949
+40,USER_000040,20240416,1995-07-08,Male,Bhutan,East Paulberg,Student,Social Media,5,True,Cancelled,2024-04-16,2025-10-02 13:25:52.053544
+41,USER_000041,20250714,1987-12-10,Female,Uruguay,Lake Vickie,Individual,Organic Search,4,True,Active,2025-07-14,2025-08-15 17:08:34.335449
+42,USER_000042,20240405,1972-04-08,Female,Montserrat,New Martinshire,Student,Paid Ads,1,False,Churned,2024-04-05,2024-08-27 09:40:36.369104
+43,USER_000043,20230701,1961-10-02,Male,Mozambique,South Christopher,Student,Social Media,2,True,Active,2023-07-01,2025-06-14 11:21:48.530769
+44,USER_000044,20240805,1981-02-02,Male,Ghana,Morrisonhaven,Individual,Email Campaign,3,False,Active,2024-08-05,2024-09-04 11:51:32.123646
+45,USER_000045,20241216,1974-07-10,Female,Saint Lucia,Port Peter,Professional,Email Campaign,2,False,Active,2024-12-16,2025-05-06 20:43:02.187183
+46,USER_000046,20231122,1969-01-31,Male,Guinea-Bissau,South Andrew,Individual,Paid Ads,1,False,Inactive,2023-11-22,2024-04-01 00:03:36.484652
+47,USER_000047,20240529,1985-04-04,Male,Libyan Arab Jamahiriya,Patrickmouth,Professional,Email Campaign,5,True,Cancelled,2024-05-29,2024-10-01 23:08:43.635861
+48,USER_000048,20240318,2001-01-06,Male,Albania,Port Robinstad,Individual,Referral,5,True,Paused,2024-03-18,2025-07-23 00:27:28.568593
+49,USER_000049,20241025,1977-10-11,Male,Benin,East Jamiemouth,Professional,Paid Ads,1,False,Churned,2024-10-25,2025-03-27 15:59:08.333572
+50,USER_000050,20250620,1987-09-23,Male,Mongolia,Billfort,Professional,Social Media,5,True,Active,2025-06-20,2025-10-15 10:03:44.596531
+51,USER_000051,20231028,1964-11-27,Male,Iceland,Rodriguezchester,Professional,Referral,2,True,Active,2023-10-28,2024-04-03 20:40:24.435258
+52,USER_000052,20240919,1997-10-04,Male,Palestinian Territory,Sarahshire,Professional,Referral,5,True,Active,2024-09-19,2024-10-04 11:19:09.590780
+53,USER_000053,20250530,1994-04-12,Male,Swaziland,Lake Melissaberg,Student,Organic Search,2,True,Active,2025-05-30,2025-11-08 13:10:12.263568
+54,USER_000054,20250525,1968-08-21,Female,Lesotho,East Daniel,Individual,Organic Search,3,False,Active,2025-05-25,2025-07-12 17:58:19.756948
+55,USER_000055,20240414,1966-01-31,Male,Benin,Davidmouth,Professional,Paid Ads,5,True,Active,2024-04-14,2025-04-11 18:14:05.596480
+56,USER_000056,20240413,1980-08-27,Female,Uganda,Johnsonshire,Student,Social Media,3,False,Cancelled,2024-04-13,2025-06-20 10:24:06.498167
+57,USER_000057,20240525,2007-06-12,Male,Chad,East Tinaborough,Individual,Social Media,2,False,Active,2024-05-25,2025-06-04 02:40:41.603290
+58,USER_000058,20231030,1962-10-01,Female,Bhutan,Sancheztown,Individual,Organic Search,4,True,Active,2023-10-30,2024-11-29 15:23:00.239673
+59,USER_000059,20221217,1977-11-22,Female,Turkmenistan,Thompsonburgh,Student,Referral,3,False,Paused,2022-12-17,2023-02-03 06:51:14.537878
+60,USER_000060,20230924,1981-01-11,Male,Bermuda,Joyfort,Student,Social Media,1,False,Churned,2023-09-24,2025-01-10 03:25:18.110363
+61,USER_000061,20230406,1976-10-28,Male,Palestinian Territory,Potterberg,Professional,Email Campaign,5,True,Downgraded,2023-04-06,2023-05-01 11:22:53.170037
+62,USER_000062,20231013,1981-08-11,Female,Lao People's Democratic Republic,New Erica,Student,Referral,4,True,Active,2023-10-13,2025-10-03 19:06:38.080835
+63,USER_000063,20230808,2000-10-01,Male,Mozambique,Lake Vanessa,Student,Email Campaign,4,True,Active,2023-08-08,2024-09-22 16:30:20.288513
+64,USER_000064,20250515,1969-04-10,Female,Palestinian Territory,South Juliafort,Professional,Referral,3,True,Downgraded,2025-05-15,2025-05-16 07:52:39.922992
+65,USER_000065,20240904,1973-01-17,Female,Tokelau,New Natalie,Individual,Paid Ads,2,False,Cancelled,2024-09-04,2025-05-28 15:16:03.020782
+66,USER_000066,20230309,1984-04-11,Male,Lebanon,Tranport,Student,Referral,1,False,Inactive,2023-03-09,2023-05-01 02:58:38.199582
+67,USER_000067,20240707,1999-10-20,Female,Aruba,South Brian,Individual,Email Campaign,3,True,Active,2024-07-07,2025-06-19 01:52:48.001055
+68,USER_000068,20250917,1986-06-02,Male,Zambia,Valerieburgh,Individual,Email Campaign,4,True,Active,2025-09-17,2025-09-28 22:32:51.930786
+69,USER_000069,20250609,1973-09-10,Female,Paraguay,Stewarttown,Individual,Social Media,4,True,Active,2025-06-09,2025-09-01 12:40:16.970286
+70,USER_000070,20250130,1959-05-25,Female,Congo,Mayomouth,Individual,Social Media,1,False,Active,2025-01-30,2025-11-03 05:27:49.144085
+71,USER_000071,20230430,1992-07-18,Male,Lebanon,South Saraberg,Student,Email Campaign,1,False,Churned,2023-04-30,2025-10-31 23:53:35.922659
+72,USER_000072,20231217,1963-07-03,Male,Belgium,South Daniellemouth,Student,Paid Ads,2,False,Cancelled,2023-12-17,2025-08-05 08:37:03.841232
+73,USER_000073,20241129,2009-06-24,Male,French Southern Territories,West Meghanchester,Professional,Organic Search,4,True,Cancelled,2024-11-29,2025-06-26 13:20:51.733054
+74,USER_000074,20230922,1959-01-10,Male,Uzbekistan,Craigland,Individual,Social Media,1,False,Churned,2023-09-22,2023-11-05 07:33:43.426524
+75,USER_000075,20250401,1997-11-20,Female,Tanzania,New Emma,Student,Social Media,4,True,Active,2025-04-01,2025-11-06 07:54:02.434293
+76,USER_000076,20230618,1969-10-28,Male,Korea,Danielfort,Individual,Organic Search,3,False,Cancelled,2023-06-18,2025-02-07 13:27:23.138382
+77,USER_000077,20230506,2000-10-02,Female,Liberia,East Mikeland,Individual,Social Media,1,False,Inactive,2023-05-06,2023-10-22 12:24:24.802211
+78,USER_000078,20230629,1959-07-10,Female,Grenada,Port Jason,Individual,Email Campaign,1,False,Churned,2023-06-29,2023-10-17 04:19:26.066901
+79,USER_000079,20230213,2007-10-20,Male,Guam,East Heather,Individual,Paid Ads,1,False,Inactive,2023-02-13,2024-07-03 15:55:02.474521
+80,USER_000080,20250214,1975-11-29,Male,Botswana,Campbellchester,Professional,Organic Search,4,True,Active,2025-02-14,2025-03-27 10:20:57.500557
+81,USER_000081,20250115,1984-09-16,Female,Nicaragua,Port Waltermouth,Student,Email Campaign,4,True,Cancelled,2025-01-15,2025-01-18 23:02:01.709711
+82,USER_000082,20250126,1960-02-10,Male,Zambia,Eduardoside,Professional,Social Media,1,False,Churned,2025-01-26,2025-03-25 06:38:50.206298
+83,USER_000083,20241223,1990-05-27,Male,Tuvalu,New Jose,Student,Organic Search,4,True,Active,2024-12-23,2025-04-18 18:25:25.332886
+84,USER_000084,20241117,1989-02-22,Female,Iceland,Lake Mark,Individual,Organic Search,3,False,Cancelled,2024-11-17,2025-07-09 01:59:10.622352
+85,USER_000085,20230220,1994-03-31,Female,Australia,Rachelside,Individual,Referral,1,False,Active,2023-02-20,2023-04-10 07:55:40.004191
+86,USER_000086,20240802,2008-11-15,Female,Saint Martin,Gonzalezmouth,Student,Email Campaign,3,False,Active,2024-08-02,2024-11-30 21:54:12.975692
+87,USER_000087,20221204,1988-06-03,Male,Paraguay,East Melissachester,Individual,Organic Search,3,False,Cancelled,2022-12-04,2025-09-22 10:56:53.032209
+88,USER_000088,20230101,2007-07-26,Male,Tuvalu,Lake Markshire,Individual,Paid Ads,1,False,Churned,2023-01-01,2025-02-12 14:25:29.461796
+89,USER_000089,20240424,1957-12-05,Female,Ecuador,Christinafurt,Professional,Email Campaign,1,False,Inactive,2024-04-24,2024-11-23 18:53:51.340716
+90,USER_000090,20231003,2004-07-18,Male,Estonia,Johnton,Student,Social Media,1,False,Active,2023-10-03,2024-06-14 22:35:12.674420
+91,USER_000091,20241206,1979-04-13,Female,French Guiana,East Bryan,Professional,Social Media,3,False,Active,2024-12-06,2025-02-26 05:49:39.715039
+92,USER_000092,20240430,1964-05-15,Female,Aruba,Benjaminchester,Professional,Email Campaign,4,True,Active,2024-04-30,2024-09-03 13:49:41.785331
+93,USER_000093,20221225,1985-05-09,Female,Mauritania,Yuborough,Individual,Organic Search,5,True,Active,2022-12-25,2025-02-19 13:54:22.498881
+94,USER_000094,20221217,1968-09-28,Female,Martinique,Khanville,Student,Organic Search,3,True,Active,2022-12-17,2025-11-21 07:46:12.187254
+95,USER_000095,20251112,1983-03-10,Female,Moldova,Jamesfurt,Professional,Paid Ads,4,True,Downgraded,2025-11-12,2025-11-15 11:02:35.462029
+96,USER_000096,20230816,1989-02-01,Female,Kazakhstan,Jasonview,Individual,Referral,4,True,Active,2023-08-16,2025-04-12 15:18:05.770270
+97,USER_000097,20250613,1967-08-24,Female,Saint Kitts and Nevis,New Ryan,Individual,Social Media,4,True,Cancelled,2025-06-13,2025-11-08 21:58:48.244724
+98,USER_000098,20241030,1957-01-06,Female,Albania,Baxterberg,Student,Social Media,1,False,Inactive,2024-10-30,2025-09-11 07:27:44.474090
+99,USER_000099,20240328,1980-03-19,Male,Guatemala,Lake Bryan,Professional,Email Campaign,2,False,Cancelled,2024-03-28,2024-03-30 00:30:09.161107
+100,USER_000100,20250423,1991-01-11,Female,Iraq,Laurentown,Student,Organic Search,2,True,Cancelled,2025-04-23,2025-09-27 07:55:59.085443
+101,USER_000101,20250415,1995-04-10,Female,Pitcairn Islands,Montesfurt,Student,Paid Ads,4,True,Active,2025-04-15,2025-07-11 07:57:15.677226
+102,USER_000102,20230809,1955-05-21,Male,Moldova,Candaceburgh,Professional,Social Media,2,False,Active,2023-08-09,2025-05-03 10:13:39.758632
+103,USER_000103,20230623,1976-08-26,Female,Mali,West Janetfort,Professional,Paid Ads,4,True,Downgraded,2023-06-23,2024-12-14 17:06:52.107259
+104,USER_000104,20241201,2002-05-14,Female,Tunisia,South Timothy,Individual,Social Media,4,True,Active,2024-12-01,2025-08-06 16:44:40.561218
+105,USER_000105,20251110,1979-03-10,Male,Marshall Islands,Gamblestad,Professional,Organic Search,3,True,Active,2025-11-10,2025-11-22 19:46:08.838612
+106,USER_000106,20250630,2009-05-30,Male,Netherlands Antilles,Alexanderfort,Professional,Paid Ads,3,False,Active,2025-06-30,2025-11-23 20:17:14.483863
+107,USER_000107,20250527,1982-12-26,Male,Saint Kitts and Nevis,Port Jimmystad,Student,Referral,3,True,Cancelled,2025-05-27,2025-06-07 10:22:09.271029
+108,USER_000108,20240103,1987-05-24,Female,Mexico,Hoffmanstad,Individual,Organic Search,5,True,Active,2024-01-03,2025-10-13 09:18:29.380630
+109,USER_000109,20231002,2006-03-14,Female,Belarus,East Candicemouth,Individual,Paid Ads,1,False,Inactive,2023-10-02,2024-06-10 04:19:13.308592
+110,USER_000110,20240214,1980-03-22,Male,French Polynesia,Chavezmouth,Professional,Paid Ads,5,True,Active,2024-02-14,2025-02-24 03:55:53.813982
+111,USER_000111,20250303,1970-11-06,Female,Saint Pierre and Miquelon,Briggsmouth,Student,Social Media,5,True,Paused,2025-03-03,2025-06-30 22:41:01.021233
+112,USER_000112,20230809,1954-12-24,Male,Bulgaria,New Patricia,Individual,Social Media,4,True,Paused,2023-08-09,2023-12-03 00:38:43.059057
+113,USER_000113,20240729,1993-12-31,Male,Saint Martin,Byrdmouth,Student,Organic Search,4,True,Paused,2024-07-29,2025-06-21 13:27:12.956968
+114,USER_000114,20230514,1970-05-30,Male,Hong Kong,Sandersside,Individual,Social Media,3,False,Active,2023-05-14,2024-02-03 16:29:13.895739
+115,USER_000115,20240905,1980-05-05,Male,Cyprus,Benjaminfort,Student,Organic Search,5,True,Active,2024-09-05,2025-01-19 22:10:49.819026
+116,USER_000116,20230925,1962-07-15,Male,Greenland,East Anthony,Student,Email Campaign,4,True,Downgraded,2023-09-25,2024-01-13 05:59:51.089066
+117,USER_000117,20230322,1994-05-16,Female,Sri Lanka,Sarahland,Student,Referral,5,True,Paused,2023-03-22,2023-03-23 01:21:18.017971
+118,USER_000118,20241008,1990-10-10,Female,Bahamas,Williamsside,Professional,Email Campaign,2,True,Active,2024-10-08,2025-07-26 04:44:42.780108
+119,USER_000119,20250623,2003-06-12,Female,Madagascar,Russellmouth,Professional,Social Media,5,True,Cancelled,2025-06-23,2025-09-13 04:57:56.292161
+120,USER_000120,20240325,1992-06-18,Female,Saint Helena,Port Jenniferview,Student,Email Campaign,3,False,Active,2024-03-25,2024-11-01 23:39:37.165606
+121,USER_000121,20230808,1964-06-06,Male,Rwanda,East Danielletown,Individual,Paid Ads,5,True,Paused,2023-08-08,2024-07-29 00:29:07.878477
+122,USER_000122,20231226,1989-10-02,Female,Argentina,Torresland,Student,Social Media,5,True,Active,2023-12-26,2025-08-11 11:42:19.100233
+123,USER_000123,20250228,1995-07-15,Female,Rwanda,Lake Diana,Professional,Referral,2,False,Cancelled,2025-02-28,2025-03-25 09:05:44.671955
+124,USER_000124,20230408,1985-02-21,Male,Benin,Danielview,Professional,Organic Search,3,False,Active,2023-04-08,2025-10-07 21:55:38.170788
+125,USER_000125,20230525,1968-04-18,Male,Thailand,Ricemouth,Individual,Email Campaign,5,True,Active,2023-05-25,2024-11-20 21:16:23.440151
+126,USER_000126,20240109,1957-08-24,Male,Cote d'Ivoire,Adamfurt,Professional,Email Campaign,5,True,Downgraded,2024-01-09,2024-03-15 09:04:47.023498
+127,USER_000127,20250819,1990-08-25,Female,Myanmar,Alexandraberg,Individual,Referral,3,False,Active,2025-08-19,2025-10-03 18:23:56.591109
+128,USER_000128,20230123,1976-10-23,Female,Tajikistan,Lake Tracie,Student,Referral,2,False,Active,2023-01-23,2025-09-28 08:39:55.409585
+129,USER_000129,20240229,1985-07-29,Female,Tanzania,Michaelmouth,Individual,Email Campaign,4,True,Paused,2024-02-29,2025-01-14 13:31:45.297698
+130,USER_000130,20240323,1998-04-30,Male,Namibia,Kaylaberg,Professional,Social Media,1,False,Active,2024-03-23,2024-10-15 09:21:53.944484
+131,USER_000131,20251104,1984-06-19,Male,Ukraine,North Alicia,Student,Paid Ads,2,False,Active,2025-11-04,2025-11-10 20:06:53.156438
+132,USER_000132,20251118,1993-11-01,Female,Seychelles,South Wendyborough,Individual,Referral,5,True,Active,2025-11-18,2025-11-28 05:51:59.263371
+133,USER_000133,20251027,1983-02-25,Male,Finland,Roblesfurt,Student,Paid Ads,3,True,Active,2025-10-27,2025-11-28 02:20:54.165635
+134,USER_000134,20230528,1972-04-25,Female,Azerbaijan,Robertsport,Professional,Email Campaign,2,False,Active,2023-05-28,2024-08-22 08:26:04.809207
+135,USER_000135,20250710,1987-10-04,Male,Marshall Islands,Lake Danielle,Individual,Referral,5,True,Active,2025-07-10,2025-08-11 09:18:48.955395
+136,USER_000136,20230703,1997-12-08,Male,Barbados,South Keithton,Student,Referral,2,False,Active,2023-07-03,2023-11-25 04:28:43.627718
+137,USER_000137,20231117,1969-01-29,Male,Uruguay,Houstonchester,Individual,Social Media,3,False,Active,2023-11-17,2025-03-10 03:23:00.182341
+138,USER_000138,20231216,1984-09-05,Female,Turks and Caicos Islands,Port Davidview,Individual,Organic Search,3,False,Cancelled,2023-12-16,2024-07-12 12:06:40.357258
+139,USER_000139,20251124,1958-07-14,Male,Ethiopia,Youngfurt,Individual,Organic Search,2,True,Downgraded,2025-11-24,2025-11-27 14:50:07.893380
+140,USER_000140,20230601,1987-01-20,Female,Holy See (Vatican City State),Farrellstad,Student,Email Campaign,4,True,Paused,2023-06-01,2025-07-26 10:50:47.949416
+141,USER_000141,20240227,1998-07-21,Female,Austria,Brianmouth,Professional,Paid Ads,1,False,Active,2024-02-27,2025-10-03 14:15:16.581992
+142,USER_000142,20241128,1988-02-27,Male,Spain,West Brooke,Student,Paid Ads,5,True,Active,2024-11-28,2025-08-28 02:09:50.368652
+143,USER_000143,20241123,1997-04-03,Male,Niger,East Marissamouth,Individual,Email Campaign,2,False,Cancelled,2024-11-23,2025-10-29 20:09:07.630560
+144,USER_000144,20230413,2000-01-21,Male,Israel,South Tracyton,Student,Paid Ads,2,False,Active,2023-04-13,2024-07-11 19:43:08.083810
+145,USER_000145,20231215,1979-01-09,Male,Ethiopia,Sheltonland,Student,Referral,2,False,Paused,2023-12-15,2024-12-20 21:50:30.318018
+146,USER_000146,20251109,1991-08-28,Male,Nepal,Cherylbury,Individual,Referral,2,True,Downgraded,2025-11-09,2025-11-23 15:51:32.163168
+147,USER_000147,20250826,1992-02-27,Female,Georgia,Lake Ashley,Individual,Organic Search,4,True,Active,2025-08-26,2025-09-28 04:18:13.698965
+148,USER_000148,20250604,2008-05-15,Male,Lebanon,Ballmouth,Student,Organic Search,5,True,Paused,2025-06-04,2025-10-23 00:22:46.701255
+149,USER_000149,20231227,2008-11-20,Female,Mozambique,Scottchester,Individual,Email Campaign,1,True,Active,2023-12-27,2025-06-08 16:32:05.733738
+150,USER_000150,20250928,1990-07-13,Female,Tanzania,Port Albert,Individual,Organic Search,4,True,Active,2025-09-28,2025-10-29 04:16:01.741666
+151,USER_000151,20240118,1994-06-16,Female,Qatar,South Brittany,Individual,Social Media,4,True,Active,2024-01-18,2024-06-08 09:29:35.808268
+152,USER_000152,20240121,1985-04-22,Female,Azerbaijan,Maryborough,Student,Organic Search,4,True,Cancelled,2024-01-21,2024-09-21 19:30:05.950259
+153,USER_000153,20230706,2009-02-10,Female,Gabon,Lake Sarahburgh,Professional,Social Media,3,False,Paused,2023-07-06,2023-08-04 09:26:46.595424
+154,USER_000154,20240525,1973-08-06,Female,Lao People's Democratic Republic,Henryland,Individual,Referral,5,True,Active,2024-05-25,2024-06-29 15:45:07.032226
+155,USER_000155,20250911,1962-08-11,Female,Sweden,Lake Darrell,Individual,Organic Search,1,False,Active,2025-09-11,2025-09-15 01:54:29.475816
+156,USER_000156,20250131,1961-04-28,Female,Jamaica,Hunterport,Professional,Organic Search,5,True,Active,2025-01-31,2025-11-27 11:44:18.616189
+157,USER_000157,20240721,1975-05-13,Female,Uruguay,West Christianville,Student,Organic Search,2,False,Cancelled,2024-07-21,2025-02-01 08:58:24.605655
+158,USER_000158,20240527,1998-09-07,Female,Haiti,East Teresa,Professional,Referral,4,True,Active,2024-05-27,2024-06-02 11:25:13.069012
+159,USER_000159,20231229,1995-01-16,Female,Poland,Adrianborough,Individual,Social Media,5,True,Cancelled,2023-12-29,2024-08-26 09:34:59.130153
+160,USER_000160,20231022,1957-07-23,Female,Liberia,Port Christopher,Student,Email Campaign,2,False,Paused,2023-10-22,2024-03-22 12:44:57.721027
+161,USER_000161,20230607,1967-03-29,Female,Antigua and Barbuda,East Rebecca,Professional,Referral,5,True,Active,2023-06-07,2023-12-01 17:55:23.561017
+162,USER_000162,20230126,1981-05-28,Male,Georgia,Meghanshire,Professional,Referral,1,False,Churned,2023-01-26,2025-04-21 04:24:52.780466
+163,USER_000163,20241006,1969-05-03,Male,Canada,North Anthony,Individual,Email Campaign,4,True,Cancelled,2024-10-06,2025-10-11 22:13:06.942547
+164,USER_000164,20251103,1974-10-14,Female,Namibia,Rogerstad,Professional,Referral,2,False,Active,2025-11-03,2025-11-20 19:06:10.047546
+165,USER_000165,20241128,2006-12-15,Male,Timor-Leste,Garciafurt,Professional,Paid Ads,5,True,Active,2024-11-28,2024-12-12 05:33:00.198501
+166,USER_000166,20240708,1996-01-29,Female,Poland,North Keithstad,Professional,Social Media,5,True,Active,2024-07-08,2025-02-28 20:34:09.068287
+167,USER_000167,20230101,1961-07-29,Female,Saint Barthelemy,Nolanville,Individual,Referral,5,True,Cancelled,2023-01-01,2024-01-08 03:52:27.752019
+168,USER_000168,20231026,1986-10-08,Male,Slovenia,Diazmouth,Individual,Organic Search,4,True,Active,2023-10-26,2025-09-30 19:42:03.077292
+169,USER_000169,20251113,1989-10-09,Female,Equatorial Guinea,Port William,Student,Organic Search,1,False,Inactive,2025-11-13,2025-11-13 01:27:41.546311
+170,USER_000170,20230824,1986-03-25,Female,Haiti,Greenview,Individual,Paid Ads,2,False,Cancelled,2023-08-24,2025-05-14 10:53:28.295119
+171,USER_000171,20230903,2003-08-27,Male,Latvia,North Edwardside,Student,Email Campaign,3,False,Active,2023-09-03,2024-10-04 07:51:09.787544
+172,USER_000172,20241004,1959-12-09,Female,Morocco,West Markchester,Professional,Organic Search,3,False,Active,2024-10-04,2024-12-30 20:50:15.778403
+173,USER_000173,20250505,1983-03-04,Female,Argentina,Martinborough,Student,Social Media,2,False,Cancelled,2025-05-05,2025-08-20 22:56:03.652570
+174,USER_000174,20251013,1960-04-23,Female,Malaysia,Brendaton,Professional,Referral,1,True,Downgraded,2025-10-13,2025-10-20 08:17:06.226990
+175,USER_000175,20230609,1975-01-07,Male,Solomon Islands,Saramouth,Professional,Email Campaign,5,True,Active,2023-06-09,2025-04-22 09:41:49.162888
+176,USER_000176,20251003,1967-09-06,Male,Czech Republic,Brandonburgh,Professional,Paid Ads,1,False,Inactive,2025-10-03,2025-11-19 22:50:41.479331
+177,USER_000177,20240125,1993-06-10,Female,Turkmenistan,Danielsport,Professional,Referral,4,True,Cancelled,2024-01-25,2025-02-02 13:10:10.962436
+178,USER_000178,20240811,1963-07-09,Female,Fiji,Richardchester,Student,Referral,5,True,Active,2024-08-11,2024-10-17 03:37:13.264393
+179,USER_000179,20240606,1992-09-02,Female,Comoros,West Brendanland,Student,Social Media,4,True,Cancelled,2024-06-06,2025-05-27 01:51:25.971919
+180,USER_000180,20240310,1987-06-28,Male,Burkina Faso,Montgomeryborough,Individual,Organic Search,1,False,Active,2024-03-10,2024-12-31 12:05:37.323245
+181,USER_000181,20241028,1955-12-11,Male,Kenya,Sanchezfurt,Professional,Email Campaign,3,True,Active,2024-10-28,2025-09-25 01:48:58.464988
+182,USER_000182,20240818,1979-11-07,Female,Qatar,Port Jeremy,Student,Organic Search,4,True,Active,2024-08-18,2025-06-04 04:05:01.451611
+183,USER_000183,20250801,2003-10-20,Female,Bangladesh,New Mark,Student,Social Media,4,True,Active,2025-08-01,2025-11-26 19:21:17.156855
+184,USER_000184,20250206,1993-10-06,Female,Malawi,East Dustin,Student,Organic Search,1,False,Churned,2025-02-06,2025-08-28 21:45:27.904632
+185,USER_000185,20240802,1962-11-28,Female,Nepal,Beasleychester,Professional,Organic Search,1,False,Inactive,2024-08-02,2025-03-28 07:50:09.120165
+186,USER_000186,20240125,1993-03-27,Female,Malaysia,Harrisview,Individual,Social Media,3,False,Active,2024-01-25,2024-05-24 03:22:04.184494
+187,USER_000187,20240209,2007-05-25,Female,Lebanon,East Michaelberg,Individual,Social Media,2,False,Cancelled,2024-02-09,2024-02-28 06:31:39.109895
+188,USER_000188,20231118,1984-06-25,Male,Nigeria,West Saraburgh,Professional,Organic Search,5,True,Paused,2023-11-18,2025-03-13 20:16:43.425676
+189,USER_000189,20231220,2007-04-22,Male,Yemen,Olsonberg,Professional,Referral,5,True,Active,2023-12-20,2025-09-10 23:07:58.447250
+190,USER_000190,20240403,1981-12-23,Female,North Macedonia,New Maria,Individual,Organic Search,2,False,Cancelled,2024-04-03,2024-04-28 12:13:29.825628
+191,USER_000191,20250605,1977-10-28,Female,Costa Rica,Port Rebeccaville,Individual,Social Media,3,True,Paused,2025-06-05,2025-08-29 17:52:59.379050
+192,USER_000192,20251026,2001-07-26,Female,Jersey,Strongport,Professional,Organic Search,2,False,Cancelled,2025-10-26,2025-10-28 00:02:17.841166
+193,USER_000193,20241206,1970-06-21,Female,Netherlands Antilles,West Brianchester,Individual,Social Media,5,True,Active,2024-12-06,2024-12-27 07:15:16.190725
+194,USER_000194,20231001,1988-11-23,Female,Antarctica (the territory South of 60 deg S),Lake Peterstad,Individual,Email Campaign,1,False,Active,2023-10-01,2024-12-16 20:13:42.508412
+195,USER_000195,20230828,1993-06-01,Male,Bahrain,Maciasberg,Individual,Social Media,4,True,Active,2023-08-28,2024-04-22 06:28:05.967330
+196,USER_000196,20230611,1963-12-25,Male,Ireland,Justinborough,Individual,Referral,1,False,Active,2023-06-11,2024-02-14 04:20:59.642027
+197,USER_000197,20241103,1963-09-24,Male,Ecuador,Brooksshire,Professional,Social Media,4,True,Active,2024-11-03,2025-07-07 22:34:29.251096
+198,USER_000198,20230115,1989-04-22,Male,French Southern Territories,Walkerton,Professional,Paid Ads,5,True,Active,2023-01-15,2023-09-18 00:57:00.675044
+199,USER_000199,20230909,1993-03-24,Female,Costa Rica,West Mikechester,Professional,Referral,4,True,Active,2023-09-09,2025-11-19 05:25:55.128861
+200,USER_000200,20240714,1984-12-23,Female,Micronesia,Lake Bruce,Student,Organic Search,1,False,Active,2024-07-14,2025-02-27 04:18:00.689785
+201,USER_000201,20240322,1975-02-27,Female,Russian Federation,Martinfort,Professional,Referral,3,False,Active,2024-03-22,2024-05-29 17:20:35.685520
+202,USER_000202,20251007,2005-12-09,Male,Bolivia,Port Samuelstad,Individual,Paid Ads,2,False,Cancelled,2025-10-07,2025-11-22 04:25:53.529091
+203,USER_000203,20241122,1991-07-22,Male,Hong Kong,Brittanyshire,Individual,Referral,1,False,Churned,2024-11-22,2025-06-08 01:16:20.040902
+204,USER_000204,20241113,1998-09-17,Female,Eritrea,Leeport,Professional,Paid Ads,5,True,Paused,2024-11-13,2025-05-16 02:09:27.003177
+205,USER_000205,20241207,1984-02-12,Female,Sri Lanka,Randallland,Individual,Organic Search,1,False,Active,2024-12-07,2025-06-07 10:40:09.201165
+206,USER_000206,20241101,1991-09-08,Male,Mexico,Lindaton,Professional,Social Media,4,True,Cancelled,2024-11-01,2025-03-10 10:20:09.868095
+207,USER_000207,20231010,1989-02-10,Male,Lesotho,Roberthaven,Individual,Organic Search,3,False,Cancelled,2023-10-10,2025-10-16 00:34:46.214928
+208,USER_000208,20250625,1999-12-11,Male,Western Sahara,Sarahburgh,Professional,Email Campaign,1,False,Active,2025-06-25,2025-09-23 22:01:53.602232
+209,USER_000209,20230907,1986-02-01,Male,Cocos (Keeling) Islands,Port Jamieberg,Professional,Organic Search,2,False,Cancelled,2023-09-07,2024-08-01 14:02:39.344655
+210,USER_000210,20240518,2007-12-20,Female,Serbia,West Sarahhaven,Student,Email Campaign,1,False,Active,2024-05-18,2025-09-05 12:00:29.916819
+211,USER_000211,20251008,1960-10-16,Female,Congo,Port Tyler,Individual,Paid Ads,3,False,Cancelled,2025-10-08,2025-11-06 22:37:49.376378
+212,USER_000212,20230217,1977-05-24,Female,Iran,Jenniferburgh,Individual,Email Campaign,3,True,Active,2023-02-17,2025-09-09 13:17:30.956439
+213,USER_000213,20251006,1979-08-05,Female,Bosnia and Herzegovina,Josephhaven,Student,Referral,3,False,Active,2025-10-06,2025-11-05 04:28:26.599770
+214,USER_000214,20230817,1992-03-09,Female,Sri Lanka,East Spencer,Individual,Email Campaign,2,True,Active,2023-08-17,2025-10-22 00:04:34.253202
+215,USER_000215,20240605,1996-07-30,Male,Iraq,Fernandezburgh,Professional,Email Campaign,2,False,Active,2024-06-05,2025-07-07 15:18:01.694361
+216,USER_000216,20250920,1984-02-18,Female,Maldives,Bartonchester,Individual,Social Media,5,True,Downgraded,2025-09-20,2025-10-13 21:34:35.416316
+217,USER_000217,20230114,2009-10-19,Male,Cambodia,Robertsland,Student,Paid Ads,1,False,Active,2023-01-14,2025-06-02 02:35:01.218688
+218,USER_000218,20251009,1957-12-22,Male,Christmas Island,West Lisaville,Individual,Social Media,3,False,Paused,2025-10-09,2025-11-09 08:47:56.496669
+219,USER_000219,20250202,1989-02-21,Male,Macao,East Wendyside,Professional,Referral,5,True,Cancelled,2025-02-02,2025-09-17 07:42:47.993063
+220,USER_000220,20240404,1983-04-12,Female,United Kingdom,Brianbury,Individual,Organic Search,1,False,Inactive,2024-04-04,2025-11-09 06:31:39.100542
+221,USER_000221,20231128,1989-11-21,Female,Oman,Woodsfurt,Individual,Social Media,1,False,Inactive,2023-11-28,2024-04-27 11:06:55.495828
+222,USER_000222,20250115,1976-02-11,Female,Honduras,Riverachester,Individual,Referral,2,False,Active,2025-01-15,2025-11-21 16:11:11.215894
+223,USER_000223,20231008,1969-02-16,Female,Congo,Bennettmouth,Professional,Referral,5,True,Downgraded,2023-10-08,2024-09-09 01:11:12.893186
+224,USER_000224,20250310,1962-10-24,Female,Saint Lucia,Charlestown,Student,Organic Search,1,False,Inactive,2025-03-10,2025-10-22 16:18:43.033306
+225,USER_000225,20241130,1957-12-07,Male,Niue,Castilloborough,Individual,Organic Search,4,True,Cancelled,2024-11-30,2025-07-25 08:50:54.074268
+226,USER_000226,20250819,1986-01-25,Male,Western Sahara,East Tammy,Individual,Referral,5,True,Active,2025-08-19,2025-10-19 08:57:21.713168
+227,USER_000227,20251030,1966-05-24,Male,Benin,Williamview,Student,Referral,5,True,Active,2025-10-30,2025-11-23 08:24:24.766682
+228,USER_000228,20240906,1971-07-19,Female,Mauritius,Clintonbury,Professional,Organic Search,5,True,Active,2024-09-06,2025-08-12 07:44:40.699848
+229,USER_000229,20230621,1967-01-19,Female,United Arab Emirates,New Michael,Professional,Social Media,2,False,Active,2023-06-21,2024-05-07 15:20:02.894829
+230,USER_000230,20240331,1996-01-16,Male,Gibraltar,South Lisa,Individual,Organic Search,1,False,Churned,2024-03-31,2024-10-04 12:52:12.479517
+231,USER_000231,20250718,1972-09-27,Male,Romania,Dorisberg,Individual,Paid Ads,2,False,Active,2025-07-18,2025-11-16 21:16:41.138377
+232,USER_000232,20251122,1974-03-25,Female,Bahrain,North Gloria,Student,Social Media,4,True,Active,2025-11-22,2025-11-27 11:07:26.991472
+233,USER_000233,20250603,2003-04-11,Female,Netherlands Antilles,West Madeline,Professional,Referral,1,True,Downgraded,2025-06-03,2025-11-19 17:07:24.676905
+234,USER_000234,20240421,1986-07-24,Female,Malawi,Franklinchester,Individual,Social Media,5,True,Cancelled,2024-04-21,2024-09-26 13:02:01.362460
+235,USER_000235,20230222,1976-05-03,Male,Malawi,North Isaac,Professional,Referral,4,True,Active,2023-02-22,2024-04-11 08:13:00.266088
+236,USER_000236,20231108,1967-09-06,Female,Gibraltar,East Danielle,Professional,Referral,5,True,Cancelled,2023-11-08,2025-07-28 09:38:57.152619
+237,USER_000237,20241021,1960-06-09,Female,Swaziland,Lake William,Individual,Email Campaign,3,False,Cancelled,2024-10-21,2025-02-28 18:57:35.535897
+238,USER_000238,20240804,1971-01-15,Male,Togo,East Robert,Professional,Referral,5,True,Cancelled,2024-08-04,2024-08-27 18:48:34.138347
+239,USER_000239,20230509,1979-05-27,Female,Australia,Henryborough,Student,Email Campaign,5,True,Downgraded,2023-05-09,2024-04-08 11:14:09.769843
+240,USER_000240,20230618,1972-07-03,Female,Rwanda,Harrisonborough,Professional,Social Media,5,True,Active,2023-06-18,2023-08-06 01:57:22.843922
+241,USER_000241,20221128,1967-04-09,Female,Uruguay,East Audrey,Student,Email Campaign,4,True,Active,2022-11-28,2024-08-27 16:25:34.788601
+242,USER_000242,20240424,1995-05-19,Male,Saint Pierre and Miquelon,Alexandrashire,Professional,Paid Ads,3,True,Downgraded,2024-04-24,2025-01-02 10:41:54.812418
+243,USER_000243,20230313,1993-10-01,Female,Moldova,Port Amandamouth,Professional,Paid Ads,4,True,Cancelled,2023-03-13,2025-07-13 17:57:35.633846
+244,USER_000244,20250127,1957-01-01,Male,Papua New Guinea,East Christy,Individual,Organic Search,1,False,Churned,2025-01-27,2025-11-21 21:07:28.421527
+245,USER_000245,20230508,2008-02-13,Female,Martinique,South Nicole,Individual,Email Campaign,1,False,Churned,2023-05-08,2024-11-11 18:21:20.217697
+246,USER_000246,20230904,1991-09-17,Female,Saint Martin,North Georgehaven,Professional,Email Campaign,2,False,Active,2023-09-04,2025-04-11 07:08:07.854179
+247,USER_000247,20230214,2002-10-09,Female,Antigua and Barbuda,Clarkmouth,Professional,Organic Search,3,False,Active,2023-02-14,2024-11-30 16:18:04.908085
+248,USER_000248,20230119,1987-12-10,Female,Tonga,Lake Aaronmouth,Professional,Organic Search,3,False,Cancelled,2023-01-19,2023-07-08 13:05:40.144967
+249,USER_000249,20251019,1962-09-17,Male,Equatorial Guinea,Lake Alexanderhaven,Student,Social Media,4,True,Cancelled,2025-10-19,2025-11-14 16:42:42.197394
+250,USER_000250,20230506,2007-02-11,Female,Dominican Republic,East Deborah,Student,Email Campaign,2,False,Active,2023-05-06,2024-08-14 11:21:32.428509
+251,USER_000251,20231224,1996-03-19,Male,Brazil,Jasonmouth,Individual,Social Media,2,False,Cancelled,2023-12-24,2025-05-01 15:31:13.413709
+252,USER_000252,20230427,1966-10-15,Male,Iceland,Grimeston,Individual,Social Media,4,True,Cancelled,2023-04-27,2024-07-19 21:20:02.689360
+253,USER_000253,20250224,2006-10-03,Female,Cambodia,South Alyssaland,Individual,Paid Ads,1,False,Churned,2025-02-24,2025-03-01 09:42:41.770658
+254,USER_000254,20241218,1995-08-25,Male,Cyprus,New Elizabeth,Student,Organic Search,4,True,Active,2024-12-18,2025-02-03 05:06:51.899810
+255,USER_000255,20240719,1990-10-25,Female,Cameroon,Chadview,Individual,Paid Ads,5,True,Active,2024-07-19,2024-08-13 04:44:15.415118
+256,USER_000256,20241006,1985-04-21,Female,South Georgia and the South Sandwich Islands,Keithstad,Professional,Organic Search,1,False,Inactive,2024-10-06,2025-07-03 13:42:05.826153
+257,USER_000257,20240106,1995-04-02,Male,Portugal,North Pamela,Professional,Email Campaign,5,True,Cancelled,2024-01-06,2025-08-22 08:40:30.436619
+258,USER_000258,20250630,1997-01-29,Female,United Arab Emirates,Lake Adriennehaven,Professional,Organic Search,5,True,Active,2025-06-30,2025-09-17 16:45:45.775531
+259,USER_000259,20240210,1972-03-02,Female,Libyan Arab Jamahiriya,New Meganville,Professional,Email Campaign,3,False,Active,2024-02-10,2025-07-08 12:46:00.337674
+260,USER_000260,20231018,1960-12-02,Male,Cook Islands,Choifort,Student,Email Campaign,1,False,Active,2023-10-18,2024-11-13 22:21:17.755117
+261,USER_000261,20240920,1993-04-06,Female,Guatemala,Katherinebury,Student,Social Media,2,False,Paused,2024-09-20,2025-05-25 21:50:36.423626
+262,USER_000262,20240727,1997-10-05,Female,Lithuania,Millerburgh,Student,Paid Ads,3,False,Cancelled,2024-07-27,2025-11-20 15:01:22.998660
+263,USER_000263,20241203,1956-12-04,Female,Lithuania,West Collinland,Professional,Social Media,1,False,Inactive,2024-12-03,2025-09-12 23:03:20.740811
+264,USER_000264,20230419,1963-12-05,Male,United States Virgin Islands,Bradburgh,Student,Email Campaign,1,False,Inactive,2023-04-19,2024-02-13 11:23:19.441255
+265,USER_000265,20240508,1973-06-20,Male,Saint Martin,Danielmouth,Professional,Organic Search,5,True,Active,2024-05-08,2025-05-11 16:14:11.992032
+266,USER_000266,20230322,1961-08-10,Male,Western Sahara,Whitemouth,Professional,Social Media,1,False,Inactive,2023-03-22,2024-03-04 02:30:30.859045
+267,USER_000267,20240905,1980-04-04,Male,Uzbekistan,Taylortown,Student,Organic Search,4,True,Active,2024-09-05,2025-06-20 01:50:38.319230
+268,USER_000268,20230617,1984-10-28,Female,Netherlands Antilles,East Jessefort,Professional,Organic Search,4,True,Active,2023-06-17,2023-11-17 08:08:26.771827
+269,USER_000269,20250930,1963-05-14,Male,Rwanda,Jonathanhaven,Individual,Social Media,2,True,Active,2025-09-30,2025-10-20 23:34:08.939233
+270,USER_000270,20250901,1992-06-03,Male,Madagascar,Lake Kari,Professional,Organic Search,4,True,Active,2025-09-01,2025-09-10 02:05:21.027001
+271,USER_000271,20250713,1994-03-08,Male,Zambia,Samanthabury,Professional,Referral,3,False,Cancelled,2025-07-13,2025-07-31 17:40:30.964136
+272,USER_000272,20231016,1991-11-14,Female,Mali,Port Stephanie,Student,Email Campaign,2,False,Cancelled,2023-10-16,2025-01-31 10:03:03.796739
+273,USER_000273,20241001,1999-08-31,Female,Cayman Islands,East Jenniferport,Professional,Referral,4,True,Active,2024-10-01,2025-02-12 20:27:22.771130
+274,USER_000274,20230731,1976-11-04,Female,Afghanistan,Barbarachester,Student,Email Campaign,3,False,Active,2023-07-31,2024-01-20 21:10:32.245603
+275,USER_000275,20240124,1977-04-17,Female,Slovakia (Slovak Republic),South Terri,Professional,Referral,2,False,Paused,2024-01-24,2025-09-02 06:45:31.789133
+276,USER_000276,20240814,1998-09-04,Male,Bangladesh,Yangtown,Individual,Organic Search,1,False,Inactive,2024-08-14,2024-12-01 08:37:28.410927
+277,USER_000277,20221226,1998-09-07,Female,Vanuatu,Donaldshire,Professional,Email Campaign,5,True,Cancelled,2022-12-26,2023-06-15 12:58:27.945634
+278,USER_000278,20240916,1989-08-03,Male,Ireland,Smithstad,Individual,Referral,2,True,Paused,2024-09-16,2024-09-23 19:18:56.266711
+279,USER_000279,20251121,1977-11-21,Female,Gibraltar,Greenland,Professional,Referral,1,False,Active,2025-11-21,2025-11-22 20:12:48.504760
+280,USER_000280,20240804,1988-09-26,Female,New Zealand,Nicoleberg,Professional,Referral,2,False,Active,2024-08-04,2025-02-10 14:28:35.236087
+281,USER_000281,20240824,1983-05-11,Female,United States Virgin Islands,Ayersside,Professional,Email Campaign,4,True,Active,2024-08-24,2025-04-05 09:25:30.110416
+282,USER_000282,20250526,1990-04-08,Female,Macao,North Jessicaburgh,Professional,Social Media,4,True,Downgraded,2025-05-26,2025-10-06 20:41:38.893651
+283,USER_000283,20230920,1994-09-10,Male,Kiribati,Lake Michelle,Individual,Paid Ads,1,False,Churned,2023-09-20,2025-10-02 03:02:19.144219
+284,USER_000284,20251104,1979-05-17,Male,Comoros,East Michaelmouth,Student,Referral,3,False,Active,2025-11-04,2025-11-18 04:07:51.692821
+285,USER_000285,20230417,1988-05-30,Female,Bolivia,Port Megan,Professional,Organic Search,4,True,Active,2023-04-17,2024-11-08 21:28:43.454360
+286,USER_000286,20240810,2000-09-20,Female,Iran,North Matthew,Professional,Referral,5,True,Active,2024-08-10,2025-06-04 05:59:40.873476
+287,USER_000287,20240616,1982-07-08,Male,Brazil,East Sethside,Professional,Referral,2,True,Active,2024-06-16,2025-01-10 12:30:33.373484
+288,USER_000288,20251020,1974-11-21,Male,Reunion,North Jason,Student,Email Campaign,2,True,Active,2025-10-20,2025-11-13 09:23:48.556382
+289,USER_000289,20250528,1969-07-02,Female,Saint Barthelemy,Lake Ericshire,Student,Referral,5,True,Cancelled,2025-05-28,2025-06-19 17:05:43.203473
+290,USER_000290,20231013,1964-11-18,Female,Kazakhstan,Jacobmouth,Individual,Social Media,5,True,Paused,2023-10-13,2024-01-11 16:37:41.977931
+291,USER_000291,20250915,2009-02-23,Male,Sri Lanka,Schmidtview,Individual,Paid Ads,4,True,Paused,2025-09-15,2025-09-29 17:23:20.702038
+292,USER_000292,20230226,1982-01-20,Male,Sweden,Josephton,Individual,Organic Search,1,False,Active,2023-02-26,2025-11-03 10:29:14.827584
+293,USER_000293,20250614,1963-11-08,Female,Tanzania,Williamsville,Individual,Social Media,3,True,Active,2025-06-14,2025-10-01 17:48:21.448983
+294,USER_000294,20250627,1963-04-10,Male,Ecuador,Jacobtown,Student,Paid Ads,1,False,Active,2025-06-27,2025-10-13 01:07:54.228645
+295,USER_000295,20240208,1975-02-25,Female,Korea,South Hollychester,Student,Referral,4,True,Active,2024-02-08,2025-11-17 18:08:53.290785
+296,USER_000296,20230305,1977-05-11,Female,Saint Martin,New Hannah,Professional,Paid Ads,3,True,Active,2023-03-05,2024-12-04 21:50:06.310974
+297,USER_000297,20230410,1981-03-26,Female,Bangladesh,Port Sheri,Student,Referral,4,True,Active,2023-04-10,2024-03-21 10:24:03.920964
+298,USER_000298,20250826,1955-01-09,Female,Nicaragua,Jenniferbury,Individual,Email Campaign,2,False,Cancelled,2025-08-26,2025-09-21 00:25:58.382312
+299,USER_000299,20240321,1998-06-29,Female,Solomon Islands,Barbaraville,Individual,Referral,1,False,Churned,2024-03-21,2025-03-15 03:31:06.792552
+300,USER_000300,20230711,2001-01-23,Female,Puerto Rico,Devinberg,Individual,Paid Ads,2,False,Cancelled,2023-07-11,2023-08-13 09:08:59.560134
+301,USER_000301,20250921,1961-12-10,Male,Uzbekistan,North Leah,Professional,Social Media,1,False,Active,2025-09-21,2025-09-23 01:26:08.735425
+302,USER_000302,20240113,2007-01-19,Male,Bahrain,New Joshuaville,Individual,Email Campaign,2,True,Downgraded,2024-01-13,2025-08-26 01:57:33.271010
+303,USER_000303,20230422,1959-06-30,Female,Grenada,East Nicholas,Student,Email Campaign,2,False,Active,2023-04-22,2023-04-30 05:36:32.052943
+304,USER_000304,20240321,1991-01-25,Female,Libyan Arab Jamahiriya,Garciafurt,Individual,Social Media,5,True,Active,2024-03-21,2025-03-09 02:53:35.703554
+305,USER_000305,20250916,2003-08-05,Female,Finland,Kelseyhaven,Professional,Organic Search,5,True,Active,2025-09-16,2025-09-30 01:20:00.088415
+306,USER_000306,20250619,1989-02-19,Female,Korea,East Nicoleland,Individual,Email Campaign,5,True,Cancelled,2025-06-19,2025-07-05 21:12:17.871740
+307,USER_000307,20240102,1992-06-11,Male,Chad,Georgeberg,Individual,Paid Ads,4,True,Active,2024-01-02,2024-01-20 12:31:06.793295
+308,USER_000308,20240726,1978-06-05,Female,Israel,North Karen,Individual,Paid Ads,5,True,Downgraded,2024-07-26,2025-09-25 05:31:44.609831
+309,USER_000309,20250309,1973-03-16,Male,New Caledonia,Trujilloport,Professional,Paid Ads,2,False,Active,2025-03-09,2025-05-02 00:40:51.770547
+310,USER_000310,20230512,2003-09-12,Female,United Kingdom,Joeshire,Professional,Referral,1,False,Inactive,2023-05-12,2023-11-17 12:56:20.569582
+311,USER_000311,20241023,1959-01-31,Male,Gabon,Faithland,Professional,Email Campaign,5,True,Paused,2024-10-23,2025-11-23 20:42:38.995125
+312,USER_000312,20240409,1974-03-18,Female,Liberia,South Amandaland,Student,Referral,5,True,Paused,2024-04-09,2024-07-31 01:56:54.212728
+313,USER_000313,20250706,1969-03-20,Female,Nepal,South Heather,Individual,Organic Search,3,True,Active,2025-07-06,2025-09-19 21:54:31.506706
+314,USER_000314,20250114,1983-07-10,Male,Tonga,Villegasville,Student,Social Media,3,True,Paused,2025-01-14,2025-05-09 09:02:18.876115
+315,USER_000315,20250227,1964-01-12,Male,Martinique,Shortfurt,Individual,Organic Search,1,True,Active,2025-02-27,2025-04-21 17:46:51.382828
+316,USER_000316,20240316,1965-08-09,Female,Dominica,Leechester,Individual,Organic Search,2,False,Active,2024-03-16,2024-04-08 03:12:42.315812
+317,USER_000317,20230426,1963-08-19,Male,Venezuela,Trevinostad,Professional,Email Campaign,4,True,Active,2023-04-26,2024-08-26 20:03:52.925296
+318,USER_000318,20241206,1978-10-21,Male,Svalbard & Jan Mayen Islands,Port Jennyside,Professional,Email Campaign,5,True,Active,2024-12-06,2025-08-13 17:11:11.997766
+319,USER_000319,20250808,2001-12-28,Female,Faroe Islands,Kristopherchester,Individual,Referral,1,False,Inactive,2025-08-08,2025-10-03 19:31:25.810508
+320,USER_000320,20240820,1985-10-22,Male,United States Minor Outlying Islands,Lake Brandystad,Student,Paid Ads,2,True,Paused,2024-08-20,2025-06-17 00:56:46.767575
+321,USER_000321,20251025,1962-05-08,Female,Poland,Walshhaven,Individual,Referral,4,True,Downgraded,2025-10-25,2025-11-16 14:59:15.892303
+322,USER_000322,20240514,1979-09-14,Male,Svalbard & Jan Mayen Islands,East Aaron,Professional,Paid Ads,4,True,Downgraded,2024-05-14,2025-08-09 04:15:59.196388
+323,USER_000323,20231113,1956-10-11,Female,Lithuania,East Nathaniel,Student,Email Campaign,4,True,Active,2023-11-13,2025-08-29 15:53:32.908161
+324,USER_000324,20241211,2000-08-11,Female,Afghanistan,Michaelside,Student,Organic Search,5,True,Active,2024-12-11,2025-03-13 13:06:46.482176
+325,USER_000325,20230520,1984-02-23,Male,Estonia,Crawfordside,Student,Organic Search,3,True,Downgraded,2023-05-20,2024-01-24 18:32:53.033954
+326,USER_000326,20250513,1963-08-04,Female,Chad,Lopezton,Professional,Social Media,4,True,Active,2025-05-13,2025-06-29 01:27:58.179504
+327,USER_000327,20230603,2001-09-26,Male,Switzerland,South Joshua,Professional,Organic Search,4,True,Active,2023-06-03,2025-11-06 06:05:03.666862
+328,USER_000328,20230405,1989-10-29,Male,Syrian Arab Republic,West Keith,Student,Referral,5,True,Cancelled,2023-04-05,2023-07-10 04:42:42.766716
+329,USER_000329,20250210,1974-04-03,Female,Somalia,North Robert,Individual,Referral,2,True,Active,2025-02-10,2025-07-27 02:43:19.495430
+330,USER_000330,20240321,2001-10-22,Female,Namibia,East Williamton,Professional,Social Media,1,True,Cancelled,2024-03-21,2024-07-13 17:35:44.053205
+331,USER_000331,20250211,1996-04-05,Male,Azerbaijan,Dianastad,Professional,Paid Ads,3,False,Cancelled,2025-02-11,2025-02-24 11:48:03.545090
+332,USER_000332,20240603,2007-11-03,Male,San Marino,North Henryville,Student,Paid Ads,3,True,Cancelled,2024-06-03,2024-06-12 15:26:07.546491
+333,USER_000333,20240118,1985-09-11,Female,Kenya,Lake Cesar,Professional,Social Media,1,False,Inactive,2024-01-18,2025-08-12 07:46:50.307125
+334,USER_000334,20230430,1984-04-05,Female,Guyana,Howellbury,Professional,Organic Search,4,True,Active,2023-04-30,2025-11-03 21:28:48.469037
+335,USER_000335,20231217,1955-12-29,Male,Vanuatu,New Carolynmouth,Student,Email Campaign,2,False,Cancelled,2023-12-17,2025-11-22 17:43:29.535137
+336,USER_000336,20230922,1976-08-19,Male,Bahamas,East Dustin,Professional,Referral,3,True,Cancelled,2023-09-22,2023-12-01 11:52:28.529377
+337,USER_000337,20230512,1983-08-26,Male,Comoros,Lake Angelastad,Professional,Referral,3,False,Active,2023-05-12,2023-08-18 18:29:39.632178
+338,USER_000338,20240725,1959-10-11,Female,Egypt,Delgadofort,Professional,Organic Search,2,True,Active,2024-07-25,2025-10-03 18:30:37.073036
+339,USER_000339,20230111,2000-10-18,Female,Spain,Dylanfurt,Professional,Social Media,1,False,Churned,2023-01-11,2025-05-04 14:02:18.303115
+340,USER_000340,20250408,1992-10-12,Male,Greenland,Lyonsside,Individual,Referral,5,True,Downgraded,2025-04-08,2025-06-19 16:28:47.895339
+341,USER_000341,20251016,1984-06-06,Female,Jersey,Penningtonburgh,Individual,Referral,3,False,Active,2025-10-16,2025-10-24 19:03:24.558714
+342,USER_000342,20230601,1981-07-23,Male,Suriname,Smithberg,Individual,Email Campaign,5,True,Downgraded,2023-06-01,2025-04-03 12:04:28.534753
+343,USER_000343,20251015,1965-04-03,Male,British Indian Ocean Territory (Chagos Archipelago),South Karabury,Individual,Social Media,5,True,Cancelled,2025-10-15,2025-10-27 15:18:36.006747
+344,USER_000344,20250220,1975-05-17,Female,Singapore,Lake Jessicamouth,Individual,Organic Search,1,False,Inactive,2025-02-20,2025-07-31 22:23:36.557456
+345,USER_000345,20240814,1966-10-30,Male,Gabon,Port Aaronfort,Individual,Email Campaign,5,True,Active,2024-08-14,2025-03-23 05:38:27.813629
+346,USER_000346,20251015,1963-05-10,Male,South Georgia and the South Sandwich Islands,Tonyahaven,Professional,Email Campaign,3,False,Active,2025-10-15,2025-11-03 21:21:27.581370
+347,USER_000347,20241112,1978-05-12,Female,Botswana,Mitchellland,Individual,Social Media,3,False,Paused,2024-11-12,2025-09-03 15:26:01.989755
+348,USER_000348,20240617,1993-09-06,Female,Mauritius,New Robertmouth,Student,Social Media,4,True,Active,2024-06-17,2024-10-29 12:55:30.906314
+349,USER_000349,20251030,1972-06-18,Female,Rwanda,West Christian,Professional,Referral,4,True,Active,2025-10-30,2025-11-26 02:24:08.999833
+350,USER_000350,20230222,1973-01-22,Male,Papua New Guinea,New Daniel,Student,Referral,3,False,Active,2023-02-22,2024-02-13 18:03:39.943995
+351,USER_000351,20231203,1991-11-11,Male,Bermuda,New Brettchester,Individual,Social Media,1,False,Inactive,2023-12-03,2024-05-20 20:58:16.396898
+352,USER_000352,20250324,1993-08-18,Male,Antarctica (the territory South of 60 deg S),North Steven,Student,Referral,1,False,Churned,2025-03-24,2025-05-25 02:43:55.900064
+353,USER_000353,20241107,1982-12-16,Male,Macao,Lake Tammy,Student,Referral,2,False,Cancelled,2024-11-07,2025-04-12 09:13:41.697752
+354,USER_000354,20230524,1955-06-28,Male,Swaziland,Lake John,Professional,Social Media,3,False,Active,2023-05-24,2024-08-10 16:39:09.500687
+355,USER_000355,20250220,1955-12-15,Female,Belarus,North Victoria,Student,Organic Search,4,True,Paused,2025-02-20,2025-11-07 08:05:53.704287
+356,USER_000356,20231206,1963-04-16,Female,Jersey,South Sheri,Student,Email Campaign,1,False,Inactive,2023-12-06,2025-09-04 20:37:26.912533
+357,USER_000357,20231129,1996-11-29,Female,Chad,East Amanda,Individual,Social Media,1,False,Inactive,2023-11-29,2024-10-18 22:19:17.848234
+358,USER_000358,20240727,1990-09-05,Female,Indonesia,Parkermouth,Professional,Organic Search,2,False,Active,2024-07-27,2024-09-16 06:11:25.424209
+359,USER_000359,20250203,1957-04-03,Female,Bouvet Island (Bouvetoya),Allisonbury,Student,Referral,1,False,Active,2025-02-03,2025-07-24 03:28:47.932971
+360,USER_000360,20231007,1972-01-19,Male,Zambia,Davisside,Student,Social Media,2,False,Paused,2023-10-07,2025-11-05 20:39:55.823782
+361,USER_000361,20250410,1969-06-08,Female,Congo,Annafurt,Professional,Email Campaign,3,True,Downgraded,2025-04-10,2025-11-27 14:00:03.289756
+362,USER_000362,20240303,2000-09-12,Female,New Caledonia,Jacksonland,Professional,Email Campaign,1,False,Inactive,2024-03-03,2024-12-01 02:36:29.355744
+363,USER_000363,20231202,1989-07-09,Female,Cocos (Keeling) Islands,Markhaven,Student,Organic Search,1,False,Active,2023-12-02,2024-08-02 09:48:28.937542
+364,USER_000364,20230715,1998-11-19,Male,Belarus,Jenningsbury,Professional,Paid Ads,5,True,Active,2023-07-15,2024-02-06 16:52:49.328255
+365,USER_000365,20230916,1991-10-24,Female,Cameroon,North Stephanieport,Professional,Referral,4,True,Active,2023-09-16,2025-11-01 03:30:34.497108
+366,USER_000366,20231220,1979-01-13,Male,Northern Mariana Islands,West Karen,Individual,Email Campaign,1,False,Inactive,2023-12-20,2025-01-09 08:38:00.837962
+367,USER_000367,20230608,2004-08-27,Female,Jordan,Jacksonmouth,Professional,Social Media,1,True,Downgraded,2023-06-08,2025-07-04 23:36:17.959978
+368,USER_000368,20240710,1982-07-28,Female,Taiwan,Stonechester,Student,Referral,1,False,Inactive,2024-07-10,2024-10-10 17:01:47.786391
+369,USER_000369,20250128,1991-04-15,Male,United States of America,Kyleville,Individual,Social Media,2,True,Active,2025-01-28,2025-04-01 21:02:37.664757
+370,USER_000370,20231228,1969-11-22,Female,Guernsey,West Dakotastad,Individual,Paid Ads,2,True,Cancelled,2023-12-28,2025-06-01 08:41:13.499128
+371,USER_000371,20250726,1983-12-15,Male,Madagascar,Franciscoberg,Professional,Referral,4,True,Paused,2025-07-26,2025-11-27 19:34:29.701316
+372,USER_000372,20250410,1979-09-15,Male,Suriname,Williamburgh,Professional,Email Campaign,3,True,Active,2025-04-10,2025-11-14 12:12:38.555669
+373,USER_000373,20230727,1989-12-27,Male,Zambia,Lake Josephport,Individual,Referral,2,False,Active,2023-07-27,2024-12-17 05:30:23.201730
+374,USER_000374,20240401,1964-07-20,Male,Northern Mariana Islands,East Daniel,Individual,Referral,5,True,Active,2024-04-01,2024-04-30 05:00:42.964334
+375,USER_000375,20240426,1966-04-10,Female,Ukraine,Davidburgh,Student,Email Campaign,1,False,Churned,2024-04-26,2024-08-15 18:51:18.728093
+376,USER_000376,20250615,1955-09-30,Male,Pakistan,North Rebeccaport,Student,Social Media,4,True,Cancelled,2025-06-15,2025-08-08 19:15:53.527704
+377,USER_000377,20231103,2005-09-15,Male,Martinique,Walkerhaven,Individual,Social Media,1,False,Inactive,2023-11-03,2024-01-31 06:12:46.696186
+378,USER_000378,20231220,1995-05-20,Male,Cook Islands,East Christina,Individual,Social Media,3,True,Paused,2023-12-20,2024-09-02 21:33:37.460045
+379,USER_000379,20240412,1996-10-20,Male,Algeria,East Dennisberg,Individual,Organic Search,5,True,Active,2024-04-12,2025-10-26 10:26:17.086047
+380,USER_000380,20230525,1972-11-04,Female,Switzerland,New Alexisberg,Student,Referral,5,True,Cancelled,2023-05-25,2024-02-04 23:37:54.712839
+381,USER_000381,20221218,1992-04-14,Male,Uruguay,Mariostad,Individual,Social Media,5,True,Cancelled,2022-12-18,2025-07-09 23:55:42.282646
+382,USER_000382,20230522,1959-11-21,Female,Cambodia,Elizabethstad,Individual,Email Campaign,5,True,Cancelled,2023-05-22,2025-05-24 21:16:04.047884
+383,USER_000383,20250705,1995-03-11,Female,United States Minor Outlying Islands,New Darren,Professional,Paid Ads,1,False,Inactive,2025-07-05,2025-10-14 15:37:14.594137
+384,USER_000384,20240120,1968-06-22,Male,Morocco,Markstad,Professional,Social Media,2,False,Paused,2024-01-20,2025-02-21 21:03:59.450741
+385,USER_000385,20250423,1966-05-21,Female,Portugal,Port Maurice,Professional,Paid Ads,3,True,Paused,2025-04-23,2025-09-18 14:40:21.906679
+386,USER_000386,20230107,1958-01-21,Male,Cyprus,North Paulchester,Professional,Social Media,4,True,Active,2023-01-07,2025-03-28 02:31:14.604083
+387,USER_000387,20250710,1997-08-22,Female,Grenada,Estradaburgh,Student,Referral,2,False,Active,2025-07-10,2025-10-01 10:41:47.285530
+388,USER_000388,20250128,1983-10-29,Male,Guadeloupe,West Jasonshire,Individual,Social Media,3,False,Active,2025-01-28,2025-04-13 21:04:32.369119
+389,USER_000389,20251020,1982-06-06,Female,Dominican Republic,Drakemouth,Individual,Paid Ads,2,False,Cancelled,2025-10-20,2025-11-23 02:36:45.258034
+390,USER_000390,20240404,1967-08-07,Male,Honduras,Port Benjaminmouth,Professional,Organic Search,5,True,Active,2024-04-04,2024-05-06 05:00:48.092495
+391,USER_000391,20241023,1991-03-29,Female,Central African Republic,New Alexander,Individual,Paid Ads,1,False,Inactive,2024-10-23,2025-04-13 01:35:34.199593
+392,USER_000392,20230821,2008-05-04,Female,Central African Republic,East Charlesborough,Individual,Email Campaign,4,True,Cancelled,2023-08-21,2023-09-21 13:56:53.476913
+393,USER_000393,20240924,1966-01-05,Female,Bahrain,Petersontown,Individual,Email Campaign,4,True,Cancelled,2024-09-24,2025-08-04 00:15:52.389542
+394,USER_000394,20250310,1977-07-18,Female,Russian Federation,West Mary,Individual,Email Campaign,4,True,Cancelled,2025-03-10,2025-07-14 18:02:26.731977
+395,USER_000395,20241127,1992-04-10,Female,Bosnia and Herzegovina,Josephshire,Individual,Social Media,3,False,Cancelled,2024-11-27,2025-02-08 18:41:05.420186
+396,USER_000396,20230520,1994-08-07,Female,Macao,Port Marthaside,Student,Paid Ads,3,False,Cancelled,2023-05-20,2024-07-07 17:27:24.704674
+397,USER_000397,20240921,1968-10-19,Male,Reunion,Browntown,Student,Referral,3,False,Active,2024-09-21,2025-05-15 03:44:16.700617
+398,USER_000398,20230831,1980-01-30,Male,Samoa,Christopherland,Student,Social Media,4,True,Cancelled,2023-08-31,2025-08-13 00:13:20.765594
+399,USER_000399,20250305,1973-10-04,Female,Czech Republic,Lake Lisaton,Individual,Email Campaign,3,True,Active,2025-03-05,2025-08-04 11:11:38.863189
+400,USER_000400,20240912,2000-09-23,Female,Peru,Chandlerton,Student,Referral,2,True,Active,2024-09-12,2024-12-03 02:44:42.321919
+401,USER_000401,20240420,2000-01-10,Female,Palau,Daltonberg,Professional,Email Campaign,3,False,Active,2024-04-20,2025-05-10 14:07:04.313349
+402,USER_000402,20230530,2009-04-12,Female,Liechtenstein,Thompsonfort,Professional,Social Media,4,True,Active,2023-05-30,2024-03-21 11:31:41.473813
+403,USER_000403,20241031,1965-05-12,Female,Uganda,Ralphhaven,Professional,Referral,4,True,Cancelled,2024-10-31,2025-05-04 16:36:16.897557
+404,USER_000404,20241010,1967-02-16,Female,Venezuela,South Scott,Professional,Organic Search,2,False,Cancelled,2024-10-10,2025-09-14 16:28:15.261007
+405,USER_000405,20230510,1975-10-01,Male,Puerto Rico,Julieport,Individual,Social Media,1,False,Churned,2023-05-10,2023-08-20 01:13:14.253964
+406,USER_000406,20240317,1982-10-17,Female,Cambodia,Kyleland,Individual,Organic Search,1,False,Churned,2024-03-17,2025-03-06 10:11:33.144736
+407,USER_000407,20240330,1964-12-05,Female,Russian Federation,Lake Kathleen,Individual,Organic Search,2,True,Active,2024-03-30,2025-01-18 19:01:09.655676
+408,USER_000408,20231122,1994-03-10,Male,Belarus,Gonzalezfurt,Professional,Email Campaign,3,False,Cancelled,2023-11-22,2024-04-02 05:00:35.749969
+409,USER_000409,20230311,1991-07-06,Male,Finland,Jonestown,Professional,Referral,3,True,Active,2023-03-11,2024-02-01 18:10:04.669475
+410,USER_000410,20240129,1969-07-14,Male,Gambia,East Ryanville,Professional,Email Campaign,3,False,Active,2024-01-29,2025-02-26 23:02:00.687178
+411,USER_000411,20240813,1985-12-12,Female,Haiti,Nancyfort,Individual,Paid Ads,1,False,Churned,2024-08-13,2024-08-31 23:47:50.768964
+412,USER_000412,20240723,1973-09-19,Female,Belgium,East Debbieton,Professional,Organic Search,3,False,Cancelled,2024-07-23,2024-12-14 08:48:20.686018
+413,USER_000413,20240220,1988-07-12,Female,Saint Martin,Lopezport,Professional,Organic Search,5,True,Paused,2024-02-20,2024-07-03 05:36:50.938651
+414,USER_000414,20250920,1977-04-09,Male,Dominican Republic,West Rebecca,Individual,Social Media,4,True,Active,2025-09-20,2025-11-15 19:18:57.894513
+415,USER_000415,20241228,2006-07-24,Male,Cocos (Keeling) Islands,North Christineland,Student,Referral,4,True,Active,2024-12-28,2025-09-19 02:01:21.785527
+416,USER_000416,20241101,1969-04-11,Male,Isle of Man,Leestad,Professional,Social Media,3,False,Cancelled,2024-11-01,2024-11-26 12:25:03.224585
+417,USER_000417,20231119,1971-10-15,Female,Liberia,Contrerasborough,Individual,Paid Ads,1,True,Downgraded,2023-11-19,2024-01-23 04:37:37.257813
+418,USER_000418,20240510,1962-05-04,Female,Vietnam,East Jenniferton,Student,Social Media,4,True,Active,2024-05-10,2025-06-14 20:51:16.357013
+419,USER_000419,20250723,1982-12-27,Female,United States Minor Outlying Islands,Salinasfort,Professional,Referral,3,True,Active,2025-07-23,2025-11-11 14:02:14.787908
+420,USER_000420,20230709,2000-10-28,Male,Niger,Elizabethmouth,Individual,Paid Ads,3,True,Active,2023-07-09,2024-10-15 17:12:52.458125
+421,USER_000421,20240623,1988-04-03,Female,United Kingdom,Hallton,Individual,Email Campaign,5,True,Active,2024-06-23,2025-09-16 17:32:57.545415
+422,USER_000422,20230614,1975-03-24,Female,Bangladesh,Stokesbury,Individual,Paid Ads,1,False,Inactive,2023-06-14,2024-02-12 13:36:26.926219
+423,USER_000423,20250412,1976-01-09,Female,Macao,Peterfurt,Individual,Referral,4,True,Active,2025-04-12,2025-07-23 07:50:55.610885
+424,USER_000424,20241210,1957-05-31,Male,Indonesia,Lewisside,Professional,Social Media,3,False,Cancelled,2024-12-10,2025-10-01 09:47:46.300596
+425,USER_000425,20231115,1999-04-19,Female,Solomon Islands,West Rebeccafort,Student,Email Campaign,4,True,Active,2023-11-15,2024-03-04 21:16:22.465992
+426,USER_000426,20221217,1982-05-27,Female,Mozambique,South Helenton,Individual,Social Media,4,True,Active,2022-12-17,2023-06-25 06:54:30.883466
+427,USER_000427,20250916,2006-04-12,Male,Algeria,Lake Scott,Student,Email Campaign,4,True,Active,2025-09-16,2025-11-03 10:19:43.589783
+428,USER_000428,20250331,2002-12-31,Male,Kenya,Port Kimberly,Student,Email Campaign,1,True,Downgraded,2025-03-31,2025-06-25 20:48:31.707096
+429,USER_000429,20241112,1957-09-21,Male,Heard Island and McDonald Islands,Port Morgan,Student,Referral,3,True,Active,2024-11-12,2025-11-12 00:55:38.564665
+430,USER_000430,20231012,1978-08-06,Female,Morocco,Port Kaylachester,Individual,Referral,1,False,Churned,2023-10-12,2024-03-24 11:32:18.818113
+431,USER_000431,20240522,1969-07-18,Male,United States Virgin Islands,Lake Norman,Student,Organic Search,4,True,Paused,2024-05-22,2025-07-06 15:56:50.784615
+432,USER_000432,20230309,2007-05-03,Female,Vietnam,Joneston,Individual,Referral,3,False,Active,2023-03-09,2023-08-10 05:43:34.959735
+433,USER_000433,20230828,1990-12-25,Male,Egypt,Ambershire,Student,Email Campaign,1,False,Inactive,2023-08-28,2024-12-03 12:05:28.493479
+434,USER_000434,20230329,2008-02-16,Male,Equatorial Guinea,New Kimberlymouth,Student,Referral,3,False,Paused,2023-03-29,2023-07-17 03:03:54.792386
+435,USER_000435,20230619,1978-10-10,Male,Serbia,North Margaret,Student,Referral,2,False,Active,2023-06-19,2024-05-17 07:09:53.613175
+436,USER_000436,20241005,1961-01-13,Female,India,Stevensview,Professional,Referral,1,False,Active,2024-10-05,2025-07-24 17:54:12.628783
+437,USER_000437,20230205,1995-10-30,Male,Tuvalu,Robinchester,Professional,Organic Search,4,True,Active,2023-02-05,2024-09-10 23:22:57.480750
+438,USER_000438,20221219,1964-11-06,Female,Barbados,Christopherland,Professional,Paid Ads,2,False,Paused,2022-12-19,2023-05-21 00:52:10.108142
+439,USER_000439,20240423,1978-10-30,Female,Iceland,Garzamouth,Individual,Social Media,1,True,Downgraded,2024-04-23,2025-10-19 09:54:14.055170
+440,USER_000440,20240521,1988-02-21,Male,Kazakhstan,Tristanstad,Professional,Email Campaign,5,True,Cancelled,2024-05-21,2025-09-10 03:21:41.326309
+441,USER_000441,20250410,1955-12-01,Male,Finland,Lake Sarah,Student,Paid Ads,4,True,Active,2025-04-10,2025-07-10 15:43:55.233274
+442,USER_000442,20240304,2000-10-31,Male,Estonia,Port Alexandermouth,Individual,Email Campaign,5,True,Active,2024-03-04,2025-01-27 18:57:48.285373
+443,USER_000443,20251123,2004-03-25,Male,Lithuania,New Haileyport,Student,Email Campaign,4,True,Cancelled,2025-11-23,2025-11-26 10:01:54.126834
+444,USER_000444,20251120,1967-10-28,Male,Bulgaria,Jodyburgh,Professional,Email Campaign,5,True,Active,2025-11-20,2025-11-26 10:02:08.955440
+445,USER_000445,20241222,1969-09-23,Female,Falkland Islands (Malvinas),Kristaberg,Professional,Email Campaign,4,True,Cancelled,2024-12-22,2025-09-28 00:56:19.787282
+446,USER_000446,20231027,1997-03-12,Female,Vanuatu,Atkinsfurt,Professional,Social Media,1,False,Inactive,2023-10-27,2024-06-17 23:01:13.644000
+447,USER_000447,20241116,1959-05-29,Male,Guinea-Bissau,Barryland,Professional,Email Campaign,5,True,Downgraded,2024-11-16,2025-10-07 08:42:16.127803
+448,USER_000448,20250307,2003-07-11,Male,Burkina Faso,Mcguiremouth,Professional,Social Media,3,True,Downgraded,2025-03-07,2025-07-22 00:55:05.231956
+449,USER_000449,20251014,1955-04-24,Male,Netherlands Antilles,Port Jorge,Individual,Referral,3,True,Active,2025-10-14,2025-10-31 17:48:32.986150
+450,USER_000450,20250925,1989-08-29,Male,French Polynesia,Rosehaven,Professional,Organic Search,4,True,Active,2025-09-25,2025-11-01 21:02:03.205940
+451,USER_000451,20241022,1975-06-06,Female,Saudi Arabia,Jessicachester,Professional,Email Campaign,4,True,Active,2024-10-22,2025-09-06 15:32:03.642390
+452,USER_000452,20230710,1968-06-14,Male,Swaziland,North Connie,Student,Email Campaign,2,False,Active,2023-07-10,2023-12-16 05:06:02.282061
+453,USER_000453,20250525,1975-11-07,Male,Afghanistan,Daleland,Professional,Email Campaign,5,True,Active,2025-05-25,2025-06-11 06:33:04.566894
+454,USER_000454,20230627,1987-07-13,Female,Brunei Darussalam,East Tammieburgh,Professional,Paid Ads,3,False,Cancelled,2023-06-27,2025-11-20 04:15:31.349919
+455,USER_000455,20221130,1971-01-13,Female,Zimbabwe,East Courtneyfort,Professional,Referral,1,False,Active,2022-11-30,2025-01-08 23:10:12.996672
+456,USER_000456,20241108,1982-05-04,Female,Saint Martin,Peckview,Professional,Paid Ads,1,True,Cancelled,2024-11-08,2025-01-19 14:32:00.239281
+457,USER_000457,20230818,1986-11-24,Female,Antigua and Barbuda,North Taylor,Student,Email Campaign,5,True,Active,2023-08-18,2024-11-25 18:21:36.577565
+458,USER_000458,20230721,2009-04-23,Male,Liechtenstein,Lindseychester,Individual,Social Media,2,False,Active,2023-07-21,2024-08-30 20:48:09.546597
+459,USER_000459,20241022,1956-02-10,Male,Cape Verde,North John,Individual,Email Campaign,4,True,Active,2024-10-22,2025-01-25 02:52:43.894416
+460,USER_000460,20251028,1986-10-29,Female,Bolivia,Port Dustinview,Student,Paid Ads,5,True,Paused,2025-10-28,2025-11-11 18:46:41.307313
+461,USER_000461,20240418,1997-10-27,Male,Dominican Republic,West Thomas,Student,Referral,3,False,Cancelled,2024-04-18,2025-10-29 22:11:07.302107
+462,USER_000462,20230525,1984-07-12,Female,Poland,Castilloton,Professional,Social Media,3,False,Cancelled,2023-05-25,2023-12-25 08:08:24.794639
+463,USER_000463,20241215,1998-10-16,Female,Tanzania,East Christinaland,Professional,Email Campaign,5,True,Active,2024-12-15,2025-03-08 18:37:23.504833
+464,USER_000464,20231217,2008-05-01,Male,South Georgia and the South Sandwich Islands,East Ashley,Student,Referral,2,True,Cancelled,2023-12-17,2024-08-06 03:16:46.360708
+465,USER_000465,20230610,2001-08-05,Male,Bolivia,Port Jeremy,Student,Referral,3,False,Active,2023-06-10,2025-03-25 00:04:01.942713
+466,USER_000466,20241011,2005-02-27,Female,Zimbabwe,Perkinsville,Student,Paid Ads,1,False,Active,2024-10-11,2025-04-01 16:22:52.733438
+467,USER_000467,20251001,1973-06-16,Female,Ecuador,Lake Dorothy,Student,Email Campaign,5,True,Active,2025-10-01,2025-11-06 13:41:25.507771
+468,USER_000468,20231224,1970-01-27,Female,Sao Tome and Principe,Jacobbury,Student,Organic Search,3,False,Active,2023-12-24,2024-11-21 23:06:28.133029
+469,USER_000469,20240325,1984-10-07,Female,Spain,Chadville,Individual,Paid Ads,4,True,Paused,2024-03-25,2024-10-22 13:04:40.664744
+470,USER_000470,20231018,1990-05-19,Female,Venezuela,Lake Ashley,Individual,Referral,3,False,Paused,2023-10-18,2025-07-18 02:29:25.575040
+471,USER_000471,20230502,1983-01-30,Female,Palau,East Christinastad,Individual,Paid Ads,5,True,Active,2023-05-02,2025-01-02 07:40:21.940990
+472,USER_000472,20250906,1975-02-18,Male,Trinidad and Tobago,Lake Eric,Professional,Paid Ads,4,True,Active,2025-09-06,2025-11-07 03:29:35.914942
+473,USER_000473,20250311,1967-01-30,Male,Cuba,Longside,Professional,Organic Search,1,False,Churned,2025-03-11,2025-05-16 12:22:38.009041
+474,USER_000474,20250608,1978-04-28,Male,Poland,East Jordanfurt,Individual,Social Media,5,True,Active,2025-06-08,2025-10-04 03:51:34.190181
+475,USER_000475,20230214,1999-05-21,Male,Micronesia,Anthonyside,Professional,Email Campaign,2,True,Active,2023-02-14,2024-01-24 01:56:30.036264
+476,USER_000476,20240129,1986-02-06,Male,Seychelles,South Michael,Student,Organic Search,5,True,Active,2024-01-29,2024-11-02 11:17:00.951873
+477,USER_000477,20240910,1958-07-10,Female,Suriname,Alvaradohaven,Individual,Referral,3,True,Active,2024-09-10,2024-12-15 12:30:49.420419
+478,USER_000478,20240827,1996-02-27,Female,Venezuela,Michaelchester,Student,Organic Search,4,True,Active,2024-08-27,2025-08-12 23:02:19.497276
+479,USER_000479,20251106,1999-12-07,Male,Bangladesh,Crystalport,Professional,Social Media,1,False,Active,2025-11-06,2025-11-27 19:03:03.493249
+480,USER_000480,20250402,2003-11-23,Male,Cameroon,Lake Mary,Student,Referral,2,True,Paused,2025-04-02,2025-08-28 19:20:25.707742
+481,USER_000481,20250417,1985-08-16,Male,South Georgia and the South Sandwich Islands,Brianborough,Student,Paid Ads,5,True,Paused,2025-04-17,2025-08-24 07:45:17.164385
+482,USER_000482,20230826,1993-08-05,Female,Portugal,Veronicaland,Student,Social Media,2,False,Paused,2023-08-26,2024-02-25 22:59:48.896137
+483,USER_000483,20250121,1987-10-18,Male,Nepal,Garyhaven,Individual,Email Campaign,1,False,Active,2025-01-21,2025-10-30 13:58:34.527844
+484,USER_000484,20250102,1959-01-14,Female,Timor-Leste,Port Austinfort,Student,Paid Ads,5,True,Active,2025-01-02,2025-02-28 12:06:11.950589
+485,USER_000485,20221226,1971-11-17,Male,Norfolk Island,South Alexandermouth,Individual,Organic Search,5,True,Active,2022-12-26,2023-04-19 23:22:05.985790
+486,USER_000486,20240710,1976-01-29,Male,United Arab Emirates,Turnerborough,Individual,Organic Search,3,True,Active,2024-07-10,2024-07-11 20:43:04.455110
+487,USER_000487,20240522,1964-09-27,Female,Andorra,New Crystalton,Professional,Referral,1,False,Active,2024-05-22,2024-06-06 20:35:01.153910
+488,USER_000488,20240923,1963-05-06,Female,Guinea-Bissau,Thompsonfurt,Student,Email Campaign,5,True,Cancelled,2024-09-23,2025-09-17 14:00:07.450213
+489,USER_000489,20230529,1991-12-02,Male,Timor-Leste,Port Melaniefurt,Individual,Referral,5,True,Active,2023-05-29,2024-04-07 18:55:57.893546
+490,USER_000490,20231224,1975-06-21,Male,Tokelau,North Amyhaven,Student,Email Campaign,5,True,Active,2023-12-24,2025-06-23 02:30:50.247746
+491,USER_000491,20250529,1971-01-31,Male,Singapore,Christopherland,Individual,Email Campaign,4,True,Paused,2025-05-29,2025-09-14 18:01:32.297899
+492,USER_000492,20240504,1959-12-13,Female,Antarctica (the territory South of 60 deg S),Timothychester,Professional,Referral,5,True,Active,2024-05-04,2024-09-18 10:06:35.479485
+493,USER_000493,20240429,2004-01-11,Female,Serbia,South Courtneychester,Professional,Paid Ads,5,True,Active,2024-04-29,2025-03-18 03:51:47.536930
+494,USER_000494,20240408,2004-04-04,Male,Libyan Arab Jamahiriya,Stevenville,Professional,Referral,3,True,Paused,2024-04-08,2024-05-04 09:20:58.306264
+495,USER_000495,20240325,2007-11-15,Female,United Kingdom,Lake Dawnbury,Student,Organic Search,2,False,Active,2024-03-25,2024-11-21 12:22:59.243032
+496,USER_000496,20230725,1995-09-02,Female,Armenia,East Melissamouth,Student,Referral,4,True,Cancelled,2023-07-25,2024-08-04 12:32:42.305480
+497,USER_000497,20240103,1962-01-18,Female,Bhutan,Port Davidview,Professional,Referral,2,False,Active,2024-01-03,2024-05-26 06:01:20.081115
+498,USER_000498,20250907,1980-12-16,Female,Eritrea,Port Kenneth,Professional,Paid Ads,4,True,Downgraded,2025-09-07,2025-09-14 21:45:38.365369
+499,USER_000499,20240126,1991-02-10,Female,Tokelau,Nicoleside,Individual,Referral,3,True,Active,2024-01-26,2025-10-25 07:55:17.519324
+500,USER_000500,20250621,1987-08-11,Female,Lesotho,Port Coryfurt,Professional,Referral,1,False,Active,2025-06-21,2025-10-20 09:28:53.793425
+501,USER_000501,20250605,2002-10-30,Female,Gibraltar,Kirstenshire,Professional,Social Media,5,True,Active,2025-06-05,2025-10-01 22:33:04.415561
+502,USER_000502,20231023,2004-07-07,Male,Venezuela,Christophermouth,Student,Paid Ads,4,True,Active,2023-10-23,2024-07-01 19:15:08.854486
+503,USER_000503,20230114,1967-08-03,Female,Solomon Islands,Elizabethville,Professional,Email Campaign,1,False,Churned,2023-01-14,2025-10-20 09:33:05.681977
+504,USER_000504,20241003,1992-07-08,Male,Palau,East Katieland,Student,Email Campaign,3,False,Cancelled,2024-10-03,2025-07-26 16:15:28.632337
+505,USER_000505,20241016,2006-04-27,Female,Germany,Raymondside,Individual,Email Campaign,3,False,Paused,2024-10-16,2025-06-17 10:28:32.258904
+506,USER_000506,20230309,1958-12-10,Male,Honduras,Wrightfurt,Individual,Organic Search,1,False,Churned,2023-03-09,2025-08-28 10:07:04.044901
+507,USER_000507,20230518,1984-04-20,Male,Norfolk Island,Christopherberg,Individual,Paid Ads,5,True,Paused,2023-05-18,2023-06-10 09:20:03.641875
+508,USER_000508,20240310,2004-04-08,Female,Lebanon,Port Ian,Individual,Email Campaign,3,False,Active,2024-03-10,2025-09-15 23:19:25.308531
+509,USER_000509,20230514,1993-11-23,Female,Bosnia and Herzegovina,Marquezland,Professional,Paid Ads,2,False,Active,2023-05-14,2023-12-26 13:47:38.197386
+510,USER_000510,20240825,1988-06-13,Male,Croatia,East Phillip,Student,Paid Ads,1,False,Inactive,2024-08-25,2024-09-25 21:59:41.854196
+511,USER_000511,20241202,1982-06-25,Male,Maldives,Castroburgh,Individual,Social Media,2,False,Cancelled,2024-12-02,2025-07-12 15:36:21.766007
+512,USER_000512,20250623,1960-02-28,Female,Lesotho,Markborough,Student,Referral,5,True,Cancelled,2025-06-23,2025-11-22 04:22:59.611336
+513,USER_000513,20231205,1981-07-16,Female,Brazil,South Johnside,Professional,Referral,4,True,Active,2023-12-05,2025-02-19 06:56:05.155797
+514,USER_000514,20240629,1990-06-09,Female,Panama,East Tinaborough,Student,Organic Search,4,True,Downgraded,2024-06-29,2024-12-23 22:33:55.308092
+515,USER_000515,20250202,1959-06-25,Male,Uzbekistan,North Brendanburgh,Student,Email Campaign,5,True,Active,2025-02-02,2025-10-27 05:06:38.747513
+516,USER_000516,20240402,1992-03-09,Male,Dominica,Josephfurt,Professional,Paid Ads,3,True,Downgraded,2024-04-02,2024-05-31 22:56:14.881955
+517,USER_000517,20230712,1993-10-17,Male,North Macedonia,Teresaside,Professional,Social Media,4,True,Downgraded,2023-07-12,2025-05-27 09:42:30.647072
+518,USER_000518,20250120,1983-10-16,Female,Jamaica,Walkerstad,Professional,Social Media,1,False,Churned,2025-01-20,2025-11-18 22:23:11.892784
+519,USER_000519,20230706,1974-11-11,Female,Korea,Candicestad,Professional,Referral,4,True,Active,2023-07-06,2024-10-13 14:17:53.960706
+520,USER_000520,20240724,1992-01-16,Male,Turks and Caicos Islands,South Lindatown,Individual,Email Campaign,1,False,Active,2024-07-24,2024-11-27 07:22:26.381930
+521,USER_000521,20251022,1959-10-13,Male,Lesotho,Lake Jamesbury,Student,Email Campaign,2,False,Cancelled,2025-10-22,2025-11-04 11:44:22.939818
+522,USER_000522,20250201,1969-08-11,Male,Suriname,East Lucas,Individual,Organic Search,3,True,Active,2025-02-01,2025-04-05 11:54:47.518935
+523,USER_000523,20231118,1986-09-26,Female,Swaziland,West Steve,Student,Referral,4,True,Active,2023-11-18,2024-04-23 11:13:10.153714
+524,USER_000524,20231222,1986-01-08,Female,Western Sahara,Donaldfurt,Professional,Social Media,4,True,Active,2023-12-22,2024-11-29 19:26:45.882281
+525,USER_000525,20230929,1975-09-30,Male,Vanuatu,East Bradley,Student,Referral,4,True,Active,2023-09-29,2024-09-27 00:46:19.661711
+526,USER_000526,20230326,2007-12-15,Female,Niue,Barryville,Student,Email Campaign,1,False,Active,2023-03-26,2023-04-08 09:02:44.646590
+527,USER_000527,20240519,1980-09-09,Male,Canada,Port Scottville,Student,Social Media,3,False,Active,2024-05-19,2024-11-01 11:37:37.276248
+528,USER_000528,20231023,1968-07-06,Female,New Caledonia,North Rachelmouth,Student,Social Media,3,True,Downgraded,2023-10-23,2024-12-25 08:11:40.202796
+529,USER_000529,20240501,1974-11-03,Male,Congo,Josephburgh,Individual,Organic Search,1,False,Churned,2024-05-01,2025-02-15 03:07:03.357281
+530,USER_000530,20250115,1990-07-28,Male,Mauritius,East Timothy,Individual,Paid Ads,3,True,Paused,2025-01-15,2025-02-04 22:37:50.635145
+531,USER_000531,20231021,1984-04-06,Female,Benin,Danielfurt,Individual,Referral,1,False,Inactive,2023-10-21,2023-12-28 10:49:43.573373
+532,USER_000532,20230209,1996-06-05,Male,Haiti,Johnsonchester,Professional,Organic Search,1,False,Churned,2023-02-09,2024-03-01 07:24:54.681752
+533,USER_000533,20230127,1974-12-14,Male,Bahrain,Markburgh,Professional,Social Media,3,True,Active,2023-01-27,2025-10-31 07:49:55.281990
+534,USER_000534,20240306,1971-10-13,Female,Papua New Guinea,Popeborough,Student,Paid Ads,5,True,Paused,2024-03-06,2025-01-08 22:57:40.903557
+535,USER_000535,20241114,1964-02-08,Male,Peru,West Bradley,Student,Paid Ads,1,False,Churned,2024-11-14,2025-10-30 06:14:45.958045
+536,USER_000536,20251014,1999-09-21,Female,British Virgin Islands,Andreborough,Professional,Organic Search,1,False,Churned,2025-10-14,2025-11-21 17:22:26.652685
+537,USER_000537,20241021,1988-07-04,Female,Bermuda,Underwoodview,Student,Referral,5,True,Active,2024-10-21,2025-01-06 20:14:58.931752
+538,USER_000538,20230611,1980-07-08,Male,Ireland,Brookemouth,Individual,Referral,4,True,Active,2023-06-11,2023-07-27 19:14:10.133471
+539,USER_000539,20240412,1966-12-14,Male,Nepal,South Pamelaton,Student,Paid Ads,5,True,Cancelled,2024-04-12,2025-01-03 07:25:39.627906
+540,USER_000540,20250317,1994-04-28,Male,Croatia,South Tyler,Student,Social Media,2,True,Downgraded,2025-03-17,2025-11-27 15:16:38.460262
+541,USER_000541,20240105,1970-05-03,Female,Nepal,North Whitney,Student,Referral,3,False,Active,2024-01-05,2025-07-10 13:47:24.187062
+542,USER_000542,20251020,2007-05-25,Female,Algeria,Conniefort,Individual,Organic Search,4,True,Active,2025-10-20,2025-11-21 19:34:51.388167
+543,USER_000543,20250826,1956-10-11,Male,Philippines,Kimberlyhaven,Professional,Organic Search,5,True,Paused,2025-08-26,2025-09-18 03:20:47.770141
+544,USER_000544,20231130,2002-07-26,Male,Antarctica (the territory South of 60 deg S),Annashire,Professional,Social Media,5,True,Active,2023-11-30,2024-09-02 17:19:43.876768
+545,USER_000545,20240818,1975-10-14,Female,Ghana,Floresport,Individual,Organic Search,5,True,Active,2024-08-18,2025-08-17 20:36:37.424347
+546,USER_000546,20250122,1992-09-06,Female,Tanzania,Russellport,Student,Social Media,3,False,Active,2025-01-22,2025-04-25 03:04:15.923903
+547,USER_000547,20240323,1964-05-20,Female,Barbados,West Kevin,Student,Social Media,4,True,Active,2024-03-23,2025-04-07 11:54:42.988837
+548,USER_000548,20230421,1999-09-10,Male,Liechtenstein,Haynesborough,Individual,Email Campaign,1,False,Active,2023-04-21,2024-02-20 17:55:58.281352
+549,USER_000549,20240820,1990-07-28,Female,Mayotte,West Tara,Individual,Paid Ads,1,False,Inactive,2024-08-20,2024-09-15 02:12:40.903615
+550,USER_000550,20250206,2001-09-07,Male,Isle of Man,East Stephanie,Student,Social Media,5,True,Active,2025-02-06,2025-11-01 13:36:19.708971
+551,USER_000551,20240415,2002-09-24,Female,Moldova,Rodriguezburgh,Professional,Organic Search,1,True,Cancelled,2024-04-15,2025-05-19 09:07:05.844088
+552,USER_000552,20241221,1970-12-23,Male,French Southern Territories,Perryville,Professional,Social Media,2,False,Paused,2024-12-21,2025-01-27 08:20:20.249142
+553,USER_000553,20230320,1968-04-08,Male,Swaziland,Erikshire,Individual,Referral,3,False,Paused,2023-03-20,2024-09-02 02:08:40.011629
+554,USER_000554,20240816,1988-03-23,Male,Israel,Port Savannah,Professional,Referral,4,True,Active,2024-08-16,2025-02-03 20:46:24.707271
+555,USER_000555,20250509,1975-02-20,Male,Georgia,Brownburgh,Individual,Email Campaign,2,False,Active,2025-05-09,2025-08-26 12:52:58.765360
+556,USER_000556,20230526,1992-07-07,Male,Cambodia,New Charles,Professional,Organic Search,4,True,Paused,2023-05-26,2025-01-31 03:42:59.721419
+557,USER_000557,20250116,1998-08-22,Female,China,Juanberg,Student,Referral,3,False,Active,2025-01-16,2025-10-23 16:09:14.178767
+558,USER_000558,20230719,2003-05-25,Female,Heard Island and McDonald Islands,Diazland,Student,Organic Search,5,True,Active,2023-07-19,2023-10-29 13:39:46.018622
+559,USER_000559,20240506,1982-08-26,Male,Pitcairn Islands,Mosleystad,Individual,Social Media,5,True,Active,2024-05-06,2024-07-21 19:40:03.497576
+560,USER_000560,20241017,1992-10-08,Male,Nigeria,Kimberlyside,Student,Referral,4,True,Active,2024-10-17,2025-08-01 03:25:21.733775
+561,USER_000561,20231214,2006-11-26,Female,Angola,South Johnshire,Individual,Paid Ads,1,False,Churned,2023-12-14,2025-03-06 04:56:33.917905
+562,USER_000562,20231224,1972-08-28,Male,Israel,New James,Professional,Organic Search,3,False,Active,2023-12-24,2025-10-16 10:41:39.246875
+563,USER_000563,20250322,1973-09-10,Female,Iceland,Port Staceyport,Student,Paid Ads,5,True,Active,2025-03-22,2025-10-02 09:17:05.697959
+564,USER_000564,20250730,1999-09-06,Male,Thailand,North Jessicaport,Student,Referral,3,False,Active,2025-07-30,2025-07-31 11:31:39.716101
+565,USER_000565,20250908,2008-03-30,Male,Korea,South Angelatown,Individual,Referral,3,False,Active,2025-09-08,2025-11-25 10:19:56.521209
+566,USER_000566,20230129,2008-02-15,Male,Bolivia,West Lori,Professional,Organic Search,3,True,Cancelled,2023-01-29,2024-02-20 18:33:15.540784
+567,USER_000567,20251028,2000-06-07,Female,Turkmenistan,East Michael,Professional,Paid Ads,5,True,Cancelled,2025-10-28,2025-11-27 16:13:55.115155
+568,USER_000568,20230204,2003-12-15,Female,Italy,West Moniqueland,Student,Paid Ads,3,False,Active,2023-02-04,2023-09-09 15:44:04.274547
+569,USER_000569,20240920,2007-01-26,Female,Poland,South Aaronburgh,Individual,Organic Search,1,False,Inactive,2024-09-20,2024-11-03 06:28:16.978700
+570,USER_000570,20250827,1963-10-17,Male,Singapore,Roblesside,Student,Email Campaign,3,False,Cancelled,2025-08-27,2025-11-15 07:14:22.498319
+571,USER_000571,20241005,1989-01-04,Male,Cayman Islands,Maryview,Individual,Referral,1,False,Churned,2024-10-05,2024-12-23 01:24:38.692624
+572,USER_000572,20241019,1967-05-19,Male,Yemen,Melissastad,Professional,Organic Search,5,True,Downgraded,2024-10-19,2025-03-22 01:14:25.611343
+573,USER_000573,20251006,1969-05-21,Male,Martinique,North Gary,Student,Referral,5,True,Downgraded,2025-10-06,2025-10-25 13:20:44.658916
+574,USER_000574,20251003,1956-02-08,Male,Ghana,Port Keithmouth,Individual,Organic Search,4,True,Paused,2025-10-03,2025-10-30 06:19:32.665911
+575,USER_000575,20251104,2009-07-03,Male,Bouvet Island (Bouvetoya),Scottport,Professional,Social Media,1,False,Inactive,2025-11-04,2025-11-26 02:40:41.057021
+576,USER_000576,20250103,1956-05-12,Male,Cape Verde,Port Sue,Individual,Paid Ads,4,True,Active,2025-01-03,2025-10-06 03:53:41.344491
+577,USER_000577,20231130,2003-12-27,Female,Reunion,Gordonfurt,Student,Organic Search,4,True,Cancelled,2023-11-30,2025-06-12 20:27:46.078059
+578,USER_000578,20241101,1990-11-19,Female,Egypt,Garyshire,Professional,Social Media,3,True,Paused,2024-11-01,2025-02-15 05:29:26.342265
+579,USER_000579,20250507,2008-11-15,Female,France,Chavezport,Professional,Email Campaign,1,False,Churned,2025-05-07,2025-09-24 23:18:29.096277
+580,USER_000580,20251002,1986-08-26,Male,North Macedonia,Jeffreyberg,Individual,Email Campaign,3,True,Active,2025-10-02,2025-10-21 09:38:27.084954
+581,USER_000581,20231118,1971-05-29,Male,Saint Kitts and Nevis,Manningport,Individual,Email Campaign,5,True,Paused,2023-11-18,2024-09-16 14:03:09.200248
+582,USER_000582,20250825,1994-05-22,Male,Saint Lucia,Bakerville,Individual,Organic Search,3,True,Active,2025-08-25,2025-11-07 02:24:21.908625
+583,USER_000583,20240720,1995-06-25,Female,Comoros,Coleberg,Student,Email Campaign,4,True,Active,2024-07-20,2025-07-18 14:46:12.484905
+584,USER_000584,20241113,1968-12-26,Male,Uruguay,Port Brandonmouth,Individual,Organic Search,2,False,Cancelled,2024-11-13,2025-08-10 11:19:19.269874
+585,USER_000585,20231123,1969-10-23,Male,Gambia,Hilltown,Student,Paid Ads,2,False,Active,2023-11-23,2025-06-01 12:31:02.032470
+586,USER_000586,20240222,1971-07-24,Female,Tanzania,Daviesfort,Student,Email Campaign,5,True,Active,2024-02-22,2025-07-01 23:57:24.652298
+587,USER_000587,20241112,1976-07-11,Female,Ireland,Bauerton,Student,Referral,3,False,Cancelled,2024-11-12,2025-03-12 22:40:13.278186
+588,USER_000588,20230620,1975-02-05,Female,French Guiana,Lake Joe,Professional,Social Media,5,True,Cancelled,2023-06-20,2023-12-31 15:23:24.765541
+589,USER_000589,20240713,1972-10-25,Male,Algeria,Perkinstown,Professional,Referral,5,True,Active,2024-07-13,2025-09-10 00:17:04.454134
+590,USER_000590,20250604,2007-12-25,Male,Falkland Islands (Malvinas),East Mary,Professional,Paid Ads,3,False,Active,2025-06-04,2025-11-10 09:29:04.878997
+591,USER_000591,20250527,1983-05-04,Male,French Polynesia,Stephaniestad,Student,Referral,3,False,Active,2025-05-27,2025-08-06 17:27:42.130586
+592,USER_000592,20250723,1994-08-20,Female,Cuba,Jesusport,Individual,Organic Search,5,True,Cancelled,2025-07-23,2025-10-26 06:17:34.189500
+593,USER_000593,20230209,1972-02-12,Male,Madagascar,Crawfordfurt,Student,Referral,2,True,Active,2023-02-09,2024-05-29 15:50:40.368174
+594,USER_000594,20231202,1997-09-26,Male,Cameroon,Leestad,Individual,Email Campaign,1,False,Churned,2023-12-02,2025-02-12 09:43:01.501696
+595,USER_000595,20231107,2006-08-08,Female,Egypt,New Samanthamouth,Professional,Referral,2,True,Downgraded,2023-11-07,2025-09-21 04:43:13.476638
+596,USER_000596,20230318,2007-10-24,Female,Paraguay,Lake Lisamouth,Professional,Organic Search,4,True,Active,2023-03-18,2025-08-16 21:18:53.508777
+597,USER_000597,20240817,1983-01-25,Female,Andorra,Pattersonburgh,Professional,Organic Search,5,True,Active,2024-08-17,2025-06-11 07:20:16.749102
+598,USER_000598,20230409,2005-08-11,Male,Vietnam,East Anitabury,Professional,Organic Search,2,True,Active,2023-04-09,2024-12-13 11:20:23.436461
+599,USER_000599,20240906,1995-09-08,Female,Jersey,New Scottmouth,Professional,Social Media,3,False,Cancelled,2024-09-06,2025-11-03 17:15:08.830047
+600,USER_000600,20241202,1994-08-12,Female,Kyrgyz Republic,New Shannonview,Individual,Referral,1,False,Churned,2024-12-02,2025-11-21 13:33:47.533116
+601,USER_000601,20241219,1967-09-16,Male,Comoros,Hesterstad,Professional,Organic Search,5,True,Cancelled,2024-12-19,2024-12-25 13:29:55.876283
+602,USER_000602,20241130,2002-07-25,Male,United Arab Emirates,West Carolburgh,Student,Paid Ads,1,False,Inactive,2024-11-30,2025-09-11 09:05:41.020650
+603,USER_000603,20230421,1968-02-29,Female,Macao,Port Davidtown,Professional,Email Campaign,2,False,Active,2023-04-21,2023-11-17 06:09:33.383219
+604,USER_000604,20230629,1982-03-01,Female,Guatemala,Stephaniemouth,Professional,Social Media,5,True,Active,2023-06-29,2023-12-07 18:56:13.232301
+605,USER_000605,20240713,1965-10-20,Female,Spain,Alexandriafurt,Student,Email Campaign,1,False,Inactive,2024-07-13,2025-07-30 01:06:31.585728
+606,USER_000606,20231212,2005-05-11,Male,Mexico,Jamieland,Individual,Paid Ads,5,True,Active,2023-12-12,2024-12-31 17:58:40.724828
+607,USER_000607,20240602,1959-02-15,Male,Germany,Richardmouth,Student,Referral,1,False,Churned,2024-06-02,2024-07-12 18:48:44.066870
+608,USER_000608,20240326,1986-11-15,Female,Moldova,Williammouth,Professional,Email Campaign,2,True,Active,2024-03-26,2024-09-14 15:44:30.101850
+609,USER_000609,20250420,1972-10-10,Female,Kiribati,Lambertberg,Student,Email Campaign,1,False,Inactive,2025-04-20,2025-05-23 07:48:26.831808
+610,USER_000610,20230705,2009-07-26,Female,Algeria,Lake Rachel,Professional,Email Campaign,1,True,Active,2023-07-05,2025-07-04 15:41:18.206244
+611,USER_000611,20251030,1978-10-13,Female,Israel,Paulport,Individual,Social Media,3,False,Cancelled,2025-10-30,2025-11-17 13:32:52.336731
+612,USER_000612,20231126,2008-06-10,Female,Cape Verde,West Monicaland,Student,Referral,2,False,Paused,2023-11-26,2025-05-24 11:57:50.990558
+613,USER_000613,20231125,1998-02-01,Male,Greece,Fieldsburgh,Student,Email Campaign,2,False,Paused,2023-11-25,2025-01-25 14:55:09.517797
+614,USER_000614,20240704,2008-10-20,Male,Trinidad and Tobago,Julieland,Professional,Email Campaign,5,True,Paused,2024-07-04,2025-09-03 13:42:26.252536
+615,USER_000615,20230615,2006-08-27,Male,Guinea-Bissau,Sharpview,Individual,Organic Search,1,False,Inactive,2023-06-15,2023-10-19 20:49:17.546904
+616,USER_000616,20250920,2006-04-05,Female,Czech Republic,Estradamouth,Individual,Organic Search,4,True,Cancelled,2025-09-20,2025-11-07 18:25:26.881001
+617,USER_000617,20240725,1979-11-28,Male,Switzerland,North Larrytown,Student,Referral,5,True,Active,2024-07-25,2025-04-27 12:16:03.995323
+618,USER_000618,20250113,2005-05-25,Male,Sierra Leone,South Kendraside,Student,Referral,5,True,Active,2025-01-13,2025-07-02 01:06:51.290919
+619,USER_000619,20240421,1955-04-03,Female,Macao,New Michael,Student,Referral,4,True,Cancelled,2024-04-21,2024-07-12 23:27:28.246009
+620,USER_000620,20240419,1957-05-10,Female,Montenegro,East Jonathanview,Individual,Email Campaign,1,True,Cancelled,2024-04-19,2024-06-29 13:45:41.610697
+621,USER_000621,20231008,1961-11-05,Female,Reunion,South Christopher,Student,Organic Search,2,False,Cancelled,2023-10-08,2024-04-08 19:25:17.374704
+622,USER_000622,20240514,1967-02-27,Male,Honduras,Lindseyburgh,Individual,Referral,1,False,Active,2024-05-14,2025-05-01 04:43:35.279589
+623,USER_000623,20241105,1962-11-28,Female,Pakistan,Lake Kelly,Professional,Social Media,3,False,Active,2024-11-05,2025-04-29 17:36:31.676862
+624,USER_000624,20230211,1983-05-24,Male,Christmas Island,West Tina,Individual,Social Media,1,False,Churned,2023-02-11,2024-10-24 15:02:20.118662
+625,USER_000625,20230111,1997-03-25,Male,Dominica,South Brookeport,Professional,Referral,5,True,Downgraded,2023-01-11,2025-07-19 11:03:48.418775
+626,USER_000626,20230714,1986-08-28,Female,Dominica,Lake Bettyburgh,Professional,Referral,1,False,Active,2023-07-14,2025-06-20 05:55:11.271330
+627,USER_000627,20250516,1994-06-07,Female,Japan,Lake Edwin,Individual,Email Campaign,2,False,Active,2025-05-16,2025-07-24 07:59:29.469529
+628,USER_000628,20240823,1988-04-04,Male,Mayotte,New Amandamouth,Student,Referral,1,False,Churned,2024-08-23,2025-07-07 21:47:57.490008
+629,USER_000629,20240702,1970-01-30,Female,Botswana,Sarahshire,Student,Paid Ads,1,False,Inactive,2024-07-02,2024-11-05 18:58:21.506500
+630,USER_000630,20240701,1965-10-22,Male,Denmark,South Matthewtown,Student,Social Media,2,False,Active,2024-07-01,2024-12-16 09:29:19.759284
+631,USER_000631,20240609,1966-12-29,Female,Hungary,Cookside,Individual,Email Campaign,3,True,Downgraded,2024-06-09,2025-01-02 17:33:44.587543
+632,USER_000632,20230806,1993-12-11,Male,Burkina Faso,Clarkport,Individual,Referral,3,False,Cancelled,2023-08-06,2025-11-11 23:40:24.772921
+633,USER_000633,20240120,1994-09-15,Female,Cuba,Lake Susanport,Individual,Organic Search,4,True,Active,2024-01-20,2025-09-12 13:28:19.917800
+634,USER_000634,20250907,2000-06-26,Male,United States Virgin Islands,Jamesport,Professional,Social Media,3,True,Active,2025-09-07,2025-11-07 00:08:55.911522
+635,USER_000635,20231012,1989-11-10,Female,Dominica,Petersonland,Professional,Paid Ads,2,True,Paused,2023-10-12,2024-09-02 11:11:28.257324
+636,USER_000636,20230601,2005-07-18,Male,Bolivia,Patrickton,Individual,Email Campaign,1,False,Inactive,2023-06-01,2023-07-12 12:21:05.628358
+637,USER_000637,20250209,1984-07-21,Female,Denmark,Lake Michaelport,Professional,Organic Search,4,True,Active,2025-02-09,2025-10-09 19:18:54.461548
+638,USER_000638,20241029,1967-06-11,Female,Wallis and Futuna,Turnershire,Student,Email Campaign,3,False,Cancelled,2024-10-29,2025-08-10 10:05:04.709260
+639,USER_000639,20250115,1968-08-14,Female,Turks and Caicos Islands,Lake Janice,Professional,Paid Ads,4,True,Active,2025-01-15,2025-03-02 05:04:06.883084
+640,USER_000640,20240728,1959-11-10,Female,Italy,Millerbury,Student,Social Media,4,True,Active,2024-07-28,2025-04-03 06:20:31.720457
+641,USER_000641,20240116,1975-04-12,Female,Russian Federation,Kennethtown,Professional,Referral,5,True,Active,2024-01-16,2024-05-30 19:21:31.440650
+642,USER_000642,20230922,1981-05-19,Female,Argentina,South Sydney,Student,Social Media,3,False,Active,2023-09-22,2025-10-27 15:53:21.624989
+643,USER_000643,20250107,1985-01-19,Female,Sweden,South Margaretburgh,Individual,Email Campaign,3,False,Cancelled,2025-01-07,2025-04-17 06:33:24.549071
+644,USER_000644,20241123,1961-11-22,Female,Trinidad and Tobago,Lake Dalton,Professional,Social Media,1,False,Inactive,2024-11-23,2025-03-28 14:27:52.201308
+645,USER_000645,20251016,1979-12-22,Male,Malta,Traceyborough,Individual,Organic Search,4,True,Active,2025-10-16,2025-11-10 14:24:51.690241
+646,USER_000646,20241130,1975-03-06,Female,Greenland,Kyletown,Professional,Social Media,4,True,Active,2024-11-30,2025-08-11 02:08:54.087285
+647,USER_000647,20251114,1962-08-30,Female,Guyana,Tylerburgh,Student,Email Campaign,1,False,Churned,2025-11-14,2025-11-23 07:35:01.231611
+648,USER_000648,20240201,1987-09-05,Male,San Marino,Lake Sarah,Professional,Email Campaign,4,True,Cancelled,2024-02-01,2024-06-27 15:46:00.525752
+649,USER_000649,20230304,2002-03-09,Female,North Macedonia,Joelshire,Professional,Email Campaign,3,False,Cancelled,2023-03-04,2024-10-25 16:47:19.018275
+650,USER_000650,20251029,1978-11-20,Male,Guatemala,Garciafort,Student,Organic Search,2,False,Cancelled,2025-10-29,2025-11-17 23:40:15.920792
+651,USER_000651,20230102,1958-12-01,Male,Hungary,Martinezborough,Student,Social Media,4,True,Active,2023-01-02,2024-04-09 07:25:04.404650
+652,USER_000652,20250504,1973-08-05,Male,Cook Islands,South Eric,Individual,Email Campaign,4,True,Cancelled,2025-05-04,2025-11-25 13:34:20.983011
+653,USER_000653,20240423,1957-08-06,Male,Lesotho,Port Eugene,Student,Organic Search,4,True,Cancelled,2024-04-23,2025-04-01 10:33:08.111593
+654,USER_000654,20241011,1999-11-29,Male,Turkey,West Courtney,Student,Referral,3,False,Cancelled,2024-10-11,2025-07-15 20:56:13.279523
+655,USER_000655,20240621,1971-04-24,Female,Turkey,South Josephport,Student,Paid Ads,2,False,Cancelled,2024-06-21,2025-03-29 10:41:57.637441
+656,USER_000656,20251003,1981-09-28,Female,British Indian Ocean Territory (Chagos Archipelago),Matthewton,Professional,Paid Ads,3,False,Paused,2025-10-03,2025-11-10 16:56:36.627583
+657,USER_000657,20230428,1978-08-11,Male,New Caledonia,West Kathyview,Student,Referral,5,True,Active,2023-04-28,2023-07-05 07:59:56.810913
+658,USER_000658,20250702,1992-09-01,Male,Brunei Darussalam,Lake Janice,Professional,Organic Search,1,False,Churned,2025-07-02,2025-11-17 18:31:05.049467
+659,USER_000659,20250322,1978-11-29,Male,Kenya,East Mindy,Student,Paid Ads,5,True,Cancelled,2025-03-22,2025-10-04 02:34:30.496661
+660,USER_000660,20250306,2005-10-16,Male,Dominica,North Sharon,Individual,Social Media,4,True,Active,2025-03-06,2025-09-12 09:46:28.658502
+661,USER_000661,20250709,1975-11-06,Female,Azerbaijan,New Marvinville,Student,Referral,2,False,Active,2025-07-09,2025-09-18 02:39:11.123680
+662,USER_000662,20240222,1994-10-21,Male,Micronesia,Jamesmouth,Individual,Organic Search,5,True,Downgraded,2024-02-22,2024-05-27 06:52:10.187575
+663,USER_000663,20250219,1964-06-10,Female,Morocco,Port Aaronmouth,Individual,Referral,3,False,Active,2025-02-19,2025-07-18 07:31:32.112383
+664,USER_000664,20240108,2009-11-08,Male,Jersey,Port Jeremiahfurt,Professional,Email Campaign,5,True,Cancelled,2024-01-08,2024-12-10 03:02:08.694303
+665,USER_000665,20250906,1982-04-02,Female,Kuwait,Arthurmouth,Student,Paid Ads,4,True,Active,2025-09-06,2025-11-05 14:20:15.053449
+666,USER_000666,20231005,1968-10-30,Female,Rwanda,Rhodeston,Professional,Referral,1,False,Inactive,2023-10-05,2025-01-17 00:58:22.004472
+667,USER_000667,20240312,1959-01-16,Male,Kyrgyz Republic,Teresafurt,Professional,Referral,1,False,Inactive,2024-03-12,2025-01-22 19:13:04.272200
+668,USER_000668,20240710,1966-11-27,Female,Antigua and Barbuda,North John,Student,Organic Search,4,True,Active,2024-07-10,2024-12-21 19:10:13.178223
+669,USER_000669,20240924,1989-01-04,Female,Equatorial Guinea,North Patriciamouth,Individual,Organic Search,3,False,Active,2024-09-24,2024-12-22 01:53:38.328994
+670,USER_000670,20251012,1971-07-06,Female,Uganda,Lake Gregorystad,Professional,Email Campaign,3,False,Paused,2025-10-12,2025-11-27 12:51:54.402552
+671,USER_000671,20240912,1962-03-04,Male,Chile,Crystalshire,Professional,Email Campaign,3,False,Active,2024-09-12,2024-09-28 18:22:33.984486
+672,USER_000672,20250514,1981-02-08,Male,Guernsey,New Jason,Student,Social Media,3,False,Active,2025-05-14,2025-05-26 12:31:19.316851
+673,USER_000673,20221230,1984-01-02,Female,Bolivia,Rebeccastad,Student,Email Campaign,4,True,Active,2022-12-30,2025-05-20 04:10:46.189033
+674,USER_000674,20241126,1968-09-25,Male,North Macedonia,Port Joshuaside,Professional,Organic Search,2,False,Active,2024-11-26,2025-08-03 21:40:42.418075
+675,USER_000675,20250129,2003-07-04,Female,Niger,Thompsonfurt,Professional,Organic Search,4,True,Active,2025-01-29,2025-06-14 21:13:41.320609
+676,USER_000676,20230315,1967-08-06,Female,Paraguay,Coxmouth,Professional,Social Media,2,True,Paused,2023-03-15,2023-06-20 09:51:18.824288
+677,USER_000677,20250811,1983-09-03,Female,Reunion,East Anna,Individual,Referral,5,True,Active,2025-08-11,2025-11-10 06:04:18.477500
+678,USER_000678,20231023,1977-04-02,Male,North Macedonia,Jordanfort,Individual,Social Media,4,True,Active,2023-10-23,2025-08-01 16:19:28.021518
+679,USER_000679,20250627,1977-10-06,Female,Aruba,East Emily,Individual,Social Media,1,False,Inactive,2025-06-27,2025-10-08 08:52:04.393939
+680,USER_000680,20250428,2003-02-08,Female,Cambodia,Smithfurt,Professional,Social Media,3,False,Cancelled,2025-04-28,2025-05-18 16:40:20.013977
+681,USER_000681,20230302,1964-05-03,Male,Montenegro,Port Derekhaven,Professional,Referral,3,False,Cancelled,2023-03-02,2025-11-23 00:08:41.027252
+682,USER_000682,20250726,1989-07-19,Male,Sri Lanka,Kington,Professional,Referral,3,False,Active,2025-07-26,2025-10-27 17:36:45.981978
+683,USER_000683,20251026,1996-07-20,Male,Christmas Island,East Jeremiah,Student,Organic Search,2,False,Paused,2025-10-26,2025-11-14 00:11:48.334927
+684,USER_000684,20250419,1986-06-06,Female,South Georgia and the South Sandwich Islands,Bowmanland,Student,Social Media,4,True,Active,2025-04-19,2025-11-15 23:03:24.178066
+685,USER_000685,20230614,1971-10-28,Male,Australia,East Barbara,Individual,Paid Ads,4,True,Active,2023-06-14,2024-02-20 18:27:39.444692
+686,USER_000686,20230102,1977-11-25,Male,Ireland,Lake Kimberlymouth,Professional,Social Media,3,False,Active,2023-01-02,2024-05-14 19:58:32.781096
+687,USER_000687,20240516,1980-06-05,Female,Central African Republic,Jordanburgh,Professional,Organic Search,3,False,Cancelled,2024-05-16,2025-01-08 12:09:01.402482
+688,USER_000688,20251117,2008-08-14,Female,Luxembourg,Lake Lindsay,Student,Organic Search,2,False,Cancelled,2025-11-17,2025-11-22 06:10:59.867961
+689,USER_000689,20230531,1988-05-11,Female,Palau,Choiville,Student,Organic Search,3,False,Paused,2023-05-31,2024-06-10 16:24:25.342387
+690,USER_000690,20250815,1967-03-01,Male,Israel,New Jeffrey,Professional,Email Campaign,3,True,Active,2025-08-15,2025-08-23 05:35:32.126386
+691,USER_000691,20251027,1959-03-11,Female,Afghanistan,Richardsonport,Individual,Email Campaign,4,True,Paused,2025-10-27,2025-11-21 07:23:22.778873
+692,USER_000692,20241020,1987-06-20,Male,Gambia,Crystalhaven,Student,Social Media,4,True,Active,2024-10-20,2025-10-10 12:11:15.932115
+693,USER_000693,20221231,1958-10-07,Female,Malta,Mitchellborough,Professional,Paid Ads,3,False,Active,2022-12-31,2025-11-05 16:18:01.768263
+694,USER_000694,20250123,1955-02-24,Male,Pitcairn Islands,Olsonbury,Individual,Email Campaign,5,True,Active,2025-01-23,2025-11-15 22:07:57.170099
+695,USER_000695,20241126,1994-09-21,Male,Colombia,South Vicki,Individual,Organic Search,1,False,Churned,2024-11-26,2024-12-24 23:18:17.868957
+696,USER_000696,20251025,1994-04-12,Male,Oman,Jacksonview,Individual,Paid Ads,5,True,Active,2025-10-25,2025-11-12 03:43:45.520235
+697,USER_000697,20230124,1987-02-19,Male,Chad,South Justinmouth,Student,Email Campaign,4,True,Active,2023-01-24,2025-07-07 03:37:56.136621
+698,USER_000698,20231102,2004-05-23,Female,Eritrea,Jamesport,Professional,Paid Ads,5,True,Active,2023-11-02,2025-06-16 16:48:35.478186
+699,USER_000699,20250914,1992-12-22,Male,Iraq,Kyleview,Individual,Organic Search,5,True,Active,2025-09-14,2025-09-23 14:13:17.161696
+700,USER_000700,20230218,1982-07-13,Female,Venezuela,Staciefort,Individual,Referral,2,False,Active,2023-02-18,2023-09-24 06:45:39.412901
+701,USER_000701,20230323,1970-08-30,Female,Costa Rica,Port Kennethtown,Individual,Social Media,3,False,Cancelled,2023-03-23,2024-09-08 04:25:51.612018
+702,USER_000702,20241226,1984-01-16,Female,Thailand,Dariushaven,Student,Email Campaign,2,True,Active,2024-12-26,2025-05-07 10:13:03.206476
+703,USER_000703,20251030,1987-12-08,Female,Congo,New Laurie,Student,Paid Ads,5,True,Active,2025-10-30,2025-11-01 19:40:34.478368
+704,USER_000704,20240519,1986-08-21,Female,Saint Kitts and Nevis,Andrewborough,Professional,Paid Ads,4,True,Active,2024-05-19,2025-11-05 23:08:10.773803
+705,USER_000705,20230805,1974-06-06,Female,Saint Barthelemy,Robinsonchester,Professional,Referral,1,False,Inactive,2023-08-05,2023-09-24 00:04:44.479281
+706,USER_000706,20230206,1975-10-09,Male,Central African Republic,New Jameschester,Student,Email Campaign,4,True,Downgraded,2023-02-06,2025-07-24 11:41:28.559030
+707,USER_000707,20250710,1957-10-13,Female,Puerto Rico,East Anthony,Student,Email Campaign,2,True,Cancelled,2025-07-10,2025-11-07 18:32:18.594681
+708,USER_000708,20230904,1962-05-22,Male,Sao Tome and Principe,Lake Michael,Student,Paid Ads,5,True,Active,2023-09-04,2025-09-16 16:57:50.997781
+709,USER_000709,20250727,1973-08-16,Male,Azerbaijan,Lake Stacy,Professional,Organic Search,5,True,Active,2025-07-27,2025-09-23 14:58:02.195580
+710,USER_000710,20231021,1968-09-05,Female,Ukraine,Bellfurt,Professional,Social Media,3,True,Paused,2023-10-21,2024-06-03 02:34:44.172069
+711,USER_000711,20240811,1981-08-19,Male,Holy See (Vatican City State),New Tricia,Individual,Organic Search,1,False,Active,2024-08-11,2025-03-21 07:28:07.810436
+712,USER_000712,20230222,1971-03-02,Female,Costa Rica,Carolynmouth,Student,Email Campaign,5,True,Active,2023-02-22,2024-12-29 09:01:52.773994
+713,USER_000713,20230411,1971-08-20,Male,Holy See (Vatican City State),South Courtney,Professional,Paid Ads,1,False,Churned,2023-04-11,2023-08-25 12:20:40.248787
+714,USER_000714,20230422,1975-07-29,Female,Libyan Arab Jamahiriya,New Kristen,Individual,Referral,4,True,Active,2023-04-22,2025-06-24 06:08:56.458303
+715,USER_000715,20250614,2006-02-10,Female,Guernsey,Jessicaside,Professional,Paid Ads,2,False,Active,2025-06-14,2025-09-23 06:44:18.601120
+716,USER_000716,20230511,1957-06-28,Female,Slovenia,Lake Ronald,Student,Referral,2,False,Paused,2023-05-11,2024-02-14 22:25:37.087964
+717,USER_000717,20231017,1990-02-12,Female,French Southern Territories,Richardsbury,Professional,Referral,4,True,Active,2023-10-17,2024-08-12 06:51:00.576854
+718,USER_000718,20240206,1999-09-03,Female,Brunei Darussalam,South Juan,Professional,Social Media,4,True,Active,2024-02-06,2025-05-19 08:38:50.102508
+719,USER_000719,20250207,1977-07-15,Male,Zambia,Jacksonberg,Individual,Social Media,5,True,Active,2025-02-07,2025-03-26 13:06:32.509965
+720,USER_000720,20240130,2003-03-30,Male,Eritrea,West Nathan,Professional,Social Media,3,True,Active,2024-01-30,2025-07-16 19:36:54.348845
+721,USER_000721,20231229,1980-09-10,Male,Uruguay,Howellchester,Student,Email Campaign,5,True,Paused,2023-12-29,2024-06-06 14:54:24.510600
+722,USER_000722,20250415,1983-08-23,Male,Pakistan,Grantburgh,Professional,Social Media,1,False,Churned,2025-04-15,2025-08-13 06:17:08.062878
+723,USER_000723,20250520,1992-08-15,Male,Western Sahara,Clarkstad,Student,Social Media,2,False,Cancelled,2025-05-20,2025-05-29 10:07:02.654020
+724,USER_000724,20241007,1992-11-29,Male,Anguilla,Samanthaview,Professional,Email Campaign,5,True,Active,2024-10-07,2025-01-04 11:22:33.811462
+725,USER_000725,20240707,1975-03-28,Male,Estonia,Kimberlyside,Individual,Email Campaign,1,False,Inactive,2024-07-07,2025-01-06 21:18:30.175184
+726,USER_000726,20250708,1995-06-01,Male,Seychelles,South Michael,Professional,Email Campaign,5,True,Cancelled,2025-07-08,2025-08-06 12:26:42.632087
+727,USER_000727,20230418,1970-08-18,Female,Zambia,West Karaburgh,Student,Paid Ads,2,False,Cancelled,2023-04-18,2023-08-23 02:11:42.210315
+728,USER_000728,20240118,1961-03-23,Female,Saint Barthelemy,Rodgersland,Professional,Email Campaign,2,False,Active,2024-01-18,2024-04-22 11:36:12.083682
+729,USER_000729,20230612,1980-04-26,Male,Cambodia,Kathrynborough,Individual,Paid Ads,5,True,Active,2023-06-12,2023-10-24 00:31:23.060410
+730,USER_000730,20230805,2008-12-10,Male,Lebanon,Esparzaview,Individual,Social Media,3,False,Active,2023-08-05,2024-03-20 09:20:42.667965
+731,USER_000731,20240618,1975-04-06,Male,Liechtenstein,East Emily,Professional,Social Media,1,False,Inactive,2024-06-18,2025-04-10 14:05:52.289511
+732,USER_000732,20230428,1988-05-03,Male,Slovakia (Slovak Republic),Lake Fernandobury,Student,Paid Ads,3,False,Cancelled,2023-04-28,2023-11-19 01:15:07.418416
+733,USER_000733,20240531,1968-05-15,Female,Uganda,Thompsontown,Student,Email Campaign,1,False,Churned,2024-05-31,2024-11-19 04:52:16.123863
+734,USER_000734,20230509,1981-10-07,Male,Malta,Port Emilyfort,Professional,Organic Search,2,True,Active,2023-05-09,2023-08-31 18:31:18.624578
+735,USER_000735,20230808,1956-04-07,Male,Paraguay,Port Kennethborough,Professional,Organic Search,3,False,Cancelled,2023-08-08,2025-10-05 17:39:28.504357
+736,USER_000736,20230120,2000-11-30,Male,Cote d'Ivoire,Port Kevinstad,Professional,Social Media,5,True,Cancelled,2023-01-20,2023-02-12 02:48:08.867105
+737,USER_000737,20231207,1979-05-24,Female,Korea,Lake James,Individual,Paid Ads,4,True,Cancelled,2023-12-07,2024-08-28 09:40:49.608861
+738,USER_000738,20250530,1990-04-19,Male,Lao People's Democratic Republic,Ashleyberg,Professional,Organic Search,2,False,Active,2025-05-30,2025-07-23 13:16:51.457841
+739,USER_000739,20241113,2002-09-21,Female,Argentina,New Tracyborough,Student,Referral,5,True,Active,2024-11-13,2025-09-28 20:27:54.826928
+740,USER_000740,20240905,1958-05-07,Male,Kuwait,Wrightville,Student,Email Campaign,1,False,Active,2024-09-05,2024-12-31 01:43:28.839321
+741,USER_000741,20230824,1965-07-01,Male,Maldives,Colemanton,Professional,Email Campaign,4,True,Active,2023-08-24,2025-09-16 22:51:25.956282
+742,USER_000742,20250728,1956-04-08,Male,United Arab Emirates,Priceberg,Individual,Referral,2,True,Paused,2025-07-28,2025-09-11 07:26:20.597750
+743,USER_000743,20250514,1987-04-18,Male,Qatar,New Susanborough,Professional,Referral,5,True,Cancelled,2025-05-14,2025-06-03 13:13:48.219368
+744,USER_000744,20241107,1978-10-12,Female,Norway,East Rachel,Individual,Referral,1,False,Active,2024-11-07,2025-10-23 00:20:56.523970
+745,USER_000745,20240619,1983-11-06,Female,Kiribati,New Nicole,Professional,Organic Search,5,True,Active,2024-06-19,2024-08-13 05:01:33.711339
+746,USER_000746,20250608,1957-05-10,Female,Monaco,Jessefurt,Professional,Paid Ads,1,False,Churned,2025-06-08,2025-10-03 06:02:00.178281
+747,USER_000747,20230619,2006-05-18,Male,Tuvalu,Kathleenton,Individual,Referral,3,False,Active,2023-06-19,2025-11-27 02:25:06.010787
+748,USER_000748,20241210,1967-06-20,Female,Venezuela,Carterview,Individual,Social Media,2,False,Paused,2024-12-10,2025-03-29 03:53:39.239575
+749,USER_000749,20231121,1981-04-03,Female,Falkland Islands (Malvinas),North Jeffrey,Individual,Email Campaign,1,False,Active,2023-11-21,2024-06-22 12:12:11.514510
+750,USER_000750,20250909,1972-02-22,Male,Slovakia (Slovak Republic),North Taylor,Individual,Paid Ads,1,False,Inactive,2025-09-09,2025-09-30 08:02:47.554470
+751,USER_000751,20240517,1985-11-15,Male,Pitcairn Islands,Moniqueside,Professional,Email Campaign,2,False,Cancelled,2024-05-17,2025-02-08 08:16:28.207209
+752,USER_000752,20250408,1993-09-19,Female,Burundi,New Brian,Professional,Email Campaign,2,False,Active,2025-04-08,2025-08-24 18:21:28.378393
+753,USER_000753,20240829,1979-12-14,Female,Thailand,Stevenberg,Student,Social Media,4,True,Active,2024-08-29,2025-08-21 19:18:16.744606
+754,USER_000754,20250607,1957-03-31,Female,Panama,Jasonbury,Professional,Referral,5,True,Active,2025-06-07,2025-09-21 22:36:59.221985
+755,USER_000755,20230602,1999-08-05,Male,Belgium,Patrickmouth,Student,Email Campaign,2,False,Active,2023-06-02,2025-07-05 13:30:06.237062
+756,USER_000756,20240804,1987-12-08,Female,Liechtenstein,Whitneyland,Professional,Social Media,1,False,Churned,2024-08-04,2024-11-27 06:45:46.400603
+757,USER_000757,20240913,2008-10-29,Female,Romania,Velezport,Individual,Social Media,5,True,Cancelled,2024-09-13,2025-01-05 14:49:07.603826
+758,USER_000758,20250630,1966-04-18,Male,Nepal,Joseville,Student,Social Media,5,True,Active,2025-06-30,2025-07-11 21:50:36.559565
+759,USER_000759,20240701,1990-04-11,Male,Svalbard & Jan Mayen Islands,South Patrickside,Individual,Paid Ads,2,True,Downgraded,2024-07-01,2025-02-20 17:35:59.007250
+760,USER_000760,20250523,1973-07-28,Female,Aruba,Lake Melissamouth,Professional,Referral,1,False,Active,2025-05-23,2025-06-21 02:06:09.937561
+761,USER_000761,20250113,2009-01-01,Female,Lebanon,East Melinda,Individual,Referral,2,False,Active,2025-01-13,2025-08-05 16:08:24.667082
+762,USER_000762,20230415,1982-03-06,Female,Malaysia,South Kristin,Student,Paid Ads,1,False,Inactive,2023-04-15,2025-08-19 14:02:19.437057
+763,USER_000763,20250204,1973-02-11,Female,Argentina,South Cassandra,Professional,Paid Ads,2,False,Active,2025-02-04,2025-07-24 13:06:02.330758
+764,USER_000764,20240506,1967-03-29,Male,Trinidad and Tobago,Erikafort,Individual,Email Campaign,4,True,Paused,2024-05-06,2025-04-04 11:37:14.618940
+765,USER_000765,20230710,1989-12-20,Female,Tokelau,Davidsonborough,Professional,Email Campaign,5,True,Paused,2023-07-10,2025-06-10 14:10:12.629254
+766,USER_000766,20250918,1998-01-01,Female,Jamaica,Timothystad,Individual,Referral,4,True,Active,2025-09-18,2025-09-29 22:09:26.647888
+767,USER_000767,20250408,1955-03-11,Female,Brunei Darussalam,Luismouth,Student,Email Campaign,2,False,Active,2025-04-08,2025-07-17 00:23:39.134151
+768,USER_000768,20231025,1975-09-27,Male,Guinea,New Derrick,Individual,Email Campaign,3,False,Cancelled,2023-10-25,2025-10-19 12:30:56.578691
+769,USER_000769,20240506,1961-07-18,Male,Netherlands,Olsonmouth,Individual,Referral,1,False,Active,2024-05-06,2024-08-13 12:13:47.918495
+770,USER_000770,20240901,1987-12-20,Female,Sudan,Port Heatherborough,Individual,Email Campaign,4,True,Downgraded,2024-09-01,2025-02-22 09:11:08.323718
+771,USER_000771,20240322,2006-03-29,Female,Monaco,Port Donaldchester,Individual,Email Campaign,2,True,Active,2024-03-22,2024-10-04 20:07:12.596487
+772,USER_000772,20250216,1967-04-07,Female,New Zealand,South Juan,Student,Email Campaign,5,True,Active,2025-02-16,2025-09-12 11:39:09.943383
+773,USER_000773,20250930,1996-12-18,Male,Cape Verde,North Tammy,Professional,Paid Ads,1,False,Active,2025-09-30,2025-11-03 13:39:05.192549
+774,USER_000774,20221205,1979-12-03,Female,Morocco,New David,Student,Social Media,2,False,Cancelled,2022-12-05,2023-09-28 10:53:56.441951
+775,USER_000775,20240313,1998-01-31,Male,Tonga,East Wayneton,Individual,Paid Ads,3,False,Paused,2024-03-13,2024-09-17 20:45:41.125581
+776,USER_000776,20231016,1955-04-14,Female,Jamaica,Sarahmouth,Professional,Paid Ads,4,True,Downgraded,2023-10-16,2024-12-21 10:04:06.083430
+777,USER_000777,20240930,1962-01-26,Female,Canada,Heatherland,Student,Email Campaign,1,False,Active,2024-09-30,2025-08-31 18:53:54.447058
+778,USER_000778,20250311,1981-09-24,Male,France,Karentown,Professional,Social Media,1,False,Inactive,2025-03-11,2025-08-11 22:40:51.090111
+779,USER_000779,20230222,2008-06-02,Male,Cyprus,Danielhaven,Individual,Organic Search,4,True,Active,2023-02-22,2025-09-22 20:32:21.363341
+780,USER_000780,20221223,1959-01-29,Male,North Macedonia,Hernandezton,Individual,Email Campaign,5,True,Active,2022-12-23,2023-10-30 12:06:17.802448
+781,USER_000781,20240713,1989-08-11,Male,Chile,Davidfurt,Individual,Email Campaign,4,True,Active,2024-07-13,2025-04-10 18:50:59.439014
+782,USER_000782,20221228,1964-02-09,Male,Belarus,Port Sarahfurt,Professional,Paid Ads,1,False,Churned,2022-12-28,2024-11-21 21:32:32.505813
+783,USER_000783,20240426,1960-02-07,Male,Guadeloupe,Lake Jameschester,Student,Referral,1,False,Inactive,2024-04-26,2024-05-14 10:33:39.749312
+784,USER_000784,20250416,2000-08-23,Female,United States Minor Outlying Islands,West Donnachester,Professional,Paid Ads,5,True,Cancelled,2025-04-16,2025-08-17 05:51:41.368986
+785,USER_000785,20230211,1980-03-14,Female,Liberia,Timothyside,Individual,Social Media,3,False,Active,2023-02-11,2023-12-27 02:10:08.135449
+786,USER_000786,20230724,1974-11-20,Female,Cocos (Keeling) Islands,Bakerton,Professional,Referral,4,True,Active,2023-07-24,2024-02-29 01:11:01.931189
+787,USER_000787,20240210,1977-03-24,Male,Croatia,East Mitchell,Student,Paid Ads,2,False,Active,2024-02-10,2025-05-18 07:46:59.004920
+788,USER_000788,20240416,1965-01-23,Female,Afghanistan,Taylorburgh,Professional,Organic Search,3,False,Active,2024-04-16,2025-02-23 18:41:20.820199
+789,USER_000789,20240926,1968-04-09,Male,Cook Islands,Michelleberg,Professional,Paid Ads,5,True,Cancelled,2024-09-26,2025-01-06 00:56:08.307513
+790,USER_000790,20250618,1955-11-20,Female,Zambia,North Elizabeth,Individual,Referral,1,False,Active,2025-06-18,2025-07-31 00:43:23.065269
+791,USER_000791,20240719,1963-02-12,Female,Sri Lanka,Port Wendy,Student,Organic Search,5,True,Active,2024-07-19,2024-10-25 20:35:47.728737
+792,USER_000792,20241104,1982-03-01,Male,Romania,Hernandezport,Professional,Social Media,2,False,Active,2024-11-04,2025-11-24 01:19:44.181671
+793,USER_000793,20250209,2000-11-20,Male,Hong Kong,Alexandriamouth,Student,Referral,1,False,Inactive,2025-02-09,2025-04-24 04:18:49.808667
+794,USER_000794,20231116,1988-12-21,Female,Turkmenistan,Turnerchester,Student,Social Media,4,True,Active,2023-11-16,2025-05-10 03:10:51.390078
+795,USER_000795,20231206,1975-03-07,Male,Faroe Islands,South Luis,Professional,Organic Search,2,False,Cancelled,2023-12-06,2025-02-05 11:48:04.338333
+796,USER_000796,20230729,1980-10-26,Male,Myanmar,Gallagherchester,Student,Email Campaign,5,True,Active,2023-07-29,2025-03-24 10:11:49.659357
+797,USER_000797,20240123,1970-08-24,Male,Iceland,West Gabriella,Individual,Social Media,3,False,Paused,2024-01-23,2025-11-12 20:15:13.450570
+798,USER_000798,20230116,1964-12-11,Female,Montserrat,Debrachester,Professional,Email Campaign,4,True,Active,2023-01-16,2025-07-24 03:51:37.647033
+799,USER_000799,20230209,1985-07-24,Female,Ghana,Johnfort,Individual,Social Media,4,True,Paused,2023-02-09,2023-06-02 07:00:35.277505
+800,USER_000800,20221205,1968-02-16,Male,Montenegro,North Jonathonborough,Student,Email Campaign,1,False,Inactive,2022-12-05,2025-03-21 14:02:42.757850
+801,USER_000801,20240523,2009-06-03,Male,Colombia,Port Robert,Professional,Referral,1,False,Churned,2024-05-23,2025-07-29 01:35:10.736809
+802,USER_000802,20250410,1977-10-03,Male,Russian Federation,Port Charlotteshire,Individual,Referral,1,False,Inactive,2025-04-10,2025-11-20 11:36:35.960979
+803,USER_000803,20250523,1988-06-24,Male,Kuwait,Lake Ruthberg,Individual,Email Campaign,2,True,Paused,2025-05-23,2025-11-06 09:01:06.618852
+804,USER_000804,20250703,1985-05-10,Male,Cyprus,Lake Megan,Individual,Email Campaign,1,False,Inactive,2025-07-03,2025-09-14 10:43:06.399676
+805,USER_000805,20240316,1995-10-15,Female,Papua New Guinea,South Melinda,Professional,Organic Search,3,False,Active,2024-03-16,2025-02-10 01:13:03.780740
+806,USER_000806,20250918,1965-01-23,Male,Comoros,Coxborough,Student,Email Campaign,1,False,Churned,2025-09-18,2025-09-20 07:01:15.281901
+807,USER_000807,20231016,1998-07-28,Female,Costa Rica,Wardberg,Individual,Organic Search,4,True,Cancelled,2023-10-16,2025-03-13 23:15:30.461864
+808,USER_000808,20240618,1981-01-18,Male,India,Elizabethtown,Student,Organic Search,2,False,Cancelled,2024-06-18,2025-08-25 14:50:38.592004
+809,USER_000809,20240608,1971-11-11,Female,Canada,West Matthewborough,Individual,Paid Ads,2,False,Active,2024-06-08,2024-10-07 07:21:49.545093
+810,USER_000810,20250414,2002-04-02,Male,Suriname,South Michaelshire,Professional,Social Media,2,False,Cancelled,2025-04-14,2025-10-14 15:05:40.481732
+811,USER_000811,20250202,1963-04-02,Female,Croatia,Brendaborough,Student,Referral,1,False,Inactive,2025-02-02,2025-11-05 14:10:45.723518
+812,USER_000812,20230401,1970-05-25,Female,Philippines,Port Jennifer,Individual,Email Campaign,4,True,Downgraded,2023-04-01,2024-11-02 12:00:58.765864
+813,USER_000813,20240924,1956-03-20,Male,Morocco,South Dorisville,Student,Referral,2,False,Cancelled,2024-09-24,2025-02-04 04:29:15.400385
+814,USER_000814,20230202,1967-07-10,Male,Aruba,Tracyberg,Individual,Organic Search,4,True,Active,2023-02-02,2025-06-22 18:52:01.754793
+815,USER_000815,20230601,1985-10-24,Male,Kyrgyz Republic,Leetown,Professional,Referral,5,True,Cancelled,2023-06-01,2023-09-28 02:17:59.845519
+816,USER_000816,20240620,1994-08-24,Male,Bahrain,East Tonyside,Professional,Organic Search,5,True,Active,2024-06-20,2025-09-02 02:45:24.372769
+817,USER_000817,20230216,1989-08-26,Female,Guinea,Richardberg,Professional,Organic Search,5,True,Active,2023-02-16,2024-05-12 00:26:14.334210
+818,USER_000818,20230701,1988-01-10,Female,Lesotho,East Christopher,Professional,Organic Search,3,False,Paused,2023-07-01,2023-12-15 13:47:35.144620
+819,USER_000819,20250415,1957-09-12,Female,Central African Republic,East Kristyton,Individual,Paid Ads,2,True,Cancelled,2025-04-15,2025-11-06 07:04:28.384390
+820,USER_000820,20230622,1971-06-01,Male,Marshall Islands,Tanyafurt,Individual,Organic Search,5,True,Active,2023-06-22,2025-10-25 15:26:41.009263
+821,USER_000821,20240109,1979-01-02,Female,Tajikistan,West Ashleytown,Individual,Email Campaign,5,True,Paused,2024-01-09,2024-05-04 16:51:50.056890
+822,USER_000822,20240401,1957-04-20,Female,Venezuela,Ericview,Individual,Social Media,4,True,Active,2024-04-01,2025-01-26 01:03:35.696048
+823,USER_000823,20240518,1967-12-13,Male,Senegal,West Phillip,Professional,Email Campaign,4,True,Active,2024-05-18,2025-09-08 15:45:23.919626
+824,USER_000824,20230419,1964-04-09,Male,Northern Mariana Islands,East Jacqueline,Professional,Referral,1,False,Churned,2023-04-19,2024-08-14 00:49:37.852989
+825,USER_000825,20250812,1998-09-23,Female,Tunisia,Powellmouth,Professional,Paid Ads,1,False,Inactive,2025-08-12,2025-10-09 15:42:31.487921
+826,USER_000826,20250531,1987-11-22,Female,Algeria,New Taylor,Student,Organic Search,4,True,Active,2025-05-31,2025-08-16 17:10:54.592235
+827,USER_000827,20240113,1990-02-05,Female,Jersey,Leonardhaven,Individual,Email Campaign,3,True,Downgraded,2024-01-13,2024-03-30 03:37:25.564552
+828,USER_000828,20250801,1983-12-30,Male,Montserrat,Hollyberg,Professional,Paid Ads,3,True,Active,2025-08-01,2025-10-02 12:58:37.940543
+829,USER_000829,20230113,1971-05-09,Female,United States Minor Outlying Islands,South Krystal,Student,Referral,1,False,Inactive,2023-01-13,2024-12-31 02:01:26.723365
+830,USER_000830,20231125,1977-06-30,Female,Saint Kitts and Nevis,Alyssatown,Individual,Email Campaign,3,False,Paused,2023-11-25,2024-05-09 13:27:21.459820
+831,USER_000831,20251025,1981-03-25,Female,Pakistan,Port Ebonyfort,Individual,Referral,2,True,Active,2025-10-25,2025-11-13 05:16:46.526975
+832,USER_000832,20240112,1985-05-14,Male,Nigeria,Millerland,Individual,Organic Search,1,False,Inactive,2024-01-12,2024-12-04 18:19:20.069710
+833,USER_000833,20250129,1999-12-20,Male,Trinidad and Tobago,Perezview,Individual,Organic Search,3,False,Active,2025-01-29,2025-04-06 01:17:59.765315
+834,USER_000834,20240724,1997-01-03,Male,Saint Barthelemy,South Ariana,Individual,Paid Ads,2,False,Paused,2024-07-24,2025-04-30 19:12:46.536707
+835,USER_000835,20240529,2000-08-30,Male,Spain,Eugeneport,Student,Email Campaign,2,False,Active,2024-05-29,2025-02-21 07:47:03.909980
+836,USER_000836,20250303,1978-02-11,Male,Mayotte,North Christopher,Student,Email Campaign,4,True,Active,2025-03-03,2025-08-17 14:08:42.551919
+837,USER_000837,20241109,1989-04-12,Female,Djibouti,Lake Emmabury,Student,Social Media,3,True,Active,2024-11-09,2025-11-19 08:55:01.852078
+838,USER_000838,20241001,1968-12-01,Female,Portugal,Lake Joannabury,Student,Organic Search,5,True,Downgraded,2024-10-01,2025-06-18 07:36:32.889189
+839,USER_000839,20250917,1957-03-03,Female,Belize,North Felicia,Student,Email Campaign,2,True,Active,2025-09-17,2025-11-15 23:05:47.450180
+840,USER_000840,20250507,2003-06-02,Male,Puerto Rico,Gomezborough,Student,Referral,2,False,Active,2025-05-07,2025-06-27 19:39:38.083544
+841,USER_000841,20240516,1965-02-08,Male,Seychelles,Angelamouth,Student,Referral,3,False,Paused,2024-05-16,2025-08-26 17:47:38.978345
+842,USER_000842,20230203,1984-03-10,Female,Heard Island and McDonald Islands,Erikaport,Student,Social Media,3,False,Active,2023-02-03,2025-10-24 06:20:59.944499
+843,USER_000843,20241220,1997-11-27,Male,Comoros,Lake Linda,Student,Email Campaign,2,False,Cancelled,2024-12-20,2025-09-24 01:06:55.857448
+844,USER_000844,20250726,1997-12-21,Male,Guadeloupe,South Joetown,Individual,Organic Search,3,False,Active,2025-07-26,2025-10-10 18:48:10.462090
+845,USER_000845,20230502,1987-03-02,Female,Cape Verde,West Elizabeth,Professional,Email Campaign,3,False,Cancelled,2023-05-02,2024-07-05 04:20:43.761262
+846,USER_000846,20230206,1955-07-04,Male,South Georgia and the South Sandwich Islands,West Jennystad,Professional,Email Campaign,4,True,Downgraded,2023-02-06,2024-03-30 02:21:07.347180
+847,USER_000847,20240513,1975-03-05,Female,Samoa,North Brian,Individual,Social Media,3,False,Active,2024-05-13,2024-11-20 06:41:33.451521
+848,USER_000848,20230208,2005-12-15,Male,Andorra,Lake Nancy,Individual,Paid Ads,4,True,Paused,2023-02-08,2023-08-18 04:46:22.730366
+849,USER_000849,20230126,1968-11-02,Male,Iran,North Steven,Individual,Paid Ads,3,False,Active,2023-01-26,2023-03-16 13:01:14.527561
+850,USER_000850,20221211,1962-05-30,Female,Grenada,East Travis,Professional,Referral,3,True,Active,2022-12-11,2024-06-01 09:07:13.464209
+851,USER_000851,20251101,1978-10-05,Male,Lao People's Democratic Republic,Craigville,Student,Referral,3,True,Downgraded,2025-11-01,2025-11-17 00:18:35.619918
+852,USER_000852,20230826,1998-06-14,Female,Grenada,East Brett,Student,Organic Search,3,False,Active,2023-08-26,2024-07-05 06:01:07.939972
+853,USER_000853,20240718,1994-07-07,Male,Bulgaria,East Lisatown,Student,Referral,1,False,Inactive,2024-07-18,2025-03-18 14:51:03.233418
+854,USER_000854,20230118,2004-06-17,Male,Ireland,Antonioburgh,Student,Paid Ads,2,False,Active,2023-01-18,2024-12-21 11:59:42.786633
+855,USER_000855,20240704,1980-06-08,Male,Greenland,Port Haleyside,Professional,Paid Ads,4,True,Active,2024-07-04,2025-08-23 10:58:54.654721
+856,USER_000856,20231023,2008-10-25,Female,Czech Republic,New Stephenland,Individual,Organic Search,2,False,Paused,2023-10-23,2024-12-17 12:23:41.655181
+857,USER_000857,20240304,1968-07-02,Female,Saint Barthelemy,South Danielburgh,Individual,Social Media,5,True,Cancelled,2024-03-04,2024-12-12 22:10:11.928333
+858,USER_000858,20230128,1981-03-07,Male,Yemen,Morrisbury,Individual,Organic Search,5,True,Active,2023-01-28,2024-12-22 05:08:26.736109
+859,USER_000859,20230222,1995-12-31,Male,Papua New Guinea,Trujillomouth,Student,Social Media,4,True,Downgraded,2023-02-22,2023-09-29 18:10:27.740751
+860,USER_000860,20240121,1955-11-11,Male,Honduras,Port Anthony,Student,Referral,4,True,Active,2024-01-21,2024-05-29 06:07:42.315029
+861,USER_000861,20251114,1962-10-21,Male,Dominican Republic,Katherineton,Student,Organic Search,3,True,Downgraded,2025-11-14,2025-11-27 06:28:59.280014
+862,USER_000862,20230917,1986-01-05,Male,French Southern Territories,Manningport,Student,Organic Search,4,True,Active,2023-09-17,2024-08-11 21:05:14.838476
+863,USER_000863,20251102,1979-11-03,Male,New Zealand,Greenburgh,Individual,Organic Search,3,False,Active,2025-11-02,2025-11-26 01:22:59.529198
+864,USER_000864,20251017,1986-08-18,Female,El Salvador,Port Reneemouth,Professional,Paid Ads,1,False,Active,2025-10-17,2025-11-25 06:06:12.941318
+865,USER_000865,20230602,1963-10-29,Female,Norfolk Island,Lake Manuel,Individual,Email Campaign,2,True,Active,2023-06-02,2024-12-05 09:02:29.669054
+866,USER_000866,20241013,1994-02-26,Female,Cook Islands,Russellshire,Student,Paid Ads,1,False,Active,2024-10-13,2025-11-26 07:09:21.625809
+867,USER_000867,20250315,1956-07-07,Male,Albania,West Lisa,Student,Social Media,2,False,Active,2025-03-15,2025-05-22 15:45:41.588699
+868,USER_000868,20230319,2003-11-26,Female,San Marino,Rachelmouth,Professional,Social Media,3,False,Cancelled,2023-03-19,2024-11-26 07:24:26.802332
+869,USER_000869,20240604,1974-11-26,Female,Guadeloupe,North Erikashire,Individual,Paid Ads,1,False,Active,2024-06-04,2025-01-26 20:35:13.285739
+870,USER_000870,20230424,1958-11-01,Male,Bhutan,Alisonside,Student,Email Campaign,4,True,Active,2023-04-24,2023-06-03 05:26:58.610897
+871,USER_000871,20240515,2004-03-26,Male,Sierra Leone,Lisaberg,Professional,Organic Search,3,False,Active,2024-05-15,2024-12-24 18:13:21.926830
+872,USER_000872,20230628,1964-01-11,Female,Mauritania,Allenborough,Individual,Email Campaign,5,True,Downgraded,2023-06-28,2025-05-11 03:19:07.369532
+873,USER_000873,20240813,1957-07-25,Male,Suriname,Angelaburgh,Student,Email Campaign,1,False,Active,2024-08-13,2025-03-29 01:46:30.110863
+874,USER_000874,20240608,1978-09-29,Female,Mayotte,Port Nancyfort,Student,Organic Search,4,True,Active,2024-06-08,2025-10-29 16:16:50.477134
+875,USER_000875,20240415,1964-03-29,Male,Israel,North Andrewstad,Student,Referral,4,True,Active,2024-04-15,2024-07-22 01:40:20.442470
+876,USER_000876,20250326,1969-04-24,Female,Gambia,Thomasport,Individual,Paid Ads,5,True,Cancelled,2025-03-26,2025-05-28 21:38:21.267230
+877,USER_000877,20241122,1986-03-03,Female,Cayman Islands,West Deborah,Professional,Organic Search,2,True,Active,2024-11-22,2025-06-16 09:38:01.804490
+878,USER_000878,20230603,1967-01-05,Female,Saint Helena,Derrickland,Individual,Organic Search,4,True,Cancelled,2023-06-03,2024-03-22 11:49:51.829227
+879,USER_000879,20240209,1986-02-18,Female,Greece,North Jameshaven,Student,Referral,5,True,Active,2024-02-09,2024-05-23 17:20:29.647479
+880,USER_000880,20250508,2002-01-15,Male,Gibraltar,Shafferville,Individual,Paid Ads,5,True,Cancelled,2025-05-08,2025-10-29 11:58:29.810065
+881,USER_000881,20241223,1960-06-11,Female,Turks and Caicos Islands,Port Brandontown,Professional,Email Campaign,1,False,Churned,2024-12-23,2025-02-12 05:53:11.644860
+882,USER_000882,20251118,2006-07-21,Female,Bangladesh,New John,Individual,Referral,5,True,Cancelled,2025-11-18,2025-11-28 07:01:09.219598
+883,USER_000883,20241207,1976-10-14,Female,Australia,West Michaelbury,Individual,Social Media,4,True,Active,2024-12-07,2025-05-09 04:53:39.272637
+884,USER_000884,20230327,1980-08-16,Female,Sweden,Rodneytown,Student,Email Campaign,2,False,Paused,2023-03-27,2024-12-19 08:14:58.391919
+885,USER_000885,20241213,1975-02-20,Female,Kazakhstan,South Ronnie,Professional,Social Media,2,False,Cancelled,2024-12-13,2025-05-14 05:09:52.362504
+886,USER_000886,20231124,1990-06-21,Female,French Polynesia,Joshuaview,Individual,Organic Search,2,True,Cancelled,2023-11-24,2025-09-10 23:06:56.528893
+887,USER_000887,20221201,1978-06-21,Female,Kuwait,Parkerbury,Individual,Paid Ads,2,False,Cancelled,2022-12-01,2023-10-07 18:33:56.954317
+888,USER_000888,20250101,1987-05-11,Male,Andorra,Braunberg,Student,Organic Search,2,False,Paused,2025-01-01,2025-07-08 22:19:38.055613
+889,USER_000889,20251106,2002-10-23,Female,India,North Matthew,Professional,Email Campaign,2,False,Cancelled,2025-11-06,2025-11-06 22:24:10.259667
+890,USER_000890,20250528,1991-05-18,Male,Isle of Man,Tracyview,Student,Referral,2,False,Active,2025-05-28,2025-08-29 12:43:27.376069
+891,USER_000891,20241111,1994-02-24,Male,Uruguay,New Douglas,Individual,Social Media,2,False,Active,2024-11-11,2025-01-15 10:41:53.414452
+892,USER_000892,20250502,1974-05-28,Male,Afghanistan,New Maryfort,Professional,Paid Ads,3,True,Downgraded,2025-05-02,2025-07-13 14:07:56.755114
+893,USER_000893,20250831,2004-08-22,Female,Zimbabwe,West Perryside,Individual,Social Media,3,False,Paused,2025-08-31,2025-09-30 06:51:27.291082
+894,USER_000894,20240419,1966-04-11,Female,French Southern Territories,West Patricia,Professional,Social Media,3,False,Cancelled,2024-04-19,2025-03-29 09:34:26.158480
+895,USER_000895,20230429,1987-09-04,Female,Kiribati,Georgeville,Professional,Paid Ads,4,True,Active,2023-04-29,2023-11-14 04:29:51.487292
+896,USER_000896,20230520,1988-09-16,Female,Nepal,Josephport,Individual,Paid Ads,2,False,Active,2023-05-20,2024-07-15 20:05:32.752491
+897,USER_000897,20251115,1974-02-15,Male,Netherlands,Andrewborough,Professional,Organic Search,3,False,Cancelled,2025-11-15,2025-11-27 06:29:14.738476
+898,USER_000898,20250810,1963-05-10,Female,Canada,Simpsonfurt,Professional,Social Media,5,True,Active,2025-08-10,2025-09-01 15:00:59.442527
+899,USER_000899,20230711,1987-04-23,Female,Israel,North Aaron,Individual,Referral,4,True,Cancelled,2023-07-11,2024-12-05 14:10:31.131480
+900,USER_000900,20250417,1972-03-31,Male,Rwanda,Cochranview,Individual,Organic Search,3,False,Cancelled,2025-04-17,2025-05-20 18:57:33.790389
+901,USER_000901,20240620,1992-10-28,Male,Guinea,Edwardsfurt,Individual,Social Media,4,True,Cancelled,2024-06-20,2024-08-06 20:02:42.775709
+902,USER_000902,20240110,1959-05-10,Female,Slovakia (Slovak Republic),Darrenhaven,Individual,Social Media,3,True,Active,2024-01-10,2024-08-07 17:03:34.428081
+903,USER_000903,20230528,1963-10-13,Male,Bhutan,South Marystad,Individual,Referral,2,False,Active,2023-05-28,2024-02-24 06:15:37.065947
+904,USER_000904,20241104,1960-06-16,Female,Antigua and Barbuda,Parsonstown,Student,Email Campaign,5,True,Downgraded,2024-11-04,2025-08-27 18:37:40.096540
+905,USER_000905,20241124,1983-09-13,Male,Paraguay,Lake Sarah,Professional,Paid Ads,3,False,Cancelled,2024-11-24,2025-07-30 20:57:25.287028
+906,USER_000906,20230302,1981-11-15,Male,Seychelles,Juliafort,Professional,Referral,2,False,Active,2023-03-02,2025-10-24 13:23:31.649713
+907,USER_000907,20250308,2009-10-07,Male,Belgium,South Jessica,Individual,Referral,1,False,Churned,2025-03-08,2025-11-07 08:43:57.854326
+908,USER_000908,20240505,1956-01-18,Female,Angola,Olsonton,Professional,Email Campaign,5,True,Active,2024-05-05,2024-12-29 09:47:17.147236
+909,USER_000909,20230711,1985-10-22,Female,Poland,Mayton,Professional,Organic Search,3,False,Cancelled,2023-07-11,2025-05-01 23:46:03.621195
+910,USER_000910,20251123,1968-11-16,Female,Argentina,Garciafort,Individual,Organic Search,5,True,Active,2025-11-23,2025-11-26 09:57:54.144552
+911,USER_000911,20230830,1955-08-18,Male,Bahrain,West Michaelville,Professional,Referral,1,False,Churned,2023-08-30,2025-06-20 13:17:43.383947
+912,USER_000912,20250613,1991-03-14,Male,Northern Mariana Islands,Lake Joshua,Individual,Paid Ads,3,False,Cancelled,2025-06-13,2025-10-04 11:48:03.993422
+913,USER_000913,20240212,1960-05-15,Female,Tonga,North Gerald,Student,Social Media,5,True,Downgraded,2024-02-12,2024-02-21 03:58:56.891222
+914,USER_000914,20231211,1964-02-22,Male,Christmas Island,Phillipsfort,Student,Email Campaign,5,True,Active,2023-12-11,2025-05-02 00:01:32.430901
+915,USER_000915,20241020,2002-12-20,Male,Malawi,Camachoport,Individual,Email Campaign,3,False,Active,2024-10-20,2025-11-17 20:04:51.043952
+916,USER_000916,20251019,1956-08-28,Female,Antigua and Barbuda,Vanessaland,Student,Organic Search,3,False,Active,2025-10-19,2025-11-15 01:00:40.723527
+917,USER_000917,20240103,1998-11-16,Female,Hong Kong,Munozville,Student,Organic Search,2,True,Active,2024-01-03,2024-05-10 10:16:37.766875
+918,USER_000918,20230324,1988-04-29,Male,Mauritius,West Larryberg,Student,Social Media,1,False,Churned,2023-03-24,2024-12-05 16:06:33.176405
+919,USER_000919,20231107,1969-09-13,Female,Honduras,Brendaton,Individual,Organic Search,1,False,Inactive,2023-11-07,2023-11-18 03:55:27.973663
+920,USER_000920,20230116,1958-05-01,Male,Costa Rica,North Nicholasborough,Professional,Referral,5,True,Active,2023-01-16,2025-07-31 03:48:22.883713
+921,USER_000921,20230506,1985-12-24,Female,Grenada,Rogersfurt,Professional,Social Media,1,False,Inactive,2023-05-06,2025-06-12 08:11:33.329959
+922,USER_000922,20241202,1965-09-07,Female,Palau,East Lauren,Individual,Paid Ads,2,True,Active,2024-12-02,2025-05-12 03:15:12.507771
+923,USER_000923,20250416,2009-02-28,Female,Korea,Jessicatown,Individual,Referral,5,True,Active,2025-04-16,2025-07-14 02:02:15.343246
+924,USER_000924,20230514,1973-05-02,Female,Serbia,South Carrie,Student,Referral,5,True,Cancelled,2023-05-14,2025-07-23 05:41:57.694980
+925,USER_000925,20230519,1982-02-02,Male,French Guiana,Gallowaytown,Student,Referral,5,True,Downgraded,2023-05-19,2024-04-18 14:05:45.610834
+926,USER_000926,20250612,1977-05-10,Female,Sierra Leone,Port Brittneyport,Professional,Email Campaign,4,True,Active,2025-06-12,2025-11-25 18:03:39.038006
+927,USER_000927,20240704,1967-01-18,Male,Heard Island and McDonald Islands,New Caroline,Individual,Paid Ads,4,True,Paused,2024-07-04,2025-07-18 21:15:49.345558
+928,USER_000928,20240706,1961-05-02,Female,Finland,Jimenezfurt,Student,Organic Search,1,False,Inactive,2024-07-06,2024-07-28 17:48:05.010896
+929,USER_000929,20240927,1983-05-06,Female,Trinidad and Tobago,Salinaston,Professional,Paid Ads,1,False,Inactive,2024-09-27,2024-11-17 23:14:29.768069
+930,USER_000930,20240214,1999-03-22,Female,Zambia,Lake Colleenland,Student,Referral,5,True,Active,2024-02-14,2025-06-04 11:47:20.267974
+931,USER_000931,20250815,1970-04-21,Male,Kenya,East Theresaville,Professional,Paid Ads,5,True,Paused,2025-08-15,2025-11-12 21:04:12.862293
+932,USER_000932,20240929,1985-01-28,Female,Egypt,East Bonnie,Professional,Paid Ads,5,True,Active,2024-09-29,2025-10-13 13:21:04.015655
+933,USER_000933,20240622,1997-05-15,Female,New Caledonia,South Alexandra,Individual,Organic Search,4,True,Paused,2024-06-22,2025-11-26 07:08:44.992091
+934,USER_000934,20230507,1959-05-11,Male,Cameroon,North Jamesmouth,Student,Organic Search,1,False,Churned,2023-05-07,2023-05-20 05:04:46.939185
+935,USER_000935,20241111,1976-01-13,Male,United States Minor Outlying Islands,Johnsonhaven,Professional,Referral,5,True,Active,2024-11-11,2025-09-27 20:54:37.588378
+936,USER_000936,20230902,1969-10-09,Female,Myanmar,Youngburgh,Individual,Paid Ads,1,True,Active,2023-09-02,2024-12-16 07:12:25.247286
+937,USER_000937,20221222,1966-09-30,Male,Singapore,Lake Michael,Student,Social Media,2,False,Paused,2022-12-22,2024-12-06 08:57:17.429303
+938,USER_000938,20250405,1973-03-24,Female,Cape Verde,Fordborough,Individual,Paid Ads,5,True,Active,2025-04-05,2025-11-22 17:14:14.208691
+939,USER_000939,20250829,1968-11-05,Male,Tokelau,Newmanburgh,Student,Paid Ads,5,True,Active,2025-08-29,2025-11-20 07:14:22.992279
+940,USER_000940,20230607,1964-12-23,Female,Sweden,Raymouth,Professional,Organic Search,2,False,Cancelled,2023-06-07,2025-07-17 12:30:42.561861
+941,USER_000941,20230425,1966-01-05,Female,Vanuatu,Clarkemouth,Professional,Organic Search,3,False,Active,2023-04-25,2024-03-08 15:09:30.598014
+942,USER_000942,20250217,1981-02-12,Male,Burkina Faso,North Wendyview,Professional,Social Media,4,True,Cancelled,2025-02-17,2025-02-26 05:55:35.767555
+943,USER_000943,20230613,2005-10-14,Female,Austria,New Johnview,Professional,Organic Search,2,False,Active,2023-06-13,2025-11-09 15:01:13.294782
+944,USER_000944,20230114,1987-04-26,Male,Estonia,Lucastown,Professional,Email Campaign,3,False,Cancelled,2023-01-14,2024-07-29 16:16:42.053683
+945,USER_000945,20250224,1961-09-01,Female,Poland,Port Gary,Student,Paid Ads,2,False,Cancelled,2025-02-24,2025-05-12 12:17:18.034883
+946,USER_000946,20250510,2005-03-19,Female,Portugal,East Ruthton,Individual,Paid Ads,3,False,Active,2025-05-10,2025-11-27 20:34:42.458388
+947,USER_000947,20240525,2004-08-30,Male,Italy,New Arianabury,Student,Email Campaign,3,False,Cancelled,2024-05-25,2025-08-22 07:35:03.948874
+948,USER_000948,20230104,1962-04-27,Female,British Indian Ocean Territory (Chagos Archipelago),West Mathew,Individual,Paid Ads,5,True,Active,2023-01-04,2024-08-19 08:05:20.426903
+949,USER_000949,20230109,2004-04-06,Male,New Zealand,West Deniseton,Professional,Paid Ads,4,True,Active,2023-01-09,2023-09-07 07:59:59.952700
+950,USER_000950,20250212,1957-11-16,Male,Madagascar,North Michelleville,Student,Referral,5,True,Cancelled,2025-02-12,2025-07-12 13:32:02.765849
+951,USER_000951,20231227,1987-04-28,Male,Syrian Arab Republic,Valeriemouth,Professional,Organic Search,1,False,Active,2023-12-27,2025-11-04 13:18:53.445640
+952,USER_000952,20230507,1958-05-03,Female,Georgia,Kennethstad,Professional,Paid Ads,5,True,Paused,2023-05-07,2023-06-27 08:30:24.577162
+953,USER_000953,20240605,2006-03-17,Male,Netherlands,Martinezside,Student,Organic Search,1,False,Active,2024-06-05,2024-06-13 04:32:43.423661
+954,USER_000954,20250111,1978-03-06,Male,Liechtenstein,Lake Wendyton,Individual,Social Media,3,False,Active,2025-01-11,2025-10-03 22:15:23.170325
+955,USER_000955,20240531,1957-08-12,Female,Korea,South Christopher,Professional,Referral,2,False,Paused,2024-05-31,2025-10-15 09:45:36.553701
+956,USER_000956,20250513,1962-03-24,Male,Heard Island and McDonald Islands,East Nancy,Professional,Social Media,5,True,Active,2025-05-13,2025-10-23 00:06:04.896373
+957,USER_000957,20250521,1961-03-29,Female,Uruguay,West Tannertown,Student,Email Campaign,4,True,Paused,2025-05-21,2025-07-30 22:01:24.363415
+958,USER_000958,20230819,1992-12-26,Male,Saudi Arabia,Jacobport,Professional,Organic Search,2,False,Active,2023-08-19,2025-05-22 02:16:04.622643
+959,USER_000959,20230422,1964-08-05,Female,Holy See (Vatican City State),Phillipsfort,Individual,Paid Ads,3,False,Active,2023-04-22,2024-06-13 10:47:25.602824
+960,USER_000960,20240227,1990-08-24,Male,Guadeloupe,South Bridgetmouth,Professional,Email Campaign,4,True,Active,2024-02-27,2025-05-29 07:54:55.483238
+961,USER_000961,20241212,2001-08-31,Female,Saint Kitts and Nevis,Port Teresa,Student,Paid Ads,1,True,Active,2024-12-12,2025-05-04 16:06:20.956914
+962,USER_000962,20250105,1955-10-22,Male,Portugal,East Brian,Professional,Email Campaign,4,True,Active,2025-01-05,2025-01-06 09:22:53.549541
+963,USER_000963,20250930,1973-05-15,Male,Montserrat,Kennedyberg,Student,Email Campaign,4,True,Cancelled,2025-09-30,2025-11-24 22:44:05.845124
+964,USER_000964,20250912,2002-09-29,Male,Uganda,Barkerside,Individual,Paid Ads,2,False,Cancelled,2025-09-12,2025-11-08 22:45:56.878119
+965,USER_000965,20230208,1958-06-04,Male,Saudi Arabia,Larryfurt,Student,Referral,3,True,Active,2023-02-08,2023-11-27 18:09:56.538630
+966,USER_000966,20241031,2006-11-05,Male,Poland,North Dillontown,Student,Social Media,5,True,Active,2024-10-31,2025-07-23 00:12:18.859182
+967,USER_000967,20231105,1980-02-09,Male,Bouvet Island (Bouvetoya),Bellview,Student,Organic Search,2,True,Paused,2023-11-05,2024-06-07 22:42:24.778412
+968,USER_000968,20230214,1986-09-20,Female,Philippines,Stewartfurt,Individual,Social Media,2,True,Active,2023-02-14,2024-01-13 05:58:57.259147
+969,USER_000969,20230406,1991-11-17,Male,French Polynesia,Lake Ryanport,Student,Referral,3,False,Active,2023-04-06,2024-07-21 08:53:44.508596
+970,USER_000970,20231117,1995-12-04,Female,China,Alecfurt,Individual,Paid Ads,3,True,Active,2023-11-17,2024-05-27 07:31:16.062957
+971,USER_000971,20240125,1966-03-16,Male,Brazil,South Sandrabury,Individual,Paid Ads,5,True,Downgraded,2024-01-25,2024-06-07 18:47:14.081315
+972,USER_000972,20251015,1959-10-19,Male,Nigeria,Elizabethfurt,Student,Referral,3,False,Active,2025-10-15,2025-11-24 08:58:14.346737
+973,USER_000973,20241025,1970-11-21,Female,Western Sahara,Joneston,Student,Social Media,2,True,Paused,2024-10-25,2025-08-07 23:00:28.693120
+974,USER_000974,20230729,1982-07-13,Male,Ukraine,Port Teresaport,Individual,Paid Ads,3,False,Active,2023-07-29,2023-11-12 00:57:23.514637
+975,USER_000975,20241130,2003-12-10,Male,Haiti,Gailfurt,Individual,Organic Search,3,False,Active,2024-11-30,2025-08-25 19:29:40.744628
+976,USER_000976,20250816,1963-07-06,Female,Greenland,North Jodi,Professional,Social Media,3,False,Active,2025-08-16,2025-11-18 14:42:57.778701
+977,USER_000977,20250516,1973-06-05,Male,Myanmar,Andersonport,Student,Social Media,1,False,Inactive,2025-05-16,2025-08-13 18:32:11.410035
+978,USER_000978,20240325,1985-08-10,Female,United States Virgin Islands,Port Brett,Individual,Email Campaign,1,False,Inactive,2024-03-25,2025-03-07 13:31:17.036577
+979,USER_000979,20240607,1990-12-12,Female,Grenada,Smithberg,Professional,Paid Ads,1,False,Active,2024-06-07,2024-09-29 03:04:16.796954
+980,USER_000980,20240414,1962-02-22,Male,Taiwan,East Kimberlyberg,Student,Organic Search,5,True,Paused,2024-04-14,2024-07-14 05:54:44.161533
+981,USER_000981,20240601,2003-12-08,Male,Finland,East Robinfurt,Individual,Organic Search,1,False,Inactive,2024-06-01,2024-10-01 23:18:14.621274
+982,USER_000982,20250925,1968-11-13,Female,Ghana,West Daniel,Student,Organic Search,5,True,Paused,2025-09-25,2025-10-18 09:53:14.919111
+983,USER_000983,20230115,1966-12-27,Female,Lithuania,Bakerfort,Student,Organic Search,4,True,Active,2023-01-15,2025-11-02 18:20:17.125011
+984,USER_000984,20230928,1978-05-16,Male,Sweden,Caseshire,Individual,Paid Ads,1,False,Inactive,2023-09-28,2024-10-04 22:45:57.283812
+985,USER_000985,20250427,2002-12-09,Female,Malawi,South Marystad,Professional,Referral,1,False,Active,2025-04-27,2025-09-21 22:14:19.566067
+986,USER_000986,20240501,1990-10-26,Female,Poland,Carterburgh,Individual,Referral,3,True,Paused,2024-05-01,2025-05-17 15:01:16.695390
+987,USER_000987,20250406,1978-03-28,Male,Tunisia,Amberview,Individual,Organic Search,5,True,Downgraded,2025-04-06,2025-06-13 04:41:23.762846
+988,USER_000988,20230502,1968-03-30,Male,Qatar,Lake Marco,Individual,Referral,1,False,Active,2023-05-02,2023-05-21 09:32:15.217134
+989,USER_000989,20230613,1995-01-24,Female,Saint Barthelemy,Julietown,Student,Organic Search,4,True,Active,2023-06-13,2024-05-23 07:37:26.416688
+990,USER_000990,20250616,1956-03-24,Female,Guyana,Lisaborough,Individual,Email Campaign,5,True,Active,2025-06-16,2025-07-23 12:55:45.057188
+991,USER_000991,20230110,1986-08-30,Female,Guernsey,Hughesberg,Professional,Social Media,2,False,Cancelled,2023-01-10,2023-10-11 08:18:10.295132
+992,USER_000992,20241123,1960-02-18,Male,Saint Barthelemy,West Alyssaland,Individual,Paid Ads,5,True,Cancelled,2024-11-23,2025-05-18 15:10:20.973291
+993,USER_000993,20250328,1990-12-24,Female,Botswana,Barajasview,Individual,Social Media,2,False,Cancelled,2025-03-28,2025-06-03 09:34:36.549075
+994,USER_000994,20251024,1983-04-06,Male,Bouvet Island (Bouvetoya),North Evelyntown,Professional,Referral,4,True,Active,2025-10-24,2025-11-19 18:07:01.447400
+995,USER_000995,20230817,1980-07-20,Female,Switzerland,West Alejandro,Student,Social Media,4,True,Active,2023-08-17,2025-01-13 00:41:14.321438
+996,USER_000996,20221204,1988-03-16,Male,Belarus,North Rebeccahaven,Professional,Email Campaign,4,True,Paused,2022-12-04,2025-07-07 03:52:03.508900
+997,USER_000997,20250710,1986-08-10,Male,Rwanda,West Natashamouth,Individual,Organic Search,1,True,Downgraded,2025-07-10,2025-09-22 15:13:16.215276
+998,USER_000998,20240318,1961-12-27,Female,Guatemala,Watsonville,Individual,Paid Ads,5,True,Active,2024-03-18,2024-12-04 14:07:14.504651
+999,USER_000999,20240602,1997-09-16,Female,Palestinian Territory,Alexanderborough,Professional,Social Media,4,True,Active,2024-06-02,2025-01-27 06:18:32.050698
+1000,USER_001000,20230602,1969-09-28,Female,Holy See (Vatican City State),Monicamouth,Individual,Social Media,3,False,Cancelled,2023-06-02,2023-08-30 15:02:39.457242
+>>>>>>> Stashed changes
