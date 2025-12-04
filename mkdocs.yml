@@ -1,11 +1,17 @@
-site_name: My Docs
+site_name: EdRetain Documentation
 
 nav:
   - Home: index.md
-  - ETL: etl.md
-  - API: api.md
-  - APP: app.md
-  - API models: api_models.md
+  - Architecture:
+      - Problem & Solution: index.md
+  - Services:
+    - ETL Service: etl.md
+    - API Service: api.md
+    - Frontend (Streamlit App): app.md
+    - Data Science & Analytics: ds.md
+  - Notebooks:
+      - Result Analysis: notebook.md
+  - Resources: resources.md
 
 theme:
   name: material
