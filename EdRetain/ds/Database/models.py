@@ -1,21 +1,10 @@
 from loguru import logger
-<<<<<<< HEAD
 from sqlalchemy import Boolean, Date, create_engine, Column, Integer, String, Float, DATE, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime, timezone 
 from Database.database import Base, engine
 
-=======
-from sqlalchemy import Boolean, Date, create_engine,Column,Integer,String,Float, DATE, DateTime, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
-from datetime import datetime
-from Database.database import Base, engine
-
-# Base = declarative_base()
-
->>>>>>> main
 class DimUser(Base):
     __tablename__ = "dim_user"
     user_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -33,10 +22,6 @@ class DimUser(Base):
     created_at = Column(DateTime)
     updated_at = Column(DateTime)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class DimDate(Base):
     __tablename__ = "dim_date"
     date_key = Column(Integer, primary_key=True)
@@ -51,10 +36,6 @@ class DimDate(Base):
     day_name = Column(String)
     is_weekend = Column(Boolean)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class DimSubscriptionPlan(Base):
     __tablename__ = "dim_subscription_plan"
     subscription_plan_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -68,10 +49,6 @@ class DimSubscriptionPlan(Base):
     has_mentoring = Column(Boolean)
     has_downloads = Column(Boolean)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class DimCampaign(Base):
     __tablename__ = "dim_campaign"
     campaign_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -84,20 +61,12 @@ class DimCampaign(Base):
     start_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
     end_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class DimChannel(Base):
     __tablename__ = "dim_channel"
     channel_key = Column(Integer, primary_key=True, autoincrement=True)
     channel_name = Column(String)
     description = Column(String)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class FactUserDailyActivity(Base):
     __tablename__ = "fact_user_daily_activity"
     fact_user_daily_activity_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -120,10 +89,6 @@ class FactUserDailyActivity(Base):
     completed_courses_total = Column(Integer)
     created_at = Column(DateTime)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 class FactCampaignInteraction(Base):
     __tablename__ = "fact_campaign_interaction"
     interaction_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -138,7 +103,6 @@ class FactCampaignInteraction(Base):
     time_to_conversion_days = Column(Integer)
     created_at = Column(DateTime)
 
-<<<<<<< HEAD
 
 class FactUserAnalyticsSnapshot(Base):
     __tablename__ = "fact_user_analytics_snapshot"
@@ -148,14 +112,6 @@ class FactUserAnalyticsSnapshot(Base):
     subscription_plan_key = Column(Integer, ForeignKey("dim_subscription_plan.subscription_plan_key"))
     
     # RFM
-=======
-class FactUserAnalyticsSnapshot(Base):
-    __tablename__ = "fact_user_analytics_snapshot"
-    user_key = Column(Integer, ForeignKey("dim_user.user_key"))
-    snapshot_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
-    subscription_plan_key = Column(Integer, ForeignKey("dim_subscription_plan.subscription_plan_key"))
-    fact_user_analytics_snapshot_id = Column(Integer, primary_key=True, autoincrement=True)
->>>>>>> main
     rfm_recency = Column(Integer)
     rfm_frequency = Column(Integer)
     rfm_monetary = Column(Float)
@@ -163,7 +119,6 @@ class FactUserAnalyticsSnapshot(Base):
     rfm_f_score = Column(Integer)
     rfm_m_score = Column(Integer)
     rfm_segment = Column(String)
-<<<<<<< HEAD
     segment_label = Column(String)
     engagement_level = Column(String)
     
@@ -306,16 +261,3 @@ class ModelPerformanceMetrics(Base):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 # Base.metadata.create_all(engine)
-=======
-    kmeans_cluster = Column(Integer)
-    segment_label = Column(String)
-    churn_probability = Column(Float)
-    churn_risk_band = Column(String)
-    survival_median_time_to_downgrade = Column(Integer)
-    survival_risk_90d = Column(Float)
-    clv_value = Column(Float)
-    clv_band = Column(String)
-    model_version = Column(String)
-
-Base.metadata.create_all(engine)
->>>>>>> main

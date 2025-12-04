@@ -297,11 +297,7 @@ def generate_user_daily_activity(activity_id, user_key, date_key):
         quizzes = 0
         courses = 0
         days_active_30d = random.randint(0, 15)
-<<<<<<< HEAD
         days_since_login = random.randint(8, 90)
-=======
-        days_since_login = random.randint(8, 60)
->>>>>>> main
     
     return {
         "fact_user_daily_activity_id": activity_id,

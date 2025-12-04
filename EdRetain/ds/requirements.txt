@@ -1,37 +1,39 @@
 # Core Data Science & ML
-pandas>=2.1.0
-loguru>=0.7
-scikit-learn>=1.3.0
-flask>=3.0.0
-Faker>=20.0.0
-numpy>=1.24,<2.1
-psycopg2-binary==2.9.10
-python-dateutil==2.9.0.post0
-pytz==2024.2
-<<<<<<< HEAD
-Faker>=20.0.0
-loguru>=0.7
+pandas
+loguru
+scikit-learn
+flask
+Faker
+numpy
+psycopg2-binary
+python-dateutil
+pytz
+Faker
+loguru
+sqlalchemy
+dotenv
+lifelines
 
 # Jupyter & Notebooks
-jupyter>=1.0.0
-ipykernel>=6.25.0
-notebook>=7.0.0
+jupyter
+ipykernel
+notebook
 
 # Additional ML/Stats
-imbalanced-learn>=0.11.0
-xgboost>=2.0.0
-lightgbm>=4.1.0
+imbalanced-learn
+xgboost
+lightgbm
 
 # Time Series (if needed)
-statsmodels>=0.14.0
+statsmodels
 
 # Type Hints & Standards
-typing_extensions==4.12.2
-six==1.16.0
-=======
-six==1.16.0
-SQLAlchemy==2.0.36
-typing_extensions==4.12.2
->>>>>>> main
-tzdata==2024.2
+typing_extensions
+six
+tzdata
 jupyter
+
+#Visualization
+matplotlib
+seaborn
+plotly
