@@ -2,6 +2,7 @@ site_name: EdRetain Documentation
 
 nav:
   - Home: index.md
+  - Demo: demo.md
   - Architecture:
       - Problem & Solution: index.md
   - Services:
@@ -11,7 +12,6 @@ nav:
     - Data Science & Analytics: ds.md
   - Notebooks:
       - Result Analysis: notebook.md
-  - Resources: resources.md
 
 theme:
   name: material
