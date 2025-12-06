@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8888
 
 # Start Jupyter Notebook server
-CMD ["bash", "-c", "python ds_models.py & jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=''"]
+CMD ["bash", "-c", "python run_notebooks.py & jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=''"]
