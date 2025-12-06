@@ -1,11 +1,9 @@
 from loguru import logger
-from sqlalchemy import Boolean, Date, create_engine,Column,Integer,String,Float, DATE, DateTime, ForeignKey
+from sqlalchemy import Boolean, Date, create_engine, Column, Integer, String, Float, DATE, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-from datetime import datetime
+from datetime import datetime, timezone 
 from Database.database import Base, engine
-
-# Base = declarative_base()
 
 class DimUser(Base):
     __tablename__ = "dim_user"
@@ -24,6 +22,7 @@ class DimUser(Base):
     created_at = Column(DateTime)
     updated_at = Column(DateTime)
 
+
 class DimDate(Base):
     __tablename__ = "dim_date"
     date_key = Column(Integer, primary_key=True)
@@ -38,6 +37,7 @@ class DimDate(Base):
     day_name = Column(String)
     is_weekend = Column(Boolean)
 
+
 class DimSubscriptionPlan(Base):
     __tablename__ = "dim_subscription_plan"
     subscription_plan_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -51,6 +51,7 @@ class DimSubscriptionPlan(Base):
     has_mentoring = Column(Boolean)
     has_downloads = Column(Boolean)
 
+
 class DimCampaign(Base):
     __tablename__ = "dim_campaign"
     campaign_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -63,11 +64,13 @@ class DimCampaign(Base):
     start_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
     end_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
 
+
 class DimChannel(Base):
     __tablename__ = "dim_channel"
     channel_key = Column(Integer, primary_key=True, autoincrement=True)
     channel_name = Column(String)
     description = Column(String)
+
 
 class FactUserDailyActivity(Base):
     __tablename__ = "fact_user_daily_activity"
@@ -91,6 +94,7 @@ class FactUserDailyActivity(Base):
     completed_courses_total = Column(Integer)
     created_at = Column(DateTime)
 
+
 class FactCampaignInteraction(Base):
     __tablename__ = "fact_campaign_interaction"
     interaction_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -105,12 +109,15 @@ class FactCampaignInteraction(Base):
     time_to_conversion_days = Column(Integer)
     created_at = Column(DateTime)
 
+
 class FactUserAnalyticsSnapshot(Base):
     __tablename__ = "fact_user_analytics_snapshot"
+    fact_user_analytics_snapshot_id = Column(Integer, primary_key=True, autoincrement=True)
     user_key = Column(Integer, ForeignKey("dim_user.user_key"))
     snapshot_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
     subscription_plan_key = Column(Integer, ForeignKey("dim_subscription_plan.subscription_plan_key"))
-    fact_user_analytics_snapshot_id = Column(Integer, primary_key=True, autoincrement=True)
+    
+    # RFM
     rfm_recency = Column(Integer)
     rfm_frequency = Column(Integer)
     rfm_monetary = Column(Float)
@@ -118,12 +125,22 @@ class FactUserAnalyticsSnapshot(Base):
     rfm_f_score = Column(Integer)
     rfm_m_score = Column(Integer)
     rfm_segment = Column(String)
-    kmeans_cluster = Column(Integer)
     segment_label = Column(String)
+    engagement_level = Column(String)
+    
+    # Clustering
+    kmeans_cluster = Column(Integer)
+    kmeans_segment_label = Column(String)
+    
+    # Churn Prediction
     churn_probability = Column(Float)
     churn_risk_band = Column(String)
+    
+    # Survival Analysis
     survival_median_time_to_downgrade = Column(Integer)
     survival_risk_90d = Column(Float)
+    
+    # CLV
     clv_value = Column(Float)
     clv_band = Column(String)
     
