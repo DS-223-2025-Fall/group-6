@@ -5,10 +5,6 @@ from loguru import logger
 from sqlalchemy.orm import Session
 from Database.models import DimDate
 from datetime import datetime
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 
 def load_user_activity_and_subscription_dfs():
     """
@@ -122,7 +118,6 @@ def save_snapshot_to_db(snapshot_df: pd.DataFrame, table_name: str = "fact_user_
     except Exception as e:
         logger.error(f"Error saving snapshot to database table {table_name}: {e}")
 
-<<<<<<< HEAD
 def save_dashboard_metrics_to_db(metrics_dict: dict):
     """
     Save dashboard KPIs to database.
@@ -154,8 +149,7 @@ def save_dashboard_metrics_to_db(metrics_dict: dict):
         logger.error(f"Error saving dashboard metrics to database: {e}")
         raise
 
-=======
->>>>>>> main
+
 def ensure_snapshot_date(session: Session, snapshot_date_key: int):
     exists = session.query(DimDate).filter_by(date_key=snapshot_date_key).first()
     if not exists:
@@ -174,8 +168,7 @@ def ensure_snapshot_date(session: Session, snapshot_date_key: int):
             is_weekend=dt.isoweekday() >= 6
         )
         session.add(dim_date)
-<<<<<<< HEAD
+
         session.commit()
-=======
-        session.commit()
->>>>>>> main
+
+

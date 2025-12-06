@@ -147,7 +147,6 @@ class FactUserAnalyticsSnapshot(Base):
     # Metadata
     model_version = Column(String)
 
-<<<<<<< HEAD
 
 class FeatureImportance(Base):
     __tablename__ = "feature_importance"
@@ -267,6 +266,4 @@ class ModelPerformanceMetrics(Base):
     # Metadata
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
-=======
->>>>>>> main
 #Base.metadata.create_all(engine)

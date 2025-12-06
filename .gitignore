@@ -8,4 +8,4 @@ postgres_data/
 .ipynb_checkpoints/
 .Trash-0/
 pgadmin_data/
-.venv/
+.venv
