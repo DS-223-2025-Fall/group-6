@@ -70,17 +70,17 @@ Running the frontend in a **Docker container** ensures that the environment is t
 From the root of the project directory, build the Docker image for the frontend service using the following command:
 
 ```bash
-docker build -t frontend./frontend
+docker build -t frontend-service ./frontend
 ```
 
-This will create a Docker image named `frontend`.
+This will create a Docker image named `frontend-service`.
 
 #### Run the Docker Container
 
 After the image is built, you can run the app in a container using this command:
 
 ```bash
-docker run --rm -p 8501:8501 frontend
+docker run --rm -p 8501:8501 frontend-service
 ```
 
 This command tells Docker to map port `8501` inside the container to port `8501` on your local machine. Once the container is running, you can access the app at `http://localhost:8501`.
@@ -108,4 +108,5 @@ The Dockerfile defines the configuration for the containerized environment. Belo
 - **Docker Issues**: If you're running into problems with Docker, ensure that Docker is properly installed on your machine. Check the Docker documentation for installation guides.
 
 ---
+
 
