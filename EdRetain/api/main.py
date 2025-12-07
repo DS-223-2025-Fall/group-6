@@ -13,6 +13,7 @@ from Database.models import (
     FeatureImportance, DashboardMetrics, ChurnReasons, CampaignPerformance,
     ModelPerformanceMetrics
 )
+
 from Database.schemas import (
     DimUserCreate, DimUserSchema,
     DimDateCreate, DimDateSchema,
@@ -29,68 +30,38 @@ from Database.schemas import (
     ModelPerformanceMetricsSchema
 )
 
+
 app = FastAPI(title="Project API")
 
 
 # Page 1
-class DateRange:
-    """Simple value object to carry a date range around the app.
-
-    Attributes:
-        date_from: Start date (inclusive) as a datetime.date.
-        date_to:   End date (inclusive) as a datetime.date.
-    """
-    def __init__(self, date_from: date, date_to: date):
-        self.date_from = date_from
-        self.date_to = date_to
-
-def get_date_range(
-    date_from: date = Query(..., description="Start date (inclusive) in YYYY-MM-DD"),
-    date_to: date = Query(..., description="End date (inclusive) in YYYY-MM-DD"),
-) -> DateRange:
-    """Dependency that parses date_from/date_to query params and
-    returns a DateRange object used by dashboard endpoints."""
-    return DateRange(date_from=date_from, date_to=date_to)
-
-def get_date_keys_in_range(db: Session, date_range: DateRange):
-    """Return a subquery of DimDate.date_key values for the given
-    calendar date range. Used to limit DashboardMetrics rows to
-    the selected period."""
-    return (
-        db.query(DimDate.date_key)
-        .filter(
-            DimDate.full_date >= date_range.date_from,
-            DimDate.full_date <= date_range.date_to,
-        )
-        .subquery()
-    )
-
-
-# Active premium leaners
+# Active premium learners
 @app.get("/dashboard/active-premium-learners")
 def get_active_premium_learners(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
     """
-    Card: Active Premium Learners.
+    Retrieve the latest Active Premium Learners KPI for the dashboard card.
 
-    For the selected period (date_from/date_to), finds the most recent
-    DashboardMetrics row and returns:
-      - active_premium_learners: current count of active premium users.
-      - active_premium_change_pct: % change vs previous period (precomputed in DB).
+    This endpoint queries the DashboardMetrics table, selects the row with the
+    most recent snapshot_date_key, and returns:
+      - active_premium_learners: the current count of active premium learners
+        at the time of the latest snapshot.
+      - active_premium_change_pct: the percentage change in active premium
+        learners compared with the previous period, as precomputed in the
+        latest DashboardMetrics record.
+
+    If no DashboardMetrics rows are available, the endpoint responds with
+    HTTP 404 to indicate that no dashboard metrics data exists yet.
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
-
     latest_row = (
         db.query(DashboardMetrics)
-        .filter(DashboardMetrics.snapshot_date_key.in_(date_keys_subq))
         .order_by(DashboardMetrics.snapshot_date_key.desc())
         .first()
     )
 
     if not latest_row:
-        raise HTTPException(status_code=404, detail="No dashboard metrics for given period")
+        raise HTTPException(status_code=404, detail="No dashboard metrics available")
 
     return {
         "active_premium_learners": latest_row.active_premium_learners,
@@ -101,28 +72,30 @@ def get_active_premium_learners(
 # At risk learners 
 @app.get("/dashboard/at-risk-learners")
 def get_at_risk_learners(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
     """
-    Card: At-Risk Learners.
+    Retrieve the latest At-Risk Learners KPIs for the dashboard card.
 
-    For the selected period, returns from the latest DashboardMetrics row:
-      - at_risk_learners: current count of at-risk learners.
-      - at_risk_change_count: change in count vs previous period
-        (precomputed and stored in DashboardMetrics).
+    This endpoint queries the DashboardMetrics table, selects the record with
+    the most recent snapshot_date_key, and returns:
+      - at_risk_learners: the current count of learners classified as at-risk
+        in the latest available snapshot.
+      - at_risk_change_count: the absolute change in the number of at-risk
+        learners compared with the previous period, as stored in the same
+        DashboardMetrics row.
+
+    If no DashboardMetrics rows exist in the database, the endpoint responds
+    with HTTP 404 to indicate that dashboard metrics data is not available.
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
-
     latest_row = (
         db.query(DashboardMetrics)
-        .filter(DashboardMetrics.snapshot_date_key.in_(date_keys_subq))
         .order_by(DashboardMetrics.snapshot_date_key.desc())
         .first()
     )
 
     if not latest_row:
-        raise HTTPException(status_code=404, detail="No dashboard metrics for given period")
+        raise HTTPException(status_code=404, detail="No dashboard metrics available")
 
     return {
         "at_risk_learners": latest_row.at_risk_learners,
@@ -133,27 +106,30 @@ def get_at_risk_learners(
 # Average retention rate
 @app.get("/dashboard/average-retention-rate")
 def get_average_retention_rate(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
     """
-    Card: Average Retention Rate.
+    Retrieve the latest Average Retention Rate KPIs for the dashboard card.
 
-    For the selected period, returns from the latest DashboardMetrics row:
-      - average_retention_rate: overall retention %.
-      - retention_rate_change_pct: change in retention vs previous period.
+    This endpoint queries the DashboardMetrics table, selects the record with
+    the most recent snapshot_date_key, and returns:
+      - average_retention_rate: the overall retention percentage from the
+        latest available snapshot.
+      - retention_rate_change_pct: the percentage change in retention rate
+        compared with the previous period, as stored in that same
+        DashboardMetrics row.
+
+    If no DashboardMetrics rows exist in the database, the endpoint responds
+    with HTTP 404 to indicate that dashboard metrics data is not available.
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
-
     latest_row = (
         db.query(DashboardMetrics)
-        .filter(DashboardMetrics.snapshot_date_key.in_(date_keys_subq))
         .order_by(DashboardMetrics.snapshot_date_key.desc())
         .first()
     )
 
     if not latest_row:
-        raise HTTPException(status_code=404, detail="No dashboard metrics for given period")
+        raise HTTPException(status_code=404, detail="No dashboard metrics available")
 
     return {
         "average_retention_rate": latest_row.average_retention_rate,
@@ -161,41 +137,58 @@ def get_average_retention_rate(
     }
 
 
+
 # Trend of churn and retention rate
 @app.get("/dashboard/retention-churn-trend")
 def get_retention_churn_trend(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
-    """Line chart: monthly retention and churn trend.
-
-    For all DashboardMetrics rows whose snapshot_date_key lies in the
-    selected date range, joins DimDate to get calendar dates and
-    returns a list of points ordered by date:
-      - date
-      - month_name
-      - monthly_retention_rate
-      - monthly_churn_rate
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
+    Retrieve monthly retention and churn rates for the trend line chart.
 
+    This endpoint queries all rows from the DashboardMetrics table, joins
+    them with the DimDate table on snapshot_date_key to obtain calendar
+    dates, and returns a time-ordered list of data points. For each month,
+    it outputs:
+      - date: the calendar date associated with the snapshot.
+      - month_name: the human-readable month name (from DimDate if present,
+        otherwise derived from the date).
+      - monthly_retention_rate: the retention rate for that month, taken
+        from monthly_retention_rate if available, or from retention_rate
+        as a fallback.
+      - monthly_churn_rate: the churn rate for that month, taken from
+        monthly_churn_rate if available, or from churn_rate as a fallback.
+
+    The results are ordered by DimDate.full_date in ascending order to be
+    directly consumable by a front-end line chart component.
+    """
     rows = (
         db.query(DashboardMetrics, DimDate)
         .join(DimDate, DashboardMetrics.snapshot_date_key == DimDate.date_key)
-        .filter(DashboardMetrics.snapshot_date_key.in_(date_keys_subq))
         .order_by(DimDate.full_date.asc())
         .all()
     )
 
-    data = [
-        {
-            "date": dim_date.full_date,
-            "month_name": dim_date.month_name,
-            "monthly_retention_rate": metrics.monthly_retention_rate,
-            "monthly_churn_rate": metrics.monthly_churn_rate,
-        }
-        for metrics, dim_date in rows
-    ]
+    data = []
+    for metrics, dim_date in rows:
+        monthly_ret = getattr(metrics, "monthly_retention_rate", None)
+        if monthly_ret is None:
+            monthly_ret = getattr(metrics, "retention_rate", None)
+
+        monthly_churn = getattr(metrics, "monthly_churn_rate", None)
+        if monthly_churn is None:
+            monthly_churn = getattr(metrics, "churn_rate", None)
+
+        data.append(
+            {
+                "date": dim_date.full_date,
+                "month_name": getattr(
+                    dim_date, "month_name", dim_date.full_date.strftime("%b")
+                ),
+                "monthly_retention_rate": monthly_ret,
+                "monthly_churn_rate": monthly_churn,
+            }
+        )
 
     return data
 
@@ -203,30 +196,29 @@ def get_retention_churn_trend(
 # Learners' segmentation
 @app.get("/dashboard/learner-segmentation")
 def get_learner_segmentation(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
     """
-    Donut chart: Learner segmentation by engagement.
+    Donut chart: Retrieve the latest learner engagement segmentation for the donut chart.
 
-    For the latest DashboardMetrics row within the selected period,
-    returns counts and percentages for four engagement buckets:
-      - highly_engaged
-      - medium_engaged
-      - at_risk
-      - dormant
+    This endpoint queries the DashboardMetrics table, selects the record with
+    the most recent snapshot_date_key, and returns four engagement buckets:
+      - highly_engaged: count and percentage of highly engaged learners.
+      - medium_engaged: count and percentage of moderately engaged learners.
+      - at_risk: count and percentage of learners at risk of churn.
+      - dormant: count and percentage of dormant or inactive learners.
+
+    The percentages are taken directly from the latest DashboardMetrics row.
+    If no DashboardMetrics data is available, the endpoint responds with HTTP 404.
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
-
     latest_row = (
         db.query(DashboardMetrics)
-        .filter(DashboardMetrics.snapshot_date_key.in_(date_keys_subq))
         .order_by(DashboardMetrics.snapshot_date_key.desc())
         .first()
     )
 
     if not latest_row:
-        raise HTTPException(status_code=404, detail="No dashboard metrics for given period")
+        raise HTTPException(status_code=404, detail="No dashboard metrics available")
 
     return {
         "highly_engaged": {
@@ -251,34 +243,42 @@ def get_learner_segmentation(
 # Top features driving churn
 @app.get("/dashboard/top-features-driving-churn")
 def get_top_features_driving_churn(
-    date_range: DateRange = Depends(get_date_range),
     db: Session = Depends(get_db),
 ):
     """
-    Bar chart: Top features driving churn.
+    Bar chart: Retrieve the top model features driving churn for the bar chart.
 
-    For the selected period:
-      - filters FeatureImportance to churn_prediction models within
-        the date range,
-      - orders by latest snapshot first, then by importance_rank,
-      - returns feature_name, importance_score and importance_rank
-        for each row.
+    This endpoint first finds the most recent snapshot_date_key in the
+    FeatureImportance table for rows where model_type is 'churn_prediction'.
+    It then returns all feature importance records for that snapshot, ordered
+    by importance_rank in ascending order, so that the most important features
+    appear first.
+
+    The response is a list of objects, each containing:
+      - feature_name: the name of the feature.
+      - importance_score: the feature's importance score in the churn model.
+      - importance_rank: the feature's rank by importance (1 is most important).
+
+    If no churn_prediction feature importance data is available, the endpoint
+    responds with HTTP 404 to indicate that no relevant snapshot exists.
     """
-    date_keys_subq = get_date_keys_in_range(db, date_range)
+    latest_key = (
+        db.query(func.max(FeatureImportance.snapshot_date_key))
+        .filter(FeatureImportance.model_type == "churn_prediction")
+        .scalar()
+    )
+    if latest_key is None:
+        raise HTTPException(status_code=404, detail="No feature importance data")
 
     rows = (
         db.query(FeatureImportance)
         .filter(
-            FeatureImportance.snapshot_date_key.in_(date_keys_subq),
+            FeatureImportance.snapshot_date_key == latest_key,
             FeatureImportance.model_type == "churn_prediction",
         )
-        .order_by(FeatureImportance.snapshot_date_key.desc(),
-                  FeatureImportance.importance_rank.asc())
+        .order_by(FeatureImportance.importance_rank.asc())
         .all()
     )
-
-    if not rows:
-        raise HTTPException(status_code=404, detail="No feature importance data for given period")
 
     return [
         {
@@ -294,33 +294,37 @@ def get_top_features_driving_churn(
 @app.get("/learners/rfm-analysis")
 def get_learners_rfm_analysis(
     country: Optional[str] = Query(None, description="Filter by country"),
-    subscription_tier: Optional[str] = Query(None, description="Filter by subscription tier"),
+    subscription_tier: Optional[str] = Query(
+        None, description="Filter by subscription tier"
+    ),
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    RFM Analysis table endpoint.
+    Retrieve the latest RFM / churn / CLV analytics per learner for the table view.
 
-    Returns one row per learner combining:
-      - user profile (DimUser),
-      - latest RFM / CLV / churn prediction snapshot (FactUserAnalyticsSnapshot),
-      - latest daily activity (FactUserDailyActivity),
-      - subscription plan (DimSubscriptionPlan).
+    For each learner, this endpoint:
+      - Finds the most recent FactUserAnalyticsSnapshot (by snapshot_date_key).
+      - Finds the most recent FactUserDailyActivity record (by date_key) to get
+        days_since_last_login.
+      - Joins DimUser, DimSubscriptionPlan, and these latest fact rows to build
+        a single consolidated record.
 
     Optional filters:
-      * country: restrict learners to a specific DimUser.country (or 'All Countries' on UI to skip).
-      * subscription_tier: restrict learners to a specific DimSubscriptionPlan.tier
-        (or 'All' on UI to skip).
+      - country: if provided and not "All Countries", restricts learners to the
+        specified DimUser.country.
+      - subscription_tier: if provided and not "All", restricts learners to the
+        specified DimSubscriptionPlan.tier.
 
-    Response fields per learner:
-      - user_id: natural key / external user identifier.
+    The response returns one object per learner with:
+      - user_id: external/natural user identifier.
       - country: learner's country.
-      - segment: RFM segment label.
-      - rfm_score: sum of R, F, M scores (r_score + f_score + m_score).
+      - segment_label: business-friendly segment label from the analytics model.
+      - kmeans_segment_label: cluster label from k‑means segmentation.
+      - rfm_segment: RFM segment code for the learner.
       - clv: predicted customer lifetime value.
-      - churn_risk_pct: churn_probability as a fraction (0–1, front‑end can convert to %).
-      - last_active_days_ago: days_since_last_login from FactUserDailyActivity.
+      - churn_risk_pct: churn_probability as a 0–1 fraction.
+      - last_active_days_ago: days_since_last_login from the latest activity row.
     """
-
     # Latest analytics snapshot per user
     subq_latest_snap = (
         db.query(
@@ -352,7 +356,10 @@ def get_learners_rfm_analysis(
         .join(
             FactUserAnalyticsSnapshot,
             (FactUserAnalyticsSnapshot.user_key == subq_latest_snap.c.user_key)
-            & (FactUserAnalyticsSnapshot.snapshot_date_key == subq_latest_snap.c.latest_key),
+            & (
+                FactUserAnalyticsSnapshot.snapshot_date_key
+                == subq_latest_snap.c.latest_key
+            ),
         )
         .join(
             DimSubscriptionPlan,
@@ -366,7 +373,10 @@ def get_learners_rfm_analysis(
         .join(
             FactUserDailyActivity,
             (FactUserDailyActivity.user_key == subq_latest_activity.c.user_key)
-            & (FactUserDailyActivity.date_key == subq_latest_activity.c.latest_date_key),
+            & (
+                FactUserDailyActivity.date_key
+                == subq_latest_activity.c.latest_date_key
+            ),
         )
     )
 
@@ -378,19 +388,15 @@ def get_learners_rfm_analysis(
 
     rows = q.all()
 
-    result = []
+    result: List[Dict] = []
     for user, snap, plan, activity in rows:
-        rfm_score = (
-            (snap.rfm_r_score or 0)
-            + (snap.rfm_f_score or 0)
-            + (snap.rfm_m_score or 0)
-        )
         result.append(
             {
                 "user_id": user.user_id_nk,
                 "country": user.country,
-                "segment": snap.rfm_segment,
-                "rfm_score": rfm_score,
+                "segment_label": snap.segment_label,
+                "kmeans_segment_label": snap.kmeans_segment_label,
+                "rfm_segment": snap.rfm_segment,
                 "clv": snap.clv_value,
                 "churn_risk_pct": snap.churn_probability,
                 "last_active_days_ago": activity.days_since_last_login,
@@ -401,55 +407,115 @@ def get_learners_rfm_analysis(
 
 
 # Third page
+@app.get("/learners/filters")
+def get_learners_filters(
+    db: Session = Depends(get_db),
+) -> Dict[str, List[str]]:
+    """
+    Retrieve available filter options for the Learners RFM Analysis page.
+
+    This endpoint queries the DimUser and DimSubscriptionPlan tables to build
+    distinct, non-null lists of:
+      - countries: all unique DimUser.country values, sorted alphabetically.
+      - subscription_tiers: all unique DimSubscriptionPlan.tier values, sorted
+        alphabetically.
+
+    The resulting lists are returned in a JSON object and are intended to
+    populate the Country and Subscription Tier dropdowns on the frontend.
+    """
+    # Distinct countries
+    country_rows = (
+        db.query(DimUser.country)
+        .filter(DimUser.country.isnot(None))
+        .distinct()
+        .order_by(DimUser.country.asc())
+        .all()
+    )
+    countries = [row[0] for row in country_rows if row[0]]
+
+    # Distinct subscription tiers
+    tier_rows = (
+        db.query(DimSubscriptionPlan.tier)
+        .filter(DimSubscriptionPlan.tier.isnot(None))
+        .distinct()
+        .order_by(DimSubscriptionPlan.tier.asc())
+        .all()
+    )
+    subscription_tiers = [row[0] for row in tier_rows if row[0]]
+
+    return {
+        "countries": countries,
+        "subscription_tiers": subscription_tiers,
+    }
+
+
 # High-risk sumamry
 @app.get("/high-risk/summary")
 def get_high_risk_summary(
     risk_threshold: float = Query(0.7, description="Minimum churn_probability to be high-risk"),
-    subscription_tier: Optional[str] = Query(None, description="Filter by subscription tier"),
+    subscription_tier: Optional[str] = Query(
+        None, description="Filter by subscription tier"
+    ),
+    country: Optional[str] = Query(
+        None, description="Filter by learner country"
+    ),
     db: Session = Depends(get_db),
 ):
     """
-    Header cards: High-Risk Learners summary.
+    Retrieve high-risk learner summary metrics for the header cards.
 
-    Computes two numbers for the current high-risk cohort:
-      - total_high_risk_learners: total count of users whose churn_probability
-        is >= risk_threshold, optionally filtered by subscription tier.
-      - new_high_risk_recent: how many of those high-risk users entered the
-        snapshot in the last 7 date_key values (approx. “this week”).
+    This endpoint queries FactUserAnalyticsSnapshot to identify learners whose
+    churn_probability meets or exceeds the specified risk_threshold (default 0.7).
+    It joins with DimSubscriptionPlan and DimUser to support filtering and
+    computes two metrics:
+      - total_high_risk_learners: the total count of learners meeting the risk
+        threshold, subject to any applied filters.
+      - new_high_risk_recent: the count of those high-risk learners whose
+        analytics snapshot falls within the most recent 7 date_keys.
 
-    Args:
-        risk_threshold: Minimum churn_probability (0–1) for a learner to be
-            considered high-risk (default 0.7).
-        subscription_tier: Optional DimSubscriptionPlan.tier filter
-            (UI may pass 'All Subscriptions' to skip).
+    Optional filters:
+      - subscription_tier: if provided and not "All Subscriptions", restricts
+        to the specified tier. If omitted or "All Subscriptions", excludes the
+        "Free" tier.
+      - country: if provided and not "All Countries", restricts learners to
+        the specified DimUser.country.
+      - risk_threshold: minimum churn_probability to classify a learner as
+        high-risk (default 0.7).
 
-        db: SQLAlchemy session dependency.
-
-    Uses:
-        - FactUserAnalyticsSnapshot for churn_probability and snapshot_date_key.
-        - DimSubscriptionPlan for filtering by plan tier.
-        - DimDate to identify the latest 7 snapshot dates.
+    The "recent" count uses the last 7 date_key values in DimDate to approximate
+    learners flagged as high-risk in the most recent week of snapshots.
     """
+
     q = (
-        db.query(FactUserAnalyticsSnapshot, DimSubscriptionPlan)
+        db.query(FactUserAnalyticsSnapshot, DimSubscriptionPlan, DimUser)
         .join(
             DimSubscriptionPlan,
             FactUserAnalyticsSnapshot.subscription_plan_key
             == DimSubscriptionPlan.subscription_plan_key,
+        )
+        .join(
+            DimUser,
+            FactUserAnalyticsSnapshot.user_key == DimUser.user_key,
         )
         .filter(FactUserAnalyticsSnapshot.churn_probability >= risk_threshold)
     )
 
     if subscription_tier and subscription_tier != "All Subscriptions":
         q = q.filter(DimSubscriptionPlan.tier == subscription_tier)
+    else:
+        q = q.filter(DimSubscriptionPlan.tier != "Free")
+
+    if country and country != "All Countries":
+        q = q.filter(DimUser.country == country)
 
     total_high_risk = q.count()
 
-    # “new this week” = users whose snapshot_date_key is in the last 7 days
     latest_key_subq = (
         db.query(func.max(DimDate.date_key))
-        .join(FactUserAnalyticsSnapshot,
-              FactUserAnalyticsSnapshot.snapshot_date_key == DimDate.date_key)
+        .join(
+            FactUserAnalyticsSnapshot,
+            FactUserAnalyticsSnapshot.snapshot_date_key == DimDate.date_key,
+        )
         .scalar_subquery()
     )
 
@@ -472,18 +538,25 @@ def get_high_risk_summary(
 
 # High-Risk Learner List
 def _segment_to_campaign_type(rfm_segment: str) -> str:
-    """Map a detailed RFM segment label into a broader campaign type.
+    """
+    Map a detailed RFM segment label to a broader campaign type category.
+
+    This helper function examines the provided RFM segment label and returns
+    one of four campaign types based on keyword matching:
+      - "retention": assigned to segments indicating at-risk, declining, casual,
+        or dormant premium users who need intervention to prevent churn.
+      - "reactivation": assigned to segments indicating recently churned users
+        who may be re-engaged.
+      - "upsell": assigned to segments indicating active, engaged, loyal, or
+        promising users who are candidates for upgrade or expansion offers.
+      - "onboarding": the default fallback for segments that do not match the
+        above categories, typically representing new or unclassified users.
 
     Args:
-        rfm_segment: Text label from RFM segmentation
-            (e.g., 'High-Value at Risk', 'Active High-Value Learners').
+        rfm_segment (str): The RFM segment label (may be None or empty).
 
     Returns:
-        One of:
-          - 'retention'    for at-risk / declining / casual / dormant segments.
-          - 'reactivation' for 'Recently Churned'.
-          - 'upsell'       for healthy/loyal segments.
-          - 'onboarding'   as a default fallback for other segments.
+        str: One of "retention", "reactivation", "upsell", or "onboarding".
     """
     seg = (rfm_segment or "").lower()
 
@@ -553,31 +626,42 @@ def choose_suggested_action(rfm_segment: str) -> str:
 
 @app.get("/high-risk/learners")
 def get_high_risk_learners(
-    risk_threshold: float = Query(0.7, description="Minimum churn_probability to include"),
-    subscription_tier: Optional[str] = Query(None, description="Filter by subscription tier"),
+    risk_threshold: float = Query(
+        0.7, description="Minimum churn_probability to include"
+    ),
+    subscription_tier: Optional[str] = Query(
+        None, description="Filter by subscription tier"
+    ),
+    country: Optional[str] = Query(
+        None, description="Filter by learner country"
+    ),
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    High-Risk Learner List table.
+    Retrieve a detailed list of high-risk learners for the table view.
 
-    Builds the rows for the main table on the High-Risk Learners page with:
-      - Name
-      - Segment (RFM segment)
-      - Days Inactive
-      - Churn Probability
-      - Suggested Action (channel / offer)
+    This endpoint selects the latest analytics snapshot and latest daily-activity
+    record for each learner, then filters learners whose churn_probability is
+    greater than or equal to the specified risk_threshold (default 0.7). It
+    joins DimUser, DimSubscriptionPlan, FactUserAnalyticsSnapshot, and
+    FactUserDailyActivity to assemble learner profile, risk, and engagement
+    information.
 
-    Logic:
-      * Finds each user's latest analytics snapshot and latest daily activity.
-      * Filters learners whose churn_probability >= risk_threshold.
-      * Optionally filters by subscription_tier (DimSubscriptionPlan.tier).
-      * For each learner, computes a suggested action using RFM segment.
+    Optional filters:
+      - subscription_tier: if provided and not "All Subscriptions", restricts
+        learners to the specified DimSubscriptionPlan.tier. If omitted or
+        "All Subscriptions", excludes the "Free" tier.
+      - country: if provided and not "All Countries", restricts learners to the
+        specified DimUser.country.
+      - risk_threshold: minimum churn_probability for inclusion in the list.
 
-    Args:
-        risk_threshold: Minimum churn_probability (0–1) to be included.
-        subscription_tier: Optional subscription tier filter
-            ('All Subscriptions' on UI means no filtering).
-        db: SQLAlchemy session dependency.
+    For each high-risk learner, the response includes:
+      - name: external/natural user identifier (user_id_nk).
+      - segment: human-readable segment label from the analytics model.
+      - days_inactive: days_since_last_login from the latest activity record.
+      - churn_probability: predicted churn probability as a 0–1 value.
+      - suggested_action: recommended campaign action (channel and offer)
+        derived from the learner's RFM segment.
     """
     subq_latest_snap = (
         db.query(
@@ -608,7 +692,10 @@ def get_high_risk_learners(
         .join(
             FactUserAnalyticsSnapshot,
             (FactUserAnalyticsSnapshot.user_key == subq_latest_snap.c.user_key)
-            & (FactUserAnalyticsSnapshot.snapshot_date_key == subq_latest_snap.c.latest_key),
+            & (
+                FactUserAnalyticsSnapshot.snapshot_date_key
+                == subq_latest_snap.c.latest_key
+            ),
         )
         .join(
             DimSubscriptionPlan,
@@ -626,19 +713,25 @@ def get_high_risk_learners(
 
     if subscription_tier and subscription_tier != "All Subscriptions":
         q = q.filter(DimSubscriptionPlan.tier == subscription_tier)
+    else:
+        q = q.filter(DimSubscriptionPlan.tier != "Free")
+
+    if country and country != "All Countries":
+        q = q.filter(DimUser.country == country)
 
     rows = q.all()
 
     result: List[Dict] = []
     for user, snap, plan, activity in rows:
         suggested_action = choose_suggested_action(snap.rfm_segment)
+
         result.append(
             {
                 "name": user.user_id_nk,
-                "segment": snap.rfm_segment,
+                "segment": snap.segment_label,
                 "days_inactive": activity.days_since_last_login,
                 "churn_probability": snap.churn_probability,
-                "suggested_action": suggested_action,  # e.g. "Email / Discount"
+                "suggested_action": suggested_action,
             }
         )
 
@@ -647,16 +740,20 @@ def get_high_risk_learners(
 
 # Churn reason - Bar chart
 @app.get("/high-risk/reasons-for-churn")
-def get_reasons_for_churn(db: Session = Depends(get_db)) -> list[dict]:
+def get_reasons_for_churn(db: Session = Depends(get_db)) -> List[Dict]:
     """
-    Bar chart: Reasons for Churn.
+    Bar chart: Retrieve the top reasons for churn for the bar chart.
 
-    Uses the latest snapshot in ChurnReasons to build a list of
-    churn drivers with:
-      - reason: display name for the reason category.
-      - count: number of at-risk / churned learners for that reason.
+    This endpoint queries the ChurnReasons table to find the most recent
+    snapshot_date_key, then returns all churn reason records from that snapshot,
+    ordered by reason_count in descending order so that the most common reasons
+    appear first.
 
-    This powers the 'Reasons for Churn' bar chart on the High-Risk page.
+    Each returned object contains:
+      - reason: the user-friendly display name for the churn reason category.
+      - count: the number of at-risk learners with this primary churn reason.
+
+    If no ChurnReasons data is available, an empty list is returned.
     """
     latest_key = db.query(func.max(ChurnReasons.snapshot_date_key)).scalar()
     if latest_key is None:
@@ -687,29 +784,36 @@ def get_churn_by_tier(
     subscription_tier: Optional[str] = Query(
         None, description="Optional filter for a single tier"
     ),
+    country: Optional[str] = Query(
+        None, description="Optional filter for learner country"
+    ),
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Donut chart: distribution of high-risk learners by subscription tier.
+    Retrieve the distribution of high-risk learners by subscription tier for the donut chart.
 
-    Counts how many high-risk learners (churn_probability >= risk_threshold)
-    fall into each subscription plan tier, based on their latest analytics
-    snapshot and current subscription plan.
+    This endpoint selects the latest analytics snapshot for each learner, filters
+    for those whose churn_probability meets or exceeds the specified risk_threshold,
+    and aggregates the count of high-risk learners by DimSubscriptionPlan.tier.
 
-    Args:
-        risk_threshold: Minimum churn_probability (0–1) to treat as high-risk.
-        subscription_tier: Optional tier filter; if provided (and not
-            'All Subscriptions'), restricts the cohort to that tier only.
-        db: SQLAlchemy session.
+    Required parameter:
+      - risk_threshold: minimum churn_probability to classify a learner as high-risk.
 
-    Returns:
-        List of objects with:
-          - tier: subscription tier label.
-          - count: number of high-risk learners in that tier.
-          - pct: share of high-risk learners in that tier (0–100).
+    Optional filters:
+      - subscription_tier: if provided and not "All Subscriptions", restricts the
+        aggregation to the specified tier. If omitted or "All Subscriptions",
+        excludes the "Free" tier from the results.
+      - country: if provided and not "All Countries", restricts learners to the
+        specified DimUser.country before aggregation.
+
+    The response is a list of objects, each containing:
+      - tier: the subscription tier name.
+      - count: the number of high-risk learners in that tier.
+      - pct: the percentage of high-risk learners this tier represents out of the
+        filtered total.
+
+    The percentage is calculated as (tier_count / total_high_risk) * 100.
     """
-
-    # latest analytics snapshot per user
     subq_latest_snap = (
         db.query(
             FactUserAnalyticsSnapshot.user_key,
@@ -733,6 +837,10 @@ def get_churn_by_tier(
             FactUserAnalyticsSnapshot.subscription_plan_key
             == DimSubscriptionPlan.subscription_plan_key,
         )
+        .join(
+            DimUser,
+            FactUserAnalyticsSnapshot.user_key == DimUser.user_key,
+        )
         .filter(
             FactUserAnalyticsSnapshot.snapshot_date_key == subq_latest_snap.c.latest_key,
             FactUserAnalyticsSnapshot.churn_probability >= risk_threshold,
@@ -741,6 +849,11 @@ def get_churn_by_tier(
 
     if subscription_tier and subscription_tier != "All Subscriptions":
         q = q.filter(DimSubscriptionPlan.tier == subscription_tier)
+    else:
+        q = q.filter(DimSubscriptionPlan.tier != "Free")
+
+    if country and country != "All Countries":
+        q = q.filter(DimUser.country == country)
 
     rows = q.group_by(DimSubscriptionPlan.tier).all()
     total = sum(r.count for r in rows) or 1
@@ -761,72 +874,52 @@ def get_campaigns_overview(
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Active & Recent Campaigns table.
+    Retrieve an overview of active and recent campaigns for the table view.
 
-    Builds the data for the campaigns overview grid with one row per
-    campaign, including:
-      - campaign: campaign name.
-      - target_segment: dominant engagement_level of learners who
-        interacted with the campaign.
-      - launch_date: campaign start date from DimCampaign / DimDate.
-      - open_rate_pct: campaign-level open rate from CampaignPerformance.
-      - retention_lift_pct: retention lift vs. control from CampaignPerformance.
-      - status: campaign lifecycle status (e.g., Active, Completed).
+    This endpoint joins CampaignPerformance, DimCampaign, and DimDate tables to
+    assemble key campaign metrics. It returns all campaigns, ordered by launch
+    date in descending order (most recent first).
 
-    Joins:
-      * CampaignPerformance → DimCampaign (by campaign_key) for campaign metadata.
-      * DimCampaign → DimDate (by start_date_key) for launch date.
-      * DimCampaign → FactUserDailyActivity (by campaign_key) to find
-        users in the campaign.
-      * FactUserDailyActivity → FactUserAnalyticsSnapshot (by user_key and date_key)
-        to read engagement_level.
-
-    Grouping is done by campaign and engagement_level to derive one
-    engagement-based target segment per campaign row.
+    For each campaign, the response includes:
+      - campaign: the campaign name.
+      - target_segment: the target audience segment (defaults to "Unknown" if null).
+      - launch_date: the campaign launch date in ISO format (YYYY-MM-DD), or null
+        if unavailable.
+      - open_rate_pct: the campaign open rate as a percentage.
+      - retention_lift_pct: the retention lift (percentage point improvement over
+        control group).
+      - status: the current status of the campaign (e.g., Active, Completed, Paused).
     """
-
     rows = (
         db.query(
-            CampaignPerformance,
-            DimCampaign,
-            DimDate,
-            FactUserAnalyticsSnapshot.engagement_level,
+            CampaignPerformance.campaign_name.label("campaign_name"),
+            CampaignPerformance.target_segment.label("target_segment"),
+            DimDate.full_date.label("launch_date"),
+            CampaignPerformance.open_rate.label("open_rate"),
+            CampaignPerformance.retention_lift.label("retention_lift"),
+            CampaignPerformance.status.label("status"),
         )
         .join(DimCampaign, CampaignPerformance.campaign_key == DimCampaign.campaign_key)
         .join(DimDate, DimCampaign.start_date_key == DimDate.date_key)
-        .join(
-            FactUserDailyActivity,
-            FactUserDailyActivity.campaign_key == DimCampaign.campaign_key,
-        )
-        .join(
-            FactUserAnalyticsSnapshot,
-            (FactUserAnalyticsSnapshot.user_key == FactUserDailyActivity.user_key)
-            & (FactUserAnalyticsSnapshot.snapshot_date_key == FactUserDailyActivity.date_key),
-        )
-        .group_by(
-            CampaignPerformance.campaign_performance_id,
-            DimCampaign.campaign_key,
-            DimDate.date_key,
-            FactUserAnalyticsSnapshot.engagement_level,
-        )
         .order_by(DimDate.full_date.desc())
         .all()
     )
 
     result: List[Dict] = []
-    for perf, camp, date, engagement_level in rows:
+    for r in rows:
         result.append(
             {
-                "campaign": perf.campaign_name or camp.campaign_name,
-                "target_segment": engagement_level or "Unknown",
-                "launch_date": date.full_date.isoformat(),
-                "open_rate_pct": perf.open_rate,
-                "retention_lift_pct": perf.retention_lift,
-                "status": perf.status,
+                "campaign": r.campaign_name,
+                "target_segment": r.target_segment or "Unknown",
+                "launch_date": r.launch_date.isoformat() if r.launch_date else None,
+                "open_rate_pct": r.open_rate,
+                "retention_lift_pct": r.retention_lift,
+                "status": r.status,
             }
         )
 
     return result
+
 
 
 @app.get("/campaigns/performance-comparison")
@@ -834,38 +927,42 @@ def get_campaign_performance_comparison(
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Campaign Performance Comparison chart (Lift vs. Churn Rate).
+    Retrieve campaign performance metrics for the comparison chart (Lift vs. Churn Rate).
 
-    For each campaign, returns:
-      - campaign: campaign name.
-      - churn_rate_pct: implied churn rate for the campaign group
-        (100 - campaign_retention_rate).
-      - retention_lift_pct: lift in retention vs. control group.
+    This endpoint joins CampaignPerformance and DimCampaign tables to extract
+    retention rates and lift for each campaign. It calculates the campaign churn
+    rate as (100 - campaign_retention_rate) and returns campaigns ordered
+    alphabetically by name.
 
-    Data source:
-      * CampaignPerformance provides campaign_retention_rate,
-        control_retention_rate and retention_lift.
-      * DimCampaign provides the human-readable campaign_name.
+    For each campaign, the response includes:
+      - campaign: the campaign name.
+      - churn_rate_pct: the calculated churn rate percentage for the campaign group
+        (derived as 100 minus campaign_retention_rate).
+      - retention_lift_pct: the retention lift (percentage point improvement over
+        the control group).
 
-    This output feeds the grouped bar chart where:
-      - blue bar = churn_rate_pct.
-      - green bar = retention_lift_pct.
+    This endpoint provides data suitable for visualizing the relationship between
+    campaign-driven churn reduction and retention lift in a scatter or comparison chart.
     """
     rows = (
         db.query(
             DimCampaign.campaign_name.label("campaign_name"),
-            CampaignPerformance.campaign_retention_rate.label("campaign_retention_rate"),
+            CampaignPerformance.campaign_retention_rate.label(
+                "campaign_retention_rate"
+            ),
             CampaignPerformance.control_retention_rate.label("control_retention_rate"),
             CampaignPerformance.retention_lift.label("retention_lift"),
         )
-        .join(CampaignPerformance, CampaignPerformance.campaign_key == DimCampaign.campaign_key)
+        .join(
+            CampaignPerformance,
+            CampaignPerformance.campaign_key == DimCampaign.campaign_key,
+        )
         .order_by(DimCampaign.campaign_name.asc())
         .all()
     )
 
     result: List[Dict] = []
     for r in rows:
-        # churn rate for chart = 100 - campaign_retention_rate
         churn_rate_pct = 100.0 - (r.campaign_retention_rate or 0.0)
 
         result.append(
@@ -887,18 +984,23 @@ def get_model_accuracy(
     db: Session = Depends(get_db),
 ) -> Dict:
     """
-    Model Accuracy card.
+    Retrieve the latest model accuracy metric and its change for the accuracy card.
 
-    For the given model_type (default: 'churn_prediction'), looks at the
-    two most recent ModelPerformanceMetrics rows and returns:
-      - current_accuracy_pct: latest accuracy multiplied by 100.
-      - accuracy_change_pct: difference (current - previous) in
-        percentage points, or None if only one snapshot exists.
+    This endpoint queries the ModelPerformanceMetrics table for the specified
+    model_type, selects the two most recent snapshots (ordered by snapshot_date_key
+    in descending order), and computes:
+      - current_accuracy_pct: the accuracy of the most recent model snapshot,
+        converted to a percentage (multiplied by 100).
+      - accuracy_change_pct: the absolute percentage point change in accuracy
+        from the previous snapshot to the current one. If only one snapshot is
+        available, this field is null.
 
-    This powers the main accuracy KPI card with the big percentage and
-    the small up/down delta indicator.
+    Query parameters:
+      - model_type: the type of model to query (default: "churn_prediction").
+
+    If no performance metrics are available for the specified model_type, both
+    fields in the response are null.
     """
-
     rows = (
         db.query(ModelPerformanceMetrics)
         .filter(ModelPerformanceMetrics.model_type == model_type)
@@ -933,16 +1035,22 @@ def get_model_precision(
     db: Session = Depends(get_db),
 ) -> Dict:
     """
-    Precision card.
+    Retrieve the latest model precision metric and its change for the precision card.
 
-    For the given model_type, compares the last two performance snapshots
-    and returns:
-      - current_precision_pct: latest precision * 100.
-      - precision_change_pct: current_precision_pct - previous_precision_pct,
-        or None if there is only one snapshot.
+    This endpoint queries the ModelPerformanceMetrics table for the specified
+    model_type, selects the two most recent snapshots (ordered by snapshot_date_key
+    in descending order), and computes:
+      - current_precision_pct: the precision of the most recent model snapshot,
+        converted to a percentage (multiplied by 100).
+      - precision_change_pct: the absolute percentage point change in precision
+        from the previous snapshot to the current one. If only one snapshot is
+        available, this field is null.
 
-    This card shows how often positive predictions are actually correct
-    for the churn model, plus the recent improvement or decline.
+    Query parameters:
+      - model_type: the type of model to query (default: "churn_prediction").
+
+    If no performance metrics are available for the specified model_type, both
+    fields in the response are null.
     """
     rows = (
         db.query(ModelPerformanceMetrics)
@@ -978,15 +1086,22 @@ def get_model_recall(
     db: Session = Depends(get_db),
 ) -> Dict:
     """
-    Recall card.
+    Retrieve the latest model recall metric and its change for the recall card.
 
-    For the given model_type, compares the two latest model runs and returns:
-      - current_recall_pct: latest recall * 100.
-      - recall_change_pct: change in recall vs. previous snapshot in
-        percentage points, or None if no previous snapshot exists.
+    This endpoint queries the ModelPerformanceMetrics table for the specified
+    model_type, selects the two most recent snapshots (ordered by snapshot_date_key
+    in descending order), and computes:
+      - current_recall_pct: the recall of the most recent model snapshot,
+        converted to a percentage (multiplied by 100).
+      - recall_change_pct: the absolute percentage point change in recall
+        from the previous snapshot to the current one. If only one snapshot is
+        available, this field is null.
 
-    Recall here measures how many actual churners the model correctly
-    flags, and the delta shows recent trend in sensitivity.
+    Query parameters:
+      - model_type: the type of model to query (default: "churn_prediction").
+
+    If no performance metrics are available for the specified model_type, both
+    fields in the response are null.
     """
     rows = (
         db.query(ModelPerformanceMetrics)
@@ -1022,19 +1137,20 @@ def get_model_auc_roc(
     db: Session = Depends(get_db),
 ) -> Dict:
     """
-    AUC-ROC Score card.
+    Retrieve the latest model AUC-ROC score and its change for the AUC-ROC card.
 
-    For the given model_type, inspects the last two entries in
-    ModelPerformanceMetrics and returns:
-      - current_auc_roc: latest area under the ROC curve (0–1).
-      - auc_roc_change: difference between current and previous AUC
-        (current_auc_roc - previous_auc_roc), or None if only one
-        snapshot exists.
+    This endpoint queries the ModelPerformanceMetrics table for the specified
+    model_type, selects the two most recent snapshots (ordered by snapshot_date_key
+    in descending order), and computes:
+      - current_auc_roc: the AUC-ROC score of the most recent model snapshot
+        (returned as a decimal value, typically between 0 and 1).
+      - auc_roc_change: the absolute change in AUC-ROC score from the previous
+        snapshot to the current one. If only one snapshot is available, this
+        field is null.
 
-    This card summarizes overall ranking performance of the churn model
-    across all thresholds, together with its recent improvement.
+    Query parameters:
+      - model_type: the type of model to query (default: "churn_prediction").
     """
-
     rows = (
         db.query(ModelPerformanceMetrics)
         .filter(ModelPerformanceMetrics.model_type == model_type)
@@ -1062,24 +1178,26 @@ def get_model_auc_roc(
     }
 
 
+
 # Feature Importance
 @app.get("/models/feature-importance")
 def get_model_feature_importance(
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Feature Importance horizontal bar chart.
+    Retrieve feature importance rankings for the horizontal bar chart.
 
-    Retrieves the latest feature importance snapshot for the churn prediction model
-    (model_type = 'churn_prediction') and returns the features ordered by their
-    importance_rank.
+    This endpoint queries the FeatureImportance table to find the most recent
+    snapshot_date_key for the "churn_prediction" model_type, then returns all
+    feature importance records from that snapshot, ordered by importance_rank
+    in ascending order (most important features first).
 
     For each feature, the response includes:
-      - feature_name: human-readable feature label.
-      - importance_score: relative importance value (scale defined by DS pipeline).
+      - feature_name: the name of the feature.
+      - importance_score: the feature's importance score in the churn model.
 
-    The frontend uses this list to draw a horizontal bar chart where each bar
-    represents a feature and its contribution to the churn model.
+    If no feature importance data is available for the churn_prediction model,
+    an empty list is returned.
     """
     latest_key = (
         db.query(func.max(FeatureImportance.snapshot_date_key))
@@ -1108,32 +1226,34 @@ def get_model_feature_importance(
     ]
 
 
-# Needs to be reviewed for final milestone
+# Roc curve
 @app.get("/models/roc-curve")
 def get_model_roc_curve(
     model_type: str = "churn_prediction",
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Churn Prediction Accuracy (ROC Curve).
+    Retrieve approximate ROC curve data points for the churn prediction accuracy chart.
 
-    Builds an approximate ROC curve for the specified model_type using the most
-    recent ModelPerformanceMetrics row:
+    This endpoint queries the ModelPerformanceMetrics table for the most recent
+    snapshot of the specified model_type. If an AUC-ROC value is available, it
+    generates a synthetic ROC curve by approximating true positive rate (TPR)
+    values across false positive rate (FPR) intervals from 0.0 to 1.0 in steps
+    of 0.1, using the AUC to shape the curve.
 
-      - If no metrics or no AUC is available, returns a simple diagonal
-        ROC (fpr = tpr) representing a random classifier.
-      - Otherwise, generates 11 points (fpr from 0.0 to 1.0 in steps of 0.1)
-        and approximates tpr as an increasing function of fpr and the model's
-        auc_roc score.
+    If no model performance data is available or the AUC-ROC is null, the endpoint
+    returns a diagonal baseline curve (TPR = FPR) representing random classifier
+    performance.
 
-    Output format:
-      - fpr: false positive rate (x-axis).
-      - tpr: true positive rate (y-axis).
+    Query parameters:
+      - model_type: the type of model to query (default: "churn_prediction").
 
-    The frontend plots these points as the blue ROC curve and can overlay its
-    own diagonal baseline for comparison.
+    The response is a list of data points, each containing:
+      - fpr: false positive rate (0.0 to 1.0).
+      - tpr: true positive rate (0.0 to 1.0).
+
+    This data is suitable for rendering an ROC curve visualization on the frontend.
     """
-
     latest = (
         db.query(ModelPerformanceMetrics)
         .filter(ModelPerformanceMetrics.model_type == model_type)
@@ -1141,17 +1261,15 @@ def get_model_roc_curve(
         .first()
     )
     if not latest or latest.auc_roc is None:
-        # fallback: diagonal line (random classifier)
         return [{"fpr": x / 10.0, "tpr": x / 10.0} for x in range(0, 11)]
 
     auc = latest.auc_roc
 
-    # simple parametric ROC approximation: tpr = (fpr ** 0.5) * (2 * auc - 1 + 1)
     points: List[Dict] = []
     for i in range(0, 11):
         fpr = i / 10.0
         base = fpr ** 0.5
-        tpr = min(1.0, max(0.0, base * (2 * auc - 1 + 1)))  # keep in [0,1]
+        tpr = min(1.0, max(0.0, base * (2 * auc - 1 + 1)))
         points.append({"fpr": fpr, "tpr": tpr})
 
     return points
@@ -1163,27 +1281,22 @@ def get_segment_retention_probability(
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Segment-wise Retention Probability bar chart.
+    Retrieve segment-wise retention probability for the bar chart.
 
-    For each engagement segment (engagement_level) in FactUserAnalyticsSnapshot,
-    this endpoint calculates the average retention probability based on the
-    most recent snapshot per user.
+    This endpoint selects the latest analytics snapshot for each learner, groups
+    them by engagement_level (segment), and computes the average retention
+    probability for each segment. Retention probability is calculated as
+    (1 - churn_probability).
 
-    Steps:
-      1. Find the latest snapshot_date_key for each user.
-      2. Join back to FactUserAnalyticsSnapshot on (user_key, latest_key).
-      3. Group by engagement_level and compute:
-           retention_prob = avg(1 - churn_probability).
+    The response is a list of segments, each containing:
+      - segment: the engagement level label (e.g., "Highly Engaged", "At Risk"),
+        or "Unknown" if the engagement_level is null.
+      - retention_probability_pct: the average retention probability for that
+        segment, converted to a percentage (multiplied by 100).
 
-    Returns a list of:
-      - segment: engagement_level label (e.g., 'Highly Engaged', 'At Risk').
-      - retention_probability_pct: average retention probability in percent (0–100).
-
-    The frontend uses this to draw a bar chart comparing how likely different
-    segments are to stay subscribed.
+    This data is suitable for visualizing comparative retention rates across
+    different learner engagement segments in a bar chart.
     """
-
-    # latest snapshot per user
     subq_latest = (
         db.query(
             FactUserAnalyticsSnapshot.user_key,
@@ -1196,12 +1309,17 @@ def get_segment_retention_probability(
     rows = (
         db.query(
             FactUserAnalyticsSnapshot.engagement_level.label("segment"),
-            func.avg(1.0 - FactUserAnalyticsSnapshot.churn_probability).label("retention_prob"),
+            func.avg(1.0 - FactUserAnalyticsSnapshot.churn_probability).label(
+                "retention_prob"
+            ),
         )
         .join(
             subq_latest,
             (FactUserAnalyticsSnapshot.user_key == subq_latest.c.user_key)
-            & (FactUserAnalyticsSnapshot.snapshot_date_key == subq_latest.c.latest_key),
+            & (
+                FactUserAnalyticsSnapshot.snapshot_date_key
+                == subq_latest.c.latest_key
+            ),
         )
         .group_by(FactUserAnalyticsSnapshot.engagement_level)
         .all()
@@ -1222,42 +1340,55 @@ def get_survival_curve(
     db: Session = Depends(get_db),
 ) -> List[Dict]:
     """
-    Survival Curve (Expected Subscription Duration).
+    Retrieve an approximate survival curve for expected subscription duration.
 
-    Approximates a global subscription survival curve using summary survival
-    information from FactUserAnalyticsSnapshot:
+    This endpoint computes the average survival_median_time_to_downgrade from
+    all records in FactUserAnalyticsSnapshot to estimate the median time (in days)
+    until a learner downgrades or churns. If no data is available or the value is
+    invalid, it defaults to 180 days (6 months).
 
-      - Computes the average survival_median_time_to_downgrade (in days) over
-        all users and converts it to months.
-      - Assumes an exponential-like survival process where S(median) ≈ 0.5.
-      - Evaluates survival at fixed time points (months = [0, 3, 6, 9, 12, 15,
-        18, 21, 24]) to produce a step-like survival curve.
+    The endpoint then generates a synthetic survival curve over a 24-month period
+    (with data points at 0, 3, 6, 9, 12, 15, 18, 21, and 24 months) using an
+    exponential decay model based on the median survival time. The survival rate
+    at each time point represents the estimated percentage of learners still
+    subscribed at that duration.
 
-    For each time point, returns:
-      - months: time since subscription start (x-axis).
-      - survival_rate_pct: probability of still being subscribed at that time,
-        expressed as a percentage (0–100).
+    The response is a list of time points, each containing:
+      - months: the time elapsed in months.
+      - survival_rate_pct: the estimated percentage of learners still subscribed
+        at that time point (0–100).
 
-    The frontend can plot these as a shaded area chart to visualize how quickly
-    the subscription cohort decays over time.
+    This data is suitable for rendering a survival curve chart showing how
+    subscription retention decays over time.
     """
-
-    # get median-of-medians as global scale (in months)
     agg = db.query(
         func.avg(FactUserAnalyticsSnapshot.survival_median_time_to_downgrade)
     ).one()
-    median_days = agg[0] or 180.0  # fallback 6 months if null
+
+    raw_value = agg[0]
+
+    if raw_value is None:
+        median_days = 180.0
+    else:
+        try:
+            median_days = float(raw_value)
+        except (TypeError, ValueError):
+            median_days = 180.0
+
+    if median_days <= 0:
+        median_days = 180.0
+
     median_months = median_days / 30.0
 
     time_points = [0, 3, 6, 9, 12, 15, 18, 21, 24]
 
     def approx_survival(t_months: float) -> float:
-        # simple exponential-like drop anchored at median
-        # S(median) ≈ 0.5
         if t_months <= 0:
             return 1.0
+
         lam = (0.5) ** (1.0 / median_months)
-        return lam ** t_months
+        s = lam ** t_months
+        return max(0.0, min(1.0, s))
 
     curve: List[Dict] = []
     for m in time_points:
@@ -1271,134 +1402,3 @@ def get_survival_curve(
 
     return curve
 
-
-
-
-
-
-
-
-
-# Additional endpoints that are not needed yet
-# -------- DIMUSER CRUD --------
-@app.get("/users", response_model=list[DimUserSchema])
-def get_users(db: Session = Depends(get_db)):
-    users = db.query(DimUser).all()
-    return users
-
-@app.post("/users", response_model=DimUserSchema, status_code=status.HTTP_201_CREATED)
-def add_user(user: DimUserCreate, db: Session = Depends(get_db)):
-    db_user = DimUser(**user.dict())
-    db.add(db_user)
-    db.commit()
-    db.refresh(db_user)
-    return db_user
-
-@app.put("/users/{user_key}", response_model=DimUserSchema)
-def update_user(user_key: int, user_update: DimUserCreate, db: Session = Depends(get_db)):
-    user = db.query(DimUser).filter(DimUser.user_key == user_key).first()
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-    for key, value in user_update.dict().items():
-        setattr(user, key, value)
-    db.commit()
-    db.refresh(user)
-    return user
-
-@app.delete("/users/{user_key}")
-def delete_user(user_key: int, db: Session = Depends(get_db)):
-    user = db.query(DimUser).filter(DimUser.user_key == user_key).first()
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-    db.delete(user)
-    db.commit()
-    return {"message": "User deleted successfully"}
-
-# -------- PLANS CRUD --------
-@app.get("/plans", response_model=list[DimSubscriptionPlanSchema])
-def get_plans(db: Session = Depends(get_db)):
-    return db.query(DimSubscriptionPlan).all()
-
-@app.post("/plans", response_model=DimSubscriptionPlanSchema, status_code=status.HTTP_201_CREATED)
-def add_plan(plan: DimSubscriptionPlanCreate, db: Session = Depends(get_db)):
-    db_plan = DimSubscriptionPlan(**plan.dict())
-    db.add(db_plan)
-    db.commit()
-    db.refresh(db_plan)
-    return db_plan
-
-@app.put("/plans/{subscription_plan_key}", response_model=DimSubscriptionPlanSchema)
-def update_plan(subscription_plan_key: int, plan_update: DimSubscriptionPlanCreate, db: Session = Depends(get_db)):
-    plan = db.query(DimSubscriptionPlan).filter(DimSubscriptionPlan.subscription_plan_key == subscription_plan_key).first()
-    if not plan:
-        raise HTTPException(status_code=404, detail="Plan not found")
-    for k, v in plan_update.dict().items():
-        setattr(plan, k, v)
-    db.commit()
-    db.refresh(plan)
-    return plan
-
-@app.delete("/plans/{subscription_plan_key}")
-def delete_plan(subscription_plan_key: int, db: Session = Depends(get_db)):
-    plan = db.query(DimSubscriptionPlan).filter(DimSubscriptionPlan.subscription_plan_key == subscription_plan_key).first()
-    if not plan:
-        raise HTTPException(status_code=404, detail="Plan not found")
-    db.delete(plan)
-    db.commit()
-    return {"success": True, "message": "Plan deleted successfully"}
-
-# -------- DIMDATE CRUD --------
-@app.get("/dates", response_model=list[DimDateSchema])
-def get_dates(db: Session = Depends(get_db)):
-    return db.query(DimDate).all()
-
-@app.post("/dates", response_model=DimDateSchema, status_code=status.HTTP_201_CREATED)
-def add_date(date: DimDateCreate, db: Session = Depends(get_db)):
-    db_date = DimDate(**date.dict())
-    db.add(db_date)
-    db.commit()
-    db.refresh(db_date)
-    return db_date
-
-@app.put("/dates/{date_key}", response_model=DimDateSchema)
-def update_date(date_key: int, date_update: DimDateCreate, db: Session = Depends(get_db)):
-    date_row = db.query(DimDate).filter(DimDate.date_key == date_key).first()
-    if not date_row:
-        raise HTTPException(status_code=404, detail="Date not found")
-    for k, v in date_update.dict().items():
-        setattr(date_row, k, v)
-    db.commit()
-    db.refresh(date_row)
-    return date_row
-
-@app.delete("/dates/{date_key}")
-def delete_date(date_key: int, db: Session = Depends(get_db)):
-    date_row = db.query(DimDate).filter(DimDate.date_key == date_key).first()
-    if not date_row:
-        raise HTTPException(status_code=404, detail="Date not found")
-    db.delete(date_row)
-    db.commit()
-    return {"success": True, "message": "Date deleted successfully"}
-
-# -------- Example Analytic Endpoint --------
-@app.get("/count_risk_customers")
-def count_risk_customers(db: Session = Depends(get_db), threshold: float = Query(0.7)):
-    risk_customers = db.query(FactUserAnalyticsSnapshot).filter(FactUserAnalyticsSnapshot.churn_probability >= threshold).count()
-    return {"count_risk_customers": risk_customers}
-
-# -------- Dummy Endpoints for Milestone 2 --------
-@app.get("/dummy")
-def dummy_get():
-    return {"msg": "GET working"}
-
-@app.post("/dummy")
-def dummy_post(data: dict):
-    return {"msg": "POST working", "data": data}
-
-@app.put("/dummy")
-def dummy_put(data: dict):
-    return {"msg": "PUT working", "data": data}
-
-@app.delete("/dummy")
-def dummy_delete():
-    return {"msg": "DELETE working"}

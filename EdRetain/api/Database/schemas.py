@@ -1,3 +1,22 @@
+"""
+Pydantic schemas for API request and response validation.
+
+This module defines Pydantic models used for data validation and serialization
+in the FastAPI application. Each database table has corresponding schema classes:
+  - Base: defines the core fields shared across create and response schemas
+  - Create: inherits from Base, used for POST/PUT request validation
+  - Schema: inherits from Base, adds primary keys and metadata fields for responses
+
+These schemas ensure type safety and automatic validation for all API endpoints,
+and enable automatic conversion between SQLAlchemy ORM models and JSON responses.
+
+Modules:
+    - pydantic: For data validation and serialization.
+    - typing: For type hints including Optional types.
+    - datetime: For date and datetime field types.
+"""
+
+
 from typing import Optional
 from datetime import datetime, date
 from pydantic import BaseModel
