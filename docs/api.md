@@ -1,8 +1,11 @@
 ## API
 
-### Main.py
+### main.py
+::: EdRetain.api.main
 
+### models.py
 
+::: EdRetain.api.Database.models
 
-### Models.py
-
+### schemas.py
+::: EdRetain.api.Database.schemas
