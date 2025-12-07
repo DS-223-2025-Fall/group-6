@@ -9,7 +9,13 @@ from Database.database import Base, engine
 Base = declarative_base()
 
 class DimUser(Base):
+    """Dimension table for user-related attributes.
+
+    Stores one row per user with stable information such as demographics,
+    signup date, country/city, user type, and current subscription status.
+    """
     __tablename__ = "dim_user"
+
     user_key = Column(Integer, primary_key=True, autoincrement=True)
     user_id_nk = Column(String)
     signup_date_key = Column(Integer)
@@ -26,7 +32,13 @@ class DimUser(Base):
     updated_at = Column(DateTime)
 
 class DimDate(Base):
+    """Date dimension.
+
+    Stores one row per calendar date with fields such as year, quarter,
+    month, weekday, and weekend flag to support time-based analysis.
+    """
     __tablename__ = "dim_date"
+
     date_key = Column(Integer, primary_key=True)
     full_date = Column(Date)
     year = Column(Integer)
@@ -40,7 +52,13 @@ class DimDate(Base):
     is_weekend = Column(Boolean)
 
 class DimSubscriptionPlan(Base):
+    """Subscription plan dimension.
+
+    Describes each subscription plan and tier, including billing cycle,
+    base price, currency and plan features (certificate, mentoring, downloads).
+    """
     __tablename__ = "dim_subscription_plan"
+
     subscription_plan_key = Column(Integer, primary_key=True, autoincrement=True)
     plan_id_nk = Column(String)
     plan_name = Column(String)
@@ -53,6 +71,11 @@ class DimSubscriptionPlan(Base):
     has_downloads = Column(Boolean)
 
 class DimCampaign(Base):
+    """Campaign dimension.
+
+    Contains core information about marketing campaigns, such as type,
+    target segment, default channel, and start/end dates.
+    """
     __tablename__ = "dim_campaign"
     campaign_key = Column(Integer, primary_key=True, autoincrement=True)
     campaign_id_nk = Column(String)
@@ -65,12 +88,22 @@ class DimCampaign(Base):
     end_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
 
 class DimChannel(Base):
+    """Channel dimension.
+
+    Lists the communication channels (for example email, in-app, SMS)
+    used to deliver campaigns and messages to users.
+    """
     __tablename__ = "dim_channel"
     channel_key = Column(Integer, primary_key=True, autoincrement=True)
     channel_name = Column(String)
     description = Column(String)
 
 class FactUserDailyActivity(Base):
+    """Fact table for daily user engagement.
+
+    Stores one row per user per day with metrics such as logins, sessions,
+    minutes watched, course activity, and inactivity indicators.
+    """
     __tablename__ = "fact_user_daily_activity"
     fact_user_daily_activity_id = Column(Integer, primary_key=True, autoincrement=True)
     user_key = Column(Integer, ForeignKey("dim_user.user_key"))
@@ -93,6 +126,11 @@ class FactUserDailyActivity(Base):
     created_at = Column(DateTime)
 
 class FactCampaignInteraction(Base):
+    """Fact table for campaign interactions.
+
+    Tracks how each user interacted with a campaign on a given date,
+    including sent, opened, clicked and converted flags.
+    """
     __tablename__ = "fact_campaign_interaction"
     interaction_id = Column(Integer, primary_key=True, autoincrement=True)
     user_key = Column(Integer, ForeignKey("dim_user.user_key"))
@@ -107,6 +145,11 @@ class FactCampaignInteraction(Base):
     created_at = Column(DateTime)
 
 class FactUserAnalyticsSnapshot(Base):
+    """Fact table for user analytics snapshots.
+
+    Stores model-based metrics for each user at a snapshot date,
+    including RFM scores, clusters, churn risk, survival metrics and CLV.
+    """
     __tablename__ = "fact_user_analytics_snapshot"
     fact_user_analytics_snapshot_id = Column(Integer, primary_key=True, autoincrement=True)
     user_key = Column(Integer, ForeignKey("dim_user.user_key"))
@@ -146,6 +189,11 @@ class FactUserAnalyticsSnapshot(Base):
 
 
 class FeatureImportance(Base):
+    """Feature importance scores for models.
+
+    Keeps importance score and rank for each feature, per model type
+    and model version, to support explainability and dashboards.
+    """
     __tablename__ = "feature_importance"
     
     feature_importance_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -163,6 +211,11 @@ class FeatureImportance(Base):
 
 
 class DashboardMetrics(Base):
+    """Aggregated dashboard metrics.
+
+    Stores precomputed key performance indicators and engagement
+    segment counts for each snapshot date used in dashboards.
+    """
     __tablename__ = "dashboard_metrics"
     
     dashboard_metrics_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -200,6 +253,11 @@ class DashboardMetrics(Base):
 
 
 class ChurnReasons(Base):
+    """Aggregated churn reasons.
+
+    Summarises the main reasons behind churn or high churn risk,
+    with counts, percentages, average churn probability and severity.
+    """
     __tablename__ = "churn_reasons"
     
     churn_reason_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -220,6 +278,11 @@ class ChurnReasons(Base):
 
 
 class CampaignPerformance(Base):
+    """Campaign performance metrics.
+
+    Stores retention and uplift results for campaigns, including
+    open rate, retention lift and campaign/control group sizes.
+    """
     __tablename__ = "campaign_performance"
     
     campaign_performance_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -247,6 +310,11 @@ class CampaignPerformance(Base):
 
 
 class ModelPerformanceMetrics(Base):
+    """Model performance metrics.
+
+    Records evaluation results for each model type and version,
+    including accuracy, precision, recall, F1, AUC and confusion matrix.
+    """
     __tablename__ = "model_performance_metrics"
 
     model_performance_id = Column(Integer, primary_key=True, autoincrement=True)
