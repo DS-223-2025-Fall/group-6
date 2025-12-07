@@ -107,6 +107,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      etl:
+        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8888/tree", "||", "exit", "1"]
       interval: 30s
