@@ -42,6 +42,7 @@ class DimUser(Base):
         updated_at (datetime): Timestamp when the record was last updated.
     """
     __tablename__ = "dim_user"
+
     user_key = Column(Integer, primary_key=True, autoincrement=True)
     user_id_nk = Column(String)
     signup_date_key = Column(Integer)
@@ -75,6 +76,7 @@ class DimDate(Base):
         is_weekend (bool): Flag indicating if the date falls on a weekend.
     """
     __tablename__ = "dim_date"
+
     date_key = Column(Integer, primary_key=True)
     full_date = Column(Date)
     year = Column(Integer)
@@ -104,6 +106,7 @@ class DimSubscriptionPlan(Base):
         has_downloads (bool): Flag indicating if the plan allows content downloads.
     """
     __tablename__ = "dim_subscription_plan"
+
     subscription_plan_key = Column(Integer, primary_key=True, autoincrement=True)
     plan_id_nk = Column(String)
     plan_name = Column(String)
