@@ -1,0 +1,40 @@
+# Core Data Science & ML
+pandas
+loguru
+scikit-learn
+flask
+Faker
+numpy
+psycopg2-binary
+python-dateutil
+pytz
+Faker
+loguru
+sqlalchemy
+dotenv
+lifelines
+nbconvert
+
+# Jupyter & Notebooks
+jupyter
+ipykernel
+notebook
+
+# Additional ML/Stats
+imbalanced-learn
+xgboost
+lightgbm
+
+# Time Series (if needed)
+statsmodels
+
+# Type Hints & Standards
+typing_extensions
+six
+tzdata
+jupyter
+
+#Visualization
+matplotlib
+seaborn
+plotly
