@@ -150,7 +150,7 @@ Here’s an overview of the project’s file structure:
 
 ## API Swagger Documentation
 
-![Swagger UI](docs/API Swagger.pdf)
+![SwaggerUI](docs/API_Swagger.pdf)
 
 ## Dashboard UI Screenshots
 
