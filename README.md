@@ -140,13 +140,38 @@ Here’s an overview of the project’s file structure:
 
 ### Requests
 
-- `POST /employees/: Create a new employee. Requests`
+#### Dashboard Endpoints
+- **GET /dashboard/active-premium-learners** — Returns the latest count of active premium learners and the percentage change from the previous period.
+- **GET /dashboard/at-risk-learners** — Returns the latest count of at-risk learners and the absolute change from the previous period.
+- **GET /dashboard/average-retention-rate** — Returns the latest overall retention rate and its percentage change.
+- **GET /dashboard/retention-churn-trend** — Returns time-ordered monthly retention and churn rates.
+- **GET /dashboard/learner-segmentation** — Returns the latest engagement distribution (highly engaged, medium, at-risk, dormant).
+- **GET /dashboard/top-features-driving-churn** — Returns ranked feature importance scores from the latest churn prediction model.
 
-- `GET /employees/{employee_id}: Retrieve employee details by ID. Requests`
+#### Learner Endpoints
+- **GET /learners/rfm-analysis** — Returns per-learner RFM, churn probability, CLV, and activity metrics with optional filters.
+- **GET /learners/filters** — Returns distinct lists of countries and subscription tiers for dropdown filters.
 
-- `PUT /employees/{employee_id}: Update an employee’s salary by ID. Requests`
+#### High-Risk Learner Endpoints
+- **GET /high-risk/summary** — Returns total high-risk learner count and recent (last 7 days) additions.
+- **GET /high-risk/learners** — Returns detailed high-risk learner table including inactivity, churn probability, and suggested actions.
+- **GET /high-risk/reasons-for-churn** — Returns the latest churn reasons ranked by frequency.
+- **GET /high-risk/churn-by-tier** — Returns high-risk learner distribution by subscription tier.
 
-- `DELETE /employees/{employee_id}: Delete an employee by ID.`
+#### Campaign Endpoints
+- **GET /campaigns/overview** — Returns all campaigns with key metrics (name, target segment, launch date, open rate, retention lift, status).
+- **GET /campaigns/performance-comparison** — Returns campaign performance metrics including churn rates and retention lift.
+
+#### Model Endpoints
+- **GET /models/accuracy** — Returns the latest model accuracy and its change from the previous snapshot.
+- **GET /models/precision** — Returns the latest precision score and its change.
+- **GET /models/recall** — Returns the latest recall score and its change.
+- **GET /models/auc-roc** — Returns the latest AUC-ROC value (0–1) and its change.
+- **GET /models/feature-importance** — Returns ranked feature importance scores from the latest model snapshot.
+- **GET /models/roc-curve** — Returns synthetic ROC curve points (FPR, TPR), or a diagonal baseline if unavailable.
+- **GET /models/segment-retention-probability** — Returns average retention probability (1 – churn_probability) per engagement segment.
+- **GET /models/survival-curve** — Returns synthetic 24-month survival curve data using exponential decay.
+
 
 ## API Swagger Documentation
 
@@ -154,9 +179,18 @@ Here’s an overview of the project’s file structure:
 
 ## Dashboard UI Screenshots
 
+![Page 1](docs/page1_dashboard.jpg)
+![Page 2, Tab 1](docs/page2_learners_tab1.jpg)
+![Page 2, Tab 2](docs/page2_learners_tab2.jpg)
+![Page 2, Tab 3](docs/page2_learners_tab3.jpg)
+![Page 3](docs/page3_AtRisk.jpg)
+![Page 4](docs/page4_campaigns.jpg)
+![Page 5](docs/page5_analytics.jpg)
+
+
 ## pgAdmin Setup
 
-![pgAdmin](docs/pgadmin.pdf)
+![pgAdmin](docs/pgadmin_page.jpg)
 
 ### Documentation
 
