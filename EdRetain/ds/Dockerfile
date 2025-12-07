@@ -14,6 +14,9 @@ COPY requirements.txt requirements.txt
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
+# Install Jupyter kernel globally so nbconvert can use it
+RUN python -m ipykernel install --name python3 --display-name "Python 3"
+
 # Copy the rest of the application code
 COPY . .
 
