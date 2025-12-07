@@ -9,9 +9,11 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
-## Project layout
+## Services
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- `Database` – Postgres database.
+- `API` – FastAPI that connects with the Postgres database.
+- `App` – Streamlit app which connects with FastAPI.
+- `PgAdmin` – UI that shows you the data you inserted.
+- `Docs` – MkDocs, it documents your code.
+

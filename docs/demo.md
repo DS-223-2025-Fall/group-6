@@ -13,6 +13,7 @@ Subscription-based EdTech platforms face high churn rates among premium subscrib
 ## Solution Architecture
 **Product Roadmap:** [Product-Roadmap.pdf](Product Roadmap.png)  
 **ERD (Entity Relationship Diagram):** [ERD.png](ERD.pdf)  
+**UI Prototype** [UI Prototype.png](UI_Prototype.pdf)  
 **Microservice Components:**  
   - **Frontend:** Streamlit – displays model outputs, visualizations, and churn dashboards.  
   - **Backend:** FastAPI – exposes endpoints for model predictions and database interactions.  
