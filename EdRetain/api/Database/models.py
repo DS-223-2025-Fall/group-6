@@ -1,3 +1,16 @@
+"""
+Database models for the learner retention analytics platform.
+
+This module defines the SQLAlchemy ORM models for the dimensional and fact
+tables used in the ETL pipeline, analytics snapshots, dashboards, and
+campaign performance tracking.
+
+Modules:
+    - sqlalchemy: For ORM mapping and database schema definition.
+    - pydantic: For data validation in other layers of the application.
+    - datetime: For timestamp and date fields in the models.
+"""
+
 from pydantic import BaseModel
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session, relationship
@@ -9,10 +22,24 @@ from Database.database import Base, engine
 Base = declarative_base()
 
 class DimUser(Base):
-    """Dimension table for user-related attributes.
+    """
+    Represents a learner in the database.
 
-    Stores one row per user with stable information such as demographics,
-    signup date, country/city, user type, and current subscription status.
+    Attributes:
+        user_key (int): The unique identifier for the user (auto-incremented).
+        user_id_nk (str): The natural key from the source system.
+        signup_date_key (int): Foreign key to the date dimension for signup date.
+        birth_date (datetime): The user's date of birth.
+        gender (str): The user's gender.
+        country (str): The user's country of residence.
+        city (str): The user's city of residence.
+        user_type (str): The type of user (e.g., student, educator).
+        acquisition_channel (str): The channel through which the user was acquired.
+        initial_plan_key (int): Foreign key to the subscription plan at signup.
+        is_premium_ever (bool): Flag indicating if the user has ever had a premium subscription.
+        current_status (str): The current status of the user account.
+        created_at (datetime): Timestamp when the record was created.
+        updated_at (datetime): Timestamp when the record was last updated.
     """
     __tablename__ = "dim_user"
 
@@ -32,10 +59,21 @@ class DimUser(Base):
     updated_at = Column(DateTime)
 
 class DimDate(Base):
-    """Date dimension.
+    """
+    Represents a calendar date in the database.
 
-    Stores one row per calendar date with fields such as year, quarter,
-    month, weekday, and weekend flag to support time-based analysis.
+    Attributes:
+        date_key (int): The unique identifier for the date (surrogate key).
+        full_date (date): The actual calendar date.
+        year (int): The year component of the date.
+        quarter (int): The quarter of the year (1-4).
+        month (int): The month of the year (1-12).
+        month_name (str): The name of the month.
+        week_of_year (int): The week number within the year.
+        day_of_month (int): The day of the month (1-31).
+        day_of_week (int): The day of the week (0-6, where 0 is Monday).
+        day_name (str): The name of the day (e.g., Monday, Tuesday).
+        is_weekend (bool): Flag indicating if the date falls on a weekend.
     """
     __tablename__ = "dim_date"
 
@@ -52,10 +90,20 @@ class DimDate(Base):
     is_weekend = Column(Boolean)
 
 class DimSubscriptionPlan(Base):
-    """Subscription plan dimension.
+    """
+    Represents a subscription plan in the database.
 
-    Describes each subscription plan and tier, including billing cycle,
-    base price, currency and plan features (certificate, mentoring, downloads).
+    Attributes:
+        subscription_plan_key (int): The unique identifier for the plan (auto-incremented).
+        plan_id_nk (str): The natural key from the source system.
+        plan_name (str): The name of the subscription plan.
+        tier (str): The tier level of the plan (e.g., Free, Basic, Premium).
+        billing_cycle (str): The billing cycle (e.g., monthly, annual).
+        base_price (float): The base price of the plan.
+        currency (str): The currency for the plan price.
+        has_certificate (bool): Flag indicating if the plan includes certificates.
+        has_mentoring (bool): Flag indicating if the plan includes mentoring.
+        has_downloads (bool): Flag indicating if the plan allows content downloads.
     """
     __tablename__ = "dim_subscription_plan"
 
@@ -71,10 +119,19 @@ class DimSubscriptionPlan(Base):
     has_downloads = Column(Boolean)
 
 class DimCampaign(Base):
-    """Campaign dimension.
+    """
+    Represents a marketing or retention campaign in the database.
 
-    Contains core information about marketing campaigns, such as type,
-    target segment, default channel, and start/end dates.
+    Attributes:
+        campaign_key (int): The unique identifier for the campaign (auto-incremented).
+        campaign_id_nk (str): The natural key from the source system.
+        campaign_name (str): The name of the campaign.
+        campaign_type (str): The type of campaign (e.g., retention, acquisition).
+        target_risk_segment (str): The target risk segment for the campaign.
+        offer_type (str): The type of offer (e.g., discount, free trial).
+        default_channel (str): The default communication channel for the campaign.
+        start_date_key (int): Foreign key to the date dimension for campaign start.
+        end_date_key (int): Foreign key to the date dimension for campaign end.
     """
     __tablename__ = "dim_campaign"
     campaign_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -88,10 +145,13 @@ class DimCampaign(Base):
     end_date_key = Column(Integer, ForeignKey("dim_date.date_key"))
 
 class DimChannel(Base):
-    """Channel dimension.
+    """
+    Represents a communication channel in the database.
 
-    Lists the communication channels (for example email, in-app, SMS)
-    used to deliver campaigns and messages to users.
+    Attributes:
+        channel_key (int): The unique identifier for the channel (auto-incremented).
+        channel_name (str): The name of the channel (e.g., email, SMS, in-app).
+        description (str): A description of the channel.
     """
     __tablename__ = "dim_channel"
     channel_key = Column(Integer, primary_key=True, autoincrement=True)
@@ -99,10 +159,29 @@ class DimChannel(Base):
     description = Column(String)
 
 class FactUserDailyActivity(Base):
-    """Fact table for daily user engagement.
+    """
+    Represents daily learner activity in the database.
 
-    Stores one row per user per day with metrics such as logins, sessions,
-    minutes watched, course activity, and inactivity indicators.
+    Attributes:
+        fact_user_daily_activity_id (int): The unique identifier for the record (auto-incremented).
+        user_key (int): Foreign key to the user dimension.
+        date_key (int): Foreign key to the date dimension.
+        subscription_plan_key (int): Foreign key to the subscription plan dimension.
+        campaign_key (int): Foreign key to the campaign dimension.
+        is_premium (bool): Flag indicating if the user is premium on this date.
+        has_active_subscription (bool): Flag indicating if the user has an active subscription.
+        logins_count (int): Number of logins on this date.
+        sessions_count (int): Number of sessions on this date.
+        minutes_watched (int): Total minutes of content watched.
+        lessons_completed (int): Number of lessons completed.
+        quizzes_attempted (int): Number of quizzes attempted.
+        distinct_courses_accessed (int): Number of distinct courses accessed.
+        active_days_last_30d (int): Number of active days in the last 30 days.
+        days_since_last_login (int): Number of days since the last login.
+        is_inactive_7d_flag (bool): Flag indicating if the user has been inactive for 7+ days.
+        active_courses_count (int): Number of currently active courses.
+        completed_courses_total (int): Total number of courses completed to date.
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "fact_user_daily_activity"
     fact_user_daily_activity_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -126,10 +205,21 @@ class FactUserDailyActivity(Base):
     created_at = Column(DateTime)
 
 class FactCampaignInteraction(Base):
-    """Fact table for campaign interactions.
+    """
+    Represents campaign interaction events in the database.
 
-    Tracks how each user interacted with a campaign on a given date,
-    including sent, opened, clicked and converted flags.
+    Attributes:
+        interaction_id (int): The unique identifier for the interaction (auto-incremented).
+        user_key (int): Foreign key to the user dimension.
+        campaign_key (int): Foreign key to the campaign dimension.
+        date_key (int): Foreign key to the date dimension.
+        channel_key (int): Foreign key to the channel dimension.
+        sent_flag (bool): Flag indicating if the campaign was sent to the user.
+        opened_flag (bool): Flag indicating if the user opened the campaign.
+        clicked_flag (bool): Flag indicating if the user clicked the campaign.
+        converted_flag (bool): Flag indicating if the user converted.
+        time_to_conversion_days (int): Number of days from send to conversion.
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "fact_campaign_interaction"
     interaction_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -145,10 +235,32 @@ class FactCampaignInteraction(Base):
     created_at = Column(DateTime)
 
 class FactUserAnalyticsSnapshot(Base):
-    """Fact table for user analytics snapshots.
+    """
+    Represents learner analytics snapshots in the database.
 
-    Stores model-based metrics for each user at a snapshot date,
-    including RFM scores, clusters, churn risk, survival metrics and CLV.
+    Attributes:
+        fact_user_analytics_snapshot_id (int): The unique identifier for the snapshot (auto-incremented).
+        user_key (int): Foreign key to the user dimension.
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        subscription_plan_key (int): Foreign key to the subscription plan dimension.
+        rfm_recency (int): Recency value (days since last activity).
+        rfm_frequency (int): Frequency value (number of activities).
+        rfm_monetary (float): Monetary value (total spend or value).
+        rfm_r_score (int): RFM recency score (1-5).
+        rfm_f_score (int): RFM frequency score (1-5).
+        rfm_m_score (int): RFM monetary score (1-5).
+        rfm_segment (str): RFM segment classification.
+        segment_label (str): Human-readable segment label.
+        engagement_level (str): Overall engagement level.
+        kmeans_cluster (int): K-means cluster assignment.
+        kmeans_segment_label (str): K-means cluster label.
+        churn_probability (float): Predicted churn probability (0-1).
+        churn_risk_band (str): Churn risk classification band.
+        survival_median_time_to_downgrade (int): Median days until downgrade from survival model.
+        survival_risk_90d (float): 90-day survival risk score.
+        clv_value (float): Customer lifetime value estimate.
+        clv_band (str): CLV classification band.
+        model_version (str): Version of the analytics model used.
     """
     __tablename__ = "fact_user_analytics_snapshot"
     fact_user_analytics_snapshot_id = Column(Integer, primary_key=True, autoincrement=True)
@@ -189,10 +301,18 @@ class FactUserAnalyticsSnapshot(Base):
 
 
 class FeatureImportance(Base):
-    """Feature importance scores for models.
+    """
+    Represents feature importance metrics for ML models in the database.
 
-    Keeps importance score and rank for each feature, per model type
-    and model version, to support explainability and dashboards.
+    Attributes:
+        feature_importance_id (int): The unique identifier for the record (auto-incremented).
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        model_type (str): The type of model (e.g., churn_prediction, clv_model).
+        model_version (str): The version of the model (e.g., v1.0, v1.1).
+        feature_name (str): The name of the feature.
+        importance_score (float): The importance score of the feature (0-100 or 0-1).
+        importance_rank (int): The rank of the feature by importance (1 is most important).
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "feature_importance"
     
@@ -211,10 +331,32 @@ class FeatureImportance(Base):
 
 
 class DashboardMetrics(Base):
-    """Aggregated dashboard metrics.
+    """
+    Represents aggregated dashboard KPI metrics in the database.
 
-    Stores precomputed key performance indicators and engagement
-    segment counts for each snapshot date used in dashboards.
+    Attributes:
+        dashboard_metrics_id (int): The unique identifier for the record (auto-incremented).
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        active_premium_learners (int): Count of active premium learners.
+        at_risk_learners (int): Count of at-risk learners.
+        average_retention_rate (float): Overall retention rate percentage.
+        total_premium_learners (int): Total count of premium learners.
+        churned_learners (int): Count of recently churned learners.
+        new_premium_learners (int): Count of new premium learners.
+        active_premium_change_pct (float): Percentage change in active premium learners from previous period.
+        at_risk_change_count (int): Change in at-risk learner count from previous period.
+        retention_rate_change_pct (float): Percentage change in retention rate from previous period.
+        monthly_retention_rate (float): Monthly retention rate percentage.
+        monthly_churn_rate (float): Monthly churn rate percentage.
+        highly_engaged_count (int): Count of highly engaged learners.
+        highly_engaged_pct (float): Percentage of highly engaged learners.
+        medium_engaged_count (int): Count of medium engaged learners.
+        medium_engaged_pct (float): Percentage of medium engaged learners.
+        at_risk_count (int): Count of at-risk learners in engagement segmentation.
+        at_risk_pct (float): Percentage of at-risk learners.
+        dormant_count (int): Count of dormant learners.
+        dormant_pct (float): Percentage of dormant learners.
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "dashboard_metrics"
     
@@ -253,10 +395,19 @@ class DashboardMetrics(Base):
 
 
 class ChurnReasons(Base):
-    """Aggregated churn reasons.
+    """
+    Represents churn reason analysis in the database.
 
-    Summarises the main reasons behind churn or high churn risk,
-    with counts, percentages, average churn probability and severity.
+    Attributes:
+        churn_reason_id (int): The unique identifier for the record (auto-incremented).
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        reason_category (str): The category of churn reason.
+        reason_display_name (str): User-friendly name for the churn reason.
+        reason_count (int): Number of at-risk users with this primary reason.
+        reason_pct (float): Percentage of total at-risk users with this reason.
+        avg_churn_probability (float): Average churn probability for users with this reason.
+        severity_level (str): Severity level of the churn reason (High, Medium, Low).
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "churn_reasons"
     
@@ -278,10 +429,26 @@ class ChurnReasons(Base):
 
 
 class CampaignPerformance(Base):
-    """Campaign performance metrics.
+    """
+    Represents campaign performance metrics in the database.
 
-    Stores retention and uplift results for campaigns, including
-    open rate, retention lift and campaign/control group sizes.
+    Attributes:
+        campaign_performance_id (int): The unique identifier for the record (auto-incremented).
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        campaign_key (int): Foreign key to the campaign dimension.
+        campaign_name (str): The name of the campaign.
+        target_segment (str): The target segment for the campaign.
+        launch_date (int): The launch date key for the campaign.
+        users_sent (int): Number of users who were sent the campaign.
+        users_opened (int): Number of users who opened the campaign.
+        open_rate (float): Campaign open rate percentage.
+        campaign_retention_rate (float): Retention rate for the campaign group.
+        control_retention_rate (float): Retention rate for the control group.
+        retention_lift (float): Lift in retention rate (campaign vs control).
+        campaign_size (int): Size of the campaign group.
+        control_size (int): Size of the control group.
+        status (str): Current status of the campaign.
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "campaign_performance"
     
@@ -310,10 +477,26 @@ class CampaignPerformance(Base):
 
 
 class ModelPerformanceMetrics(Base):
-    """Model performance metrics.
+    """
+    Represents machine learning model performance metrics in the database.
 
-    Records evaluation results for each model type and version,
-    including accuracy, precision, recall, F1, AUC and confusion matrix.
+    Attributes:
+        model_performance_id (int): The unique identifier for the record (auto-incremented).
+        snapshot_date_key (int): Foreign key to the date dimension for the snapshot date.
+        model_type (str): The type of model (e.g., churn_prediction, clv_model).
+        model_version (str): The version of the model.
+        accuracy (float): Model accuracy score.
+        precision (float): Model precision score.
+        recall (float): Model recall score.
+        f1_score (float): Model F1 score.
+        auc_roc (float): Model AUC-ROC score.
+        train_samples (int): Number of training samples.
+        test_samples (int): Number of test samples.
+        true_negatives (int): Count of true negatives in confusion matrix.
+        false_positives (int): Count of false positives in confusion matrix.
+        false_negatives (int): Count of false negatives in confusion matrix.
+        true_positives (int): Count of true positives in confusion matrix.
+        created_at (datetime): Timestamp when the record was created.
     """
     __tablename__ = "model_performance_metrics"
 
