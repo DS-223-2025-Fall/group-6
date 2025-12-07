@@ -132,9 +132,9 @@ Here’s an overview of the project’s file structure:
 ```
 ## Features
 
-### Database Model
+### ETL Schema
 
-### Frontend (Streamlit)
+![ETLSchema](docs/Images/ERD_Schema.jpg)
 
 ### Backend (FastAPI)
 
@@ -175,22 +175,22 @@ Here’s an overview of the project’s file structure:
 
 ## API Swagger Documentation
 
-![SwaggerUI](docs/API_Swagger.jpg)
+![SwaggerUI](docs/Images/API_Swagger.jpg)
 
 ## Dashboard UI Screenshots
 
-![Page 1](docs/page1_dashboard.jpg)
-![Page 2, Tab 1](docs/page2_learners_tab1.jpg)
-![Page 2, Tab 2](docs/page2_learners_tab2.jpg)
-![Page 2, Tab 3](docs/page2_learners_tab3.jpg)
-![Page 3](docs/page3_AtRisk.jpg)
-![Page 4](docs/page4_campaigns.jpg)
-![Page 5](docs/page5_analytics.jpg)
+![Page 1](docs/Images/page1_dashboard.jpg)
+![Page 2, Tab 1](docs/Images/page2_learners_tab1.jpg)
+![Page 2, Tab 2](docs/Images/page2_learners_tab2.jpg)
+![Page 2, Tab 3](docs/Images/page2_learners_tab3.jpg)
+![Page 3](docs/Images/page3_AtRisk.jpg)
+![Page 4](docs/Images/page4_campaigns.jpg)
+![Page 5](docs/Images/page5_analytics.jpg)
 
 
 ## pgAdmin Setup
 
-![pgAdmin](docs/pgadmin_page.jpg)
+![pgAdmin](docs/Images/pgadmin_page.jpg)
 
 ### Documentation
 
