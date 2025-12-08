@@ -27,18 +27,18 @@ docker compose up --build
 
 After running `docker compose up --build`, you can access each component of the application at the following URLs:
 
-- **Streamlit Frontend:** http://localhost:8501 The main interface for managing employees, built with Streamlit. Use this to add, view, update, and delete employee records.
+- **Streamlit Frontend:** [http://localhost:8501](http://localhost:8501) The main interface for managing learners, built with Streamlit. Use this to add campaigns and view learners records.
 
 - **FastAPI Backend**: [http://localhost:8008](http://localhost:8008)  
-  The backend API where requests are processed. You can use tools like [Swagger UI](http://localhost:8008/docs#/) (provided by FastAPI) to explore the API endpoints and their details.
+  The backend API where requests are processed. You can use tools like [Swagger UI](http://localhost:8008/docs) (provided by FastAPI) to explore the API endpoints and their details.
 
-- **DS Notebook** (http://localhost:8888) Files in the Jupyter Notebook 
+- **DS Notebook** [http://localhost:8888](http://localhost:8888) Files in the Jupyter Notebook 
 
 - **PgAdmin** : [http://localhost:5050](http://localhost:5050)  
   A graphical tool for PostgreSQL, which allows you to view and manage the database. Login using the credentials set in the `.env` file:
 
-  - **Email**: Value of `PGADMIN_EMAIL` in your `.env` file
-  - **Password**: Value of `PGADMIN_PASSWORD` in your `.env` file
+  - **Email**: Value of `PGADMIN_EMAIL` in  `.env` file
+  - **Password**: Value of `PGADMIN_PASSWORD` in  `.env` file
 
 
 ## Environment Variables(.env)
@@ -62,8 +62,20 @@ Here’s an overview of the project’s file structure:
 ├── .github/
 │   └── workflows/
 │       └── ci.yaml
-├── .venv/                         # Local virtual environment (optional)
+├── .venv/                         # Local virtual environment (ignored by Git)
 ├── docs/                          # MkDocs documentation sources
+│   ├── Images/                    # Screenshots used in README / docs
+│   │   ├── API_Swagger.jpg
+│   │   ├── ERD_Schema.jpg
+│   │   ├── page1_dashboard.jpg
+│   │   ├── page2_learners_tab1.jpg
+│   │   ├── page2_learners_tab2.jpg
+│   │   ├── page2_learners_tab3.jpg
+│   │   ├── page3_AtRisk.jpg
+│   │   ├── page4_campaigns.jpg
+│   │   ├── page5_analytics.jpg
+│   │   ├── pgadmin_page.jpg
+│   │   └── Product Roadmap.png
 │   ├── api.md
 │   ├── app.md
 │   ├── demo.md
@@ -72,15 +84,16 @@ Here’s an overview of the project’s file structure:
 │   ├── index.md
 │   ├── ERD.pdf
 │   ├── Problem Definition.pdf
-│   ├── Product Roadmap.png
+│   ├── Product Roadmap.png        # (used in docs pages)
 │   └── UI_Prototype.pdf
 ├── EdRetain/                      # Application package
 │   ├── api/                       # FastAPI backend
 │   │   ├── Database/              # Shared DB module (SQLAlchemy models, engine)
+│   │   │   ├── __pycache__/
 │   │   │   ├── __init__.py
-│   │   │   ├── data_generator.py
 │   │   │   ├── database.py
-│   │   │   └── models.py
+│   │   │   ├── models.py
+│   │   │   └── schemas.py
 │   │   ├── __init__.py
 │   │   ├── .gitignore
 │   │   ├── Dockerfile
@@ -90,9 +103,13 @@ Here’s an overview of the project’s file structure:
 │       ├── .gitignore
 │       ├── app.py                 # Streamlit main dashboard
 │       ├── Dockerfile
-│       └── README.md
+│       ├── README.md
+│       └── requirements.txt
 ├── ds/                            # Data-science / notebooks service
+│   ├── __pycache__/
+│   ├── .ipynb_checkpoints/
 │   ├── Database/                  # DB access reused by DS
+│   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   ├── data_generator.py
 │   │   ├── database.py
@@ -109,7 +126,8 @@ Here’s an overview of the project’s file structure:
 │   └── requirements.txt
 ├── etl/                           # ETL service (schema + loading)
 │   ├── data/                      # Source CSV files
-│   ├── Database/                  # DB models + engine for ETL
+│   ├── Database/
+│   │   ├── __pycache__/
 │   │   ├── __init__.py
 │   │   ├── data_generator.py
 │   │   ├── database.py
@@ -120,15 +138,14 @@ Here’s an overview of the project’s file structure:
 │   └── requirements.txt
 ├── pgadmin_data/                  # Volume for pgAdmin configuration
 ├── postgres_data/                 # Volume for PostgreSQL data
-├── .env                           # Environment variables (DB, pgAdmin, API_URL, …)
+├── .env                           # Environment variables (DB, pgAdmin, etc.)
 ├── .gitignore
 ├── .gitkeep
 ├── docker-compose.yml             # Multi-service Docker stack
 ├── LICENSE
 ├── mkdocs.yml                     # MkDocs configuration
 ├── README.md
-├── requirements_mkdocs.txt        # Documentation dependencies
-└── requirements.txt               # Root/shared Python dependencies
+├── requirements_mkdocs.txt        # Documentation dependencies               
 ```
 ## Features
 
@@ -203,5 +220,5 @@ mkdocs serve
 - **Backend:** FastAPI + SQLAlchemy
 - **Frontend:**  Streamlit
 - **Database::** PostgreSQL + pgAdmin
-- **DS**:  RFM, CLV, KMeans Clustering
+- **DS**:  RFM, Random Forest Classification, KMeans Clustering, CLV, Survival Analysis
 - **Documentation:** MkDocs + GitHub Actions

@@ -1,5 +1,13 @@
 ## ETL
 
+### models.py
+
+::: EdRetain.etl.Database.models
+
+### data_generator.py
+
+::: EdRetain.etl.Database.data_generator
+
 ### etl.py
 
 ::: EdRetain.etl.etl
@@ -8,10 +16,6 @@
 
 ::: EdRetain.etl.helpers
 
-### models.py
 
-::: EdRetain.etl.Database.models
 
-### data_generator.py
 
-::: EdRetain.etl.Database.data_generator
