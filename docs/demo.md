@@ -18,7 +18,7 @@ Subscription-based EdTech platforms face high churn rates among premium subscrib
   - **Frontend:** Streamlit – displays model outputs, visualizations, and churn dashboards.  
   - **Backend:** FastAPI – exposes endpoints for model predictions and database interactions.  
   - **Database:** PostgreSQL – stores user engagement, subscription, and prediction data.  
-  - **Model:** Logistic Regression / XGBoost / K-Means Clustering – for churn prediction, RFM analysis, and segmentation.
+  - **Model:** RFM, Random Forest Classification, KMeans Clustering, CLV, Survival Analysis
 
 
 ## Team Roles

@@ -8,10 +8,6 @@
 
 ::: EdRetain.etl.Database.data_generator
 
-### etl.py
-
-::: EdRetain.etl.etl
-
 ### helpers.py
 
 ::: EdRetain.etl.helpers
